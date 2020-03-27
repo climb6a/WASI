@@ -1,0 +1,130 @@
+object Form_2D_Info: TForm_2D_Info
+  Left = 751
+  Height = 404
+  Top = 355
+  Width = 764
+  Anchors = []
+  AutoSize = True
+  BorderStyle = bsDialog
+  BorderWidth = 8
+  Caption = 'Pixel info'
+  ClientHeight = 404
+  ClientWidth = 764
+  DesignTimePPI = 192
+  Font.Height = -24
+  OnCreate = FormCreate
+  Position = poDefault
+  LCLVersion = '2.0.6.0'
+  object List_PixInfo: TValueListEditor
+    Left = 14
+    Height = 164
+    Top = 124
+    Width = 234
+    AutoEdit = False
+    Enabled = False
+    FixedCols = 0
+    Font.CharSet = GREEK_CHARSET
+    Font.Height = -24
+    ParentFont = False
+    RowCount = 4
+    TabOrder = 1
+    TitleFont.CharSet = GREEK_CHARSET
+    TitleFont.Height = -24
+    Strings.Strings = (
+      'x=-1'
+      'y=-1'
+      ''
+    )
+    TitleCaptions.Strings = (
+      'Band'
+      'Value'
+    )
+    ColWidths = (
+      110
+      120
+    )
+  end
+  object List_ParNames: TValueListEditor
+    Left = 384
+    Height = 172
+    Top = 28
+    Width = 342
+    AutoEdit = False
+    Enabled = False
+    FixedCols = 0
+    Font.CharSet = GREEK_CHARSET
+    Font.Height = -24
+    ParentFont = False
+    RowCount = 2
+    TabOrder = 2
+    TitleFont.CharSet = GREEK_CHARSET
+    TitleFont.Height = -24
+    TitleCaptions.Strings = (
+      'Band'
+      'Parameter'
+    )
+    ColWidths = (
+      110
+      228
+    )
+  end
+  object List_LatLong: TValueListEditor
+    Left = 14
+    Height = 82
+    Top = 28
+    Width = 308
+    AutoEdit = False
+    DefaultColWidth = 154
+    Enabled = False
+    ExtendedSelect = False
+    FixedCols = 0
+    Font.CharSet = GREEK_CHARSET
+    Font.Height = -24
+    ParentFont = False
+    RowCount = 2
+    TabOrder = 0
+    TitleFont.CharSet = GREEK_CHARSET
+    TitleFont.Height = -24
+    TitleCaptions.Strings = (
+      'Latitude [N]'
+      'Longitude [E]'
+    )
+    ColWidths = (
+      154
+      150
+    )
+  end
+  object List_Statistics: TStringGrid
+    Left = 14
+    Height = 96
+    Top = 302
+    Width = 426
+    ColCount = 3
+    Columns = <    
+      item
+        MinSize = 18
+        MaxSize = 342
+        Title.Caption = 'Band'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 342
+        Title.Caption = 'Mean'
+      end    
+      item
+        MinSize = 18
+        MaxSize = 342
+        Title.Caption = 'Sigma'
+      end>
+    DefaultColWidth = 138
+    FixedCols = 0
+    Font.CharSet = GREEK_CHARSET
+    Font.Height = -24
+    ParentFont = False
+    RowCount = 2
+    TabOrder = 3
+    TitleFont.CharSet = GREEK_CHARSET
+    TitleFont.Height = -24
+    Visible = False
+  end
+end

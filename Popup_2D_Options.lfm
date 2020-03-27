@@ -1,0 +1,959 @@
+object Options_2D: TOptions_2D
+  Left = 1162
+  Height = 638
+  Top = 450
+  Width = 1316
+  Caption = '2D options'
+  ClientHeight = 638
+  ClientWidth = 1316
+  Color = clBtnFace
+  DesignTimePPI = 192
+  Font.Color = clWindowText
+  Font.Height = -24
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '2.0.6.0'
+  object ButtonOK: TButton
+    Left = 522
+    Height = 50
+    Top = 560
+    Width = 150
+    Caption = 'OK'
+    Default = True
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = ButtonOKClick
+    ParentFont = False
+    TabOrder = 0
+  end
+  object ButtonCancel: TButton
+    Left = 698
+    Height = 50
+    Top = 560
+    Width = 150
+    Cancel = True
+    Caption = 'Cancel'
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = ButtonCancelClick
+    ParentFont = False
+    TabOrder = 1
+  end
+  object GroupBox_HSI: TGroupBox
+    Left = 32
+    Height = 498
+    Top = 32
+    Width = 450
+    Caption = ' Hyperspectral image '
+    ClientHeight = 466
+    ClientWidth = 446
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    ParentFont = False
+    TabOrder = 2
+    object Label_Channels: TLabel
+      Left = 24
+      Height = 27
+      Top = 172
+      Width = 69
+      Caption = 'Bands'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label_Width: TLabel
+      Left = 24
+      Height = 27
+      Top = 76
+      Width = 63
+      Caption = 'Width'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label_Height: TLabel
+      Left = 24
+      Height = 27
+      Top = 124
+      Width = 70
+      Caption = 'Height'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label_Header: TLabel
+      Left = 24
+      Height = 27
+      Top = 220
+      Width = 78
+      Caption = 'Header'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label_Interleave: TLabel
+      Left = 24
+      Height = 27
+      Top = 316
+      Width = 104
+      Caption = 'Interleave'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label_DataType: TLabel
+      Left = 24
+      Height = 27
+      Top = 268
+      Width = 103
+      Caption = 'Data type'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label_y_scale: TLabel
+      Left = 24
+      Height = 27
+      Hint = '(y units of image) / (y units of spectrum type)'
+      Top = 412
+      Width = 75
+      Caption = 'y scale'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object Label_x_scale: TLabel
+      Left = 24
+      Height = 27
+      Hint = '(x units of image) / nm'
+      Top = 364
+      Width = 74
+      Caption = 'x scale'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object Edit_Width: TEdit
+      Left = 140
+      Height = 35
+      Top = 68
+      Width = 98
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnChange = Edit_WidthChange
+      ParentFont = False
+      TabOrder = 0
+      Text = '-1'
+    end
+    object Edit_Height: TEdit
+      Left = 140
+      Height = 35
+      Top = 116
+      Width = 98
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnChange = Edit_HeightChange
+      ParentFont = False
+      TabOrder = 1
+      Text = '-1'
+    end
+    object Edit_Channels: TEdit
+      Left = 140
+      Height = 35
+      Top = 164
+      Width = 98
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnChange = Edit_ChannelsChange
+      ParentFont = False
+      TabOrder = 2
+      Text = '-1'
+    end
+    object ComboBox_interleave: TComboBox
+      Left = 140
+      Height = 35
+      Top = 308
+      Width = 146
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ItemHeight = 27
+      ItemIndex = 1
+      Items.Strings = (
+        'BIL'
+        'BSQ'
+      )
+      OnChange = ComboBox_interleaveChange
+      ParentFont = False
+      TabOrder = 3
+      Text = 'BSQ'
+    end
+    object ComboBox_DataType: TComboBox
+      Left = 140
+      Height = 35
+      Top = 260
+      Width = 290
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ItemHeight = 27
+      Items.Strings = (
+        '1: 8-bit byte'
+        '2: 16-bit signed integer'
+        '3: 32-bit signed long integer'
+        '4: 32-bit floating point'
+        '12: 16-bit unsigned integer'
+        '7: ASCII text'
+      )
+      OnChange = ComboBox_DataTypeChange
+      ParentFont = False
+      TabOrder = 4
+      Text = 'Combo_DataType'
+    end
+    object Edit_Header: TEdit
+      Left = 140
+      Height = 35
+      Top = 212
+      Width = 98
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnChange = Edit_HeaderChange
+      ParentFont = False
+      TabOrder = 5
+      Text = '-1'
+    end
+    object Edit_yscale: TEdit
+      Left = 140
+      Height = 35
+      Top = 404
+      Width = 146
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnChange = Edit_yscaleChange
+      ParentFont = False
+      TabOrder = 6
+      Text = '-1'
+    end
+    object Edit_xscale: TEdit
+      Left = 140
+      Height = 35
+      Top = 356
+      Width = 146
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnChange = Edit_xscaleChange
+      ParentFont = False
+      TabOrder = 7
+      Text = '-1'
+    end
+    object CheckBox_ENVI: TCheckBox
+      Left = 24
+      Height = 38
+      Top = 20
+      Width = 410
+      Alignment = taLeftJustify
+      AutoSize = False
+      Caption = 'Use settings from ENVI header'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnClick = CheckBox_ENVIClick
+      ParentFont = False
+      TabOrder = 8
+    end
+    object Label_Width1: TLabel
+      Left = 246
+      Height = 27
+      Top = 76
+      Width = 61
+      Caption = 'pixels'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label_Height1: TLabel
+      Left = 240
+      Height = 27
+      Top = 124
+      Width = 68
+      Caption = ' pixels'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label_Header1: TLabel
+      Left = 246
+      Height = 27
+      Top = 220
+      Width = 58
+      Caption = 'bytes'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object GroupBox_Preview: TGroupBox
+    Left = 496
+    Height = 498
+    Top = 32
+    Width = 384
+    Caption = ' Preview image '
+    ClientHeight = 466
+    ClientWidth = 380
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    ParentFont = False
+    TabOrder = 3
+    object Label_G: TLabel
+      Left = 20
+      Height = 27
+      Top = 172
+      Width = 129
+      Caption = 'Green band'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label_R: TLabel
+      Left = 20
+      Height = 27
+      Top = 220
+      Width = 106
+      Caption = 'Red band'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object LabelB: TLabel
+      Left = 20
+      Height = 27
+      Top = 124
+      Width = 111
+      Caption = 'Blue band'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label_Contrast: TLabel
+      Left = 20
+      Height = 27
+      Top = 264
+      Width = 91
+      Caption = 'Contrast'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Edit_B: TEdit
+      Left = 280
+      Height = 35
+      Top = 108
+      Width = 82
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnChange = Edit_BChange
+      ParentFont = False
+      TabOrder = 0
+      Text = '-1'
+    end
+    object Edit_G: TEdit
+      Left = 278
+      Height = 35
+      Top = 156
+      Width = 82
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnChange = Edit_GChange
+      ParentFont = False
+      TabOrder = 1
+      Text = '-1'
+    end
+    object Edit_R: TEdit
+      Left = 278
+      Height = 35
+      Top = 204
+      Width = 82
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnChange = Edit_RChange
+      ParentFont = False
+      TabOrder = 2
+      Text = '-1'
+    end
+    object Edit_Contrast: TEdit
+      Left = 278
+      Height = 35
+      Top = 252
+      Width = 82
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnChange = Edit_ContrastChange
+      ParentFont = False
+      TabOrder = 3
+      Text = '-1'
+    end
+    object CheckBox_JoinBands: TCheckBox
+      Left = 20
+      Height = 38
+      Top = 56
+      Width = 340
+      Alignment = taLeftJustify
+      AutoSize = False
+      Caption = 'Scale bands together'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnClick = CheckBox_JoinBandsClick
+      ParentFont = False
+      TabOrder = 4
+    end
+    object Edit_LUT: TEdit
+      Left = 20
+      Height = 35
+      Top = 352
+      Width = 250
+      Enabled = False
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnChange = Edit_BChange
+      ParentFont = False
+      TabOrder = 5
+      Text = '-1'
+    end
+    object Button_LUT: TButton
+      Left = 296
+      Height = 50
+      Top = 352
+      Width = 66
+      Caption = 'set'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnClick = Button_LUTClick
+      ParentFont = False
+      TabOrder = 6
+    end
+    object CheckBox_3bands: TCheckBox
+      Left = 20
+      Height = 38
+      Top = 20
+      Width = 340
+      Alignment = taLeftJustify
+      AutoSize = False
+      Caption = '3 bands'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnClick = CheckBox_3bandsClick
+      ParentFont = False
+      TabOrder = 7
+    end
+    object CheckBox_LUT: TCheckBox
+      Left = 20
+      Height = 38
+      Top = 304
+      Width = 340
+      Alignment = taLeftJustify
+      AutoSize = False
+      Caption = 'Use look-up table'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnClick = CheckBox_LUTClick
+      ParentFont = False
+      TabOrder = 8
+    end
+    object Show_range: TLabel
+      Left = 20
+      Height = 27
+      Top = 416
+      Width = 133
+      Caption = 'Range: from'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Show_min: TEdit
+      Left = 160
+      Height = 35
+      Top = 408
+      Width = 82
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnChange = Show_minChange
+      ParentFont = False
+      TabOrder = 9
+      Text = '0.1'
+    end
+    object Show_max: TEdit
+      Left = 280
+      Height = 35
+      Top = 408
+      Width = 82
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnChange = Show_maxChange
+      ParentFont = False
+      TabOrder = 10
+      Text = '10'
+    end
+    object Show_range1: TLabel
+      Left = 252
+      Height = 27
+      Top = 416
+      Width = 20
+      Caption = 'to'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object GroupBox_Mask: TGroupBox
+    Left = 896
+    Height = 274
+    Top = 32
+    Width = 400
+    Caption = ' Mask '
+    ClientHeight = 242
+    ClientWidth = 396
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    ParentFont = False
+    TabOrder = 4
+    object Label_Land_channel: TLabel
+      Left = 22
+      Height = 27
+      Top = 36
+      Width = 118
+      Caption = 'Mask band'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label_Thresh_above: TLabel
+      Left = 22
+      Height = 27
+      Top = 132
+      Width = 203
+      Caption = 'Mask values above'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label_Color: TLabel
+      Left = 22
+      Height = 27
+      Top = 176
+      Width = 57
+      Caption = 'Color'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object ShapeMask: TShape
+      Left = 252
+      Height = 42
+      Top = 164
+      Width = 98
+      OnChangeBounds = ShapeMaskChangeBounds
+    end
+    object Label_Thresh_below: TLabel
+      Left = 22
+      Height = 27
+      Top = 84
+      Width = 202
+      Caption = 'Mask values below'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Edit_Land_channel: TEdit
+      Left = 252
+      Height = 35
+      Top = 20
+      Width = 98
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnChange = Edit_Land_channelChange
+      ParentFont = False
+      TabOrder = 0
+      Text = '-1'
+    end
+    object Edit_Thresh_above: TEdit
+      Left = 252
+      Height = 35
+      Top = 116
+      Width = 98
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnChange = Edit_Thresh_aboveChange
+      ParentFont = False
+      TabOrder = 1
+      Text = '-1'
+    end
+    object Button_Color: TButton
+      Left = 156
+      Height = 38
+      Top = 170
+      Width = 82
+      Caption = 'set'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnClick = Button_ColorClick
+      ParentFont = False
+      TabOrder = 2
+    end
+    object Edit_Thresh_below: TEdit
+      Left = 252
+      Height = 35
+      Top = 68
+      Width = 98
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnChange = Edit_Thresh_belowChange
+      ParentFont = False
+      TabOrder = 3
+      Text = '-1'
+    end
+  end
+  object GroupBox1: TGroupBox
+    Left = 896
+    Height = 210
+    Top = 320
+    Width = 400
+    Caption = ' Preview during inverse modeling  '
+    ClientHeight = 178
+    ClientWidth = 396
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    ParentFont = False
+    TabOrder = 5
+    object Label_Prv_Par: TLabel
+      Left = 20
+      Height = 27
+      Top = 36
+      Width = 111
+      Caption = 'Parameter'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Prv_Par_Min: TLabel
+      Left = 20
+      Height = 27
+      Top = 84
+      Width = 147
+      Caption = 'Range:   from'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Prv_Par_Max: TLabel
+      Left = 264
+      Height = 27
+      Top = 84
+      Width = 20
+      Caption = 'to'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label_updt: TLabel
+      Left = 20
+      Height = 27
+      Top = 132
+      Width = 240
+      Caption = 'Update spectrum after'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object ComboPrv: TComboBox
+      Left = 156
+      Height = 35
+      Top = 28
+      Width = 223
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ItemHeight = 27
+      Items.Strings = (
+        'none'
+        'C[0]'
+        'C[1]'
+        'C[2]'
+        'C[3]'
+        'C[4]'
+        'C[5]'
+        'X'
+        'C_Mie'
+        'C_Y'
+        'S'
+        'n'
+        'T_W'
+        'Q'
+        'fluo'
+        'rho_L'
+        'rho_dd'
+        'rho_ds'
+        'beta'
+        'alpha'
+        'f_dd'
+        'f_ds'
+        'H_oz'
+        'WV'
+        'f'
+        'z'
+        'zB'
+        'sun'
+        'view'
+        'dphi'
+        'fA[0]'
+        'fA[1]'
+        'fA[2]'
+        'fA[3]'
+        'fA[4]'
+        'fA[5]'
+        'C_D'
+        'g_dd'
+        'g_dsr'
+        'g_dsa'
+        'delta_r'
+        'alpha_d'
+        'beta_d'
+        'gamma_d'
+        'delta_d'
+        'dummy'
+        'test'
+        'alpha_r'
+        'beta_r'
+        'gamma_r'
+      )
+      OnChange = ComboPrvChange
+      ParentFont = False
+      TabOrder = 0
+    end
+    object Prv_Min: TEdit
+      Left = 176
+      Height = 35
+      Top = 77
+      Width = 82
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnChange = Prv_MinChange
+      ParentFont = False
+      TabOrder = 1
+      Text = '0.1'
+    end
+    object Prv_Max: TEdit
+      Left = 299
+      Height = 35
+      Top = 76
+      Width = 82
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnChange = Prv_MaxChange
+      ParentFont = False
+      TabOrder = 2
+      Text = '10'
+    end
+    object Edit_updt: TEdit
+      Left = 264
+      Height = 35
+      Top = 124
+      Width = 50
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnChange = Edit_updtChange
+      ParentFont = False
+      TabOrder = 3
+      Text = '-1'
+    end
+    object Label_updt1: TLabel
+      Left = 320
+      Height = 27
+      Top = 132
+      Width = 61
+      Caption = 'pixels'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object ColorDialogMask: TColorDialog
+    Color = clBlack
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    left = 376
+    top = 536
+  end
+  object OpenDialog_LUT: TOpenDialog
+    DefaultExt = '.lut'
+    Options = [ofEnableSizing]
+    left = 184
+    top = 536
+  end
+end

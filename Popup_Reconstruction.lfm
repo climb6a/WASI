@@ -1,0 +1,673 @@
+object Popup_Reconstruct: TPopup_Reconstruct
+  Left = 1132
+  Height = 650
+  Top = 455
+  Width = 1018
+  Caption = 'Reconstruction mode settings'
+  ClientHeight = 650
+  ClientWidth = 1018
+  Color = clBtnFace
+  DesignTimePPI = 192
+  Font.Color = clWindowText
+  Font.Height = -26
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '2.0.6.0'
+  object GroupSaveErr: TGroupBox
+    Left = 32
+    Height = 496
+    Top = 32
+    Width = 960
+    Caption = 'Save relative error'
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -26
+    Font.Name = 'MS Sans Serif'
+    ParentFont = False
+    TabOrder = 26
+  end
+  object ButtonOK: TButton
+    Left = 288
+    Height = 60
+    Top = 560
+    Width = 180
+    Caption = 'OK'
+    Default = True
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -26
+    Font.Name = 'MS Sans Serif'
+    ModalResult = 1
+    OnClick = ButtonOKClick
+    ParentFont = False
+    TabOrder = 27
+  end
+  object ButtonCancel: TButton
+    Left = 518
+    Height = 60
+    Top = 560
+    Width = 180
+    Cancel = True
+    Caption = 'Cancel'
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -26
+    Font.Name = 'MS Sans Serif'
+    ModalResult = 2
+    OnClick = ButtonCancelClick
+    ParentFont = False
+    TabOrder = 28
+  end
+  object Check_CP: TCheckBox
+    Left = 96
+    Height = 35
+    Top = 90
+    Width = 80
+    Caption = 'C[0]'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_CPClick
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Check_C1: TCheckBox
+    Left = 96
+    Height = 35
+    Top = 130
+    Width = 80
+    Caption = 'C[1]'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_C1Click
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Check_C2: TCheckBox
+    Left = 96
+    Height = 35
+    Top = 170
+    Width = 80
+    Caption = 'C[2]'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_C2Click
+    ParentFont = False
+    TabOrder = 2
+  end
+  object Check_C3: TCheckBox
+    Left = 96
+    Height = 35
+    Top = 210
+    Width = 80
+    Caption = 'C[3]'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_C3Click
+    ParentFont = False
+    TabOrder = 3
+  end
+  object Check_C4: TCheckBox
+    Left = 96
+    Height = 35
+    Top = 250
+    Width = 80
+    Caption = 'C[4]'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_C4Click
+    ParentFont = False
+    TabOrder = 4
+  end
+  object Check_C5: TCheckBox
+    Left = 96
+    Height = 35
+    Top = 290
+    Width = 80
+    Caption = 'C[5]'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_C5Click
+    ParentFont = False
+    TabOrder = 5
+  end
+  object Check_CL: TCheckBox
+    Left = 96
+    Height = 35
+    Top = 330
+    Width = 83
+    Caption = 'C_X'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_CLClick
+    ParentFont = False
+    TabOrder = 6
+  end
+  object Check_CMie: TCheckBox
+    Left = 96
+    Height = 35
+    Top = 370
+    Width = 106
+    Caption = 'C_Mie'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_CMieClick
+    ParentFont = False
+    TabOrder = 7
+  end
+  object Check_CD: TCheckBox
+    Left = 96
+    Height = 35
+    Top = 410
+    Width = 127
+    Caption = 'bbs_phy'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_CDClick
+    ParentFont = False
+    TabOrder = 8
+  end
+  object Check_CY: TCheckBox
+    Left = 96
+    Height = 35
+    Top = 450
+    Width = 82
+    Caption = 'C_Y'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_CYClick
+    ParentFont = False
+    TabOrder = 9
+  end
+  object Check_S: TCheckBox
+    Left = 288
+    Height = 35
+    Top = 90
+    Width = 52
+    Caption = 'S'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_SClick
+    ParentFont = False
+    TabOrder = 10
+  end
+  object Check_n: TCheckBox
+    Left = 288
+    Height = 35
+    Top = 130
+    Width = 49
+    Caption = 'n'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_nClick
+    ParentFont = False
+    TabOrder = 11
+  end
+  object Check_TW: TCheckBox
+    Left = 288
+    Height = 35
+    Top = 170
+    Width = 87
+    Caption = 'T_W'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_TWClick
+    ParentFont = False
+    TabOrder = 12
+  end
+  object Check_Q: TCheckBox
+    Left = 288
+    Height = 35
+    Top = 210
+    Width = 55
+    Caption = 'Q'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_QClick
+    ParentFont = False
+    TabOrder = 13
+  end
+  object Check_fluo: TCheckBox
+    Left = 288
+    Height = 35
+    Top = 250
+    Width = 75
+    Caption = 'fluo'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_fluoClick
+    ParentFont = False
+    TabOrder = 47
+  end
+  object Check_rho_L: TCheckBox
+    Left = 288
+    Height = 35
+    Top = 290
+    Width = 97
+    Caption = 'rho_L'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_rho_LClick
+    ParentFont = False
+    TabOrder = 14
+  end
+  object Check_rho_dd: TCheckBox
+    Left = 288
+    Height = 35
+    Top = 330
+    Width = 112
+    Caption = 'rho_dd'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_rho_ddClick
+    ParentFont = False
+    TabOrder = 15
+  end
+  object Check_rho_ds: TCheckBox
+    Left = 288
+    Height = 35
+    Top = 370
+    Width = 110
+    Caption = 'rho_ds'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_rho_dsClick
+    ParentFont = False
+    TabOrder = 17
+  end
+  object Check_alpha: TCheckBox
+    Left = 288
+    Height = 35
+    Top = 410
+    Width = 95
+    Caption = 'alpha'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_alphaClick
+    ParentFont = False
+    TabOrder = 19
+  end
+  object Check_beta: TCheckBox
+    Left = 288
+    Height = 35
+    Top = 450
+    Width = 83
+    Caption = 'beta'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_betaClick
+    ParentFont = False
+    TabOrder = 18
+  end
+  object Check_f_dd: TCheckBox
+    Left = 480
+    Height = 35
+    Top = 90
+    Width = 83
+    Caption = 'f_dd'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_f_ddClick
+    ParentFont = False
+    TabOrder = 20
+  end
+  object Check_f_ds: TCheckBox
+    Left = 480
+    Height = 35
+    Top = 130
+    Width = 81
+    Caption = 'f_ds'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_f_dsClick
+    ParentFont = False
+    TabOrder = 21
+  end
+  object Check_H_oz: TCheckBox
+    Left = 480
+    Height = 35
+    Top = 170
+    Width = 91
+    Caption = 'H_oz'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_H_ozClick
+    ParentFont = False
+    TabOrder = 22
+  end
+  object Check_WV: TCheckBox
+    Left = 480
+    Height = 35
+    Top = 210
+    Width = 73
+    Caption = 'WV'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_WVClick
+    ParentFont = False
+    TabOrder = 23
+  end
+  object Check_f: TCheckBox
+    Left = 480
+    Height = 35
+    Top = 250
+    Width = 42
+    Caption = 'f'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_fClick
+    ParentFont = False
+    TabOrder = 24
+  end
+  object Check_z: TCheckBox
+    Left = 480
+    Height = 35
+    Top = 290
+    Width = 47
+    Caption = 'z'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_zClick
+    ParentFont = False
+    TabOrder = 29
+  end
+  object Check_zB: TCheckBox
+    Left = 480
+    Height = 35
+    Top = 330
+    Width = 63
+    Caption = 'zB'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_zBClick
+    ParentFont = False
+    TabOrder = 30
+  end
+  object Check_sun: TCheckBox
+    Left = 480
+    Height = 35
+    Top = 370
+    Width = 74
+    Caption = 'sun'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_sunClick
+    ParentFont = False
+    TabOrder = 31
+  end
+  object Check_view: TCheckBox
+    Left = 480
+    Height = 35
+    Top = 410
+    Width = 85
+    Caption = 'view'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_viewClick
+    ParentFont = False
+    TabOrder = 32
+  end
+  object Check_dphi: TCheckBox
+    Left = 480
+    Height = 35
+    Top = 450
+    Width = 83
+    Caption = 'dphi'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_dphiClick
+    ParentFont = False
+    TabOrder = 33
+  end
+  object Check_f_nw: TCheckBox
+    Left = 652
+    Height = 35
+    Top = 90
+    Width = 86
+    Caption = 'f_nw'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_f_nwClick
+    ParentFont = False
+    TabOrder = 49
+  end
+  object Check_fA0: TCheckBox
+    Left = 652
+    Height = 35
+    Top = 130
+    Width = 84
+    Caption = 'fA[0]'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_fA0Click
+    ParentFont = False
+    TabOrder = 34
+  end
+  object Check_fA1: TCheckBox
+    Left = 652
+    Height = 35
+    Top = 170
+    Width = 84
+    Caption = 'fA[1]'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_fA1Click
+    ParentFont = False
+    TabOrder = 35
+  end
+  object Check_fA2: TCheckBox
+    Left = 652
+    Height = 35
+    Top = 210
+    Width = 84
+    Caption = 'fA[2]'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_fA2Click
+    ParentFont = False
+    TabOrder = 36
+  end
+  object Check_fA3: TCheckBox
+    Left = 652
+    Height = 35
+    Top = 250
+    Width = 84
+    Caption = 'fA[3]'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_fA3Click
+    ParentFont = False
+    TabOrder = 37
+  end
+  object Check_fA4: TCheckBox
+    Left = 652
+    Height = 35
+    Top = 290
+    Width = 84
+    Caption = 'fA[4]'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_fA4Click
+    ParentFont = False
+    TabOrder = 38
+  end
+  object Check_fA5: TCheckBox
+    Left = 652
+    Height = 35
+    Top = 330
+    Width = 84
+    Caption = 'fA[5]'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_fA5Click
+    ParentFont = False
+    TabOrder = 39
+  end
+  object Check_g_dd: TCheckBox
+    Left = 652
+    Height = 35
+    Top = 370
+    Width = 91
+    Caption = 'g_dd'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_g_ddClick
+    ParentFont = False
+    TabOrder = 40
+  end
+  object Check_g_dsr: TCheckBox
+    Left = 652
+    Height = 35
+    Top = 410
+    Width = 97
+    Caption = 'g_dsr'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_g_dsrClick
+    ParentFont = False
+    TabOrder = 25
+  end
+  object Check_g_dsa: TCheckBox
+    Left = 652
+    Height = 35
+    Top = 450
+    Width = 102
+    Caption = 'g_dsa'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_g_dsaClick
+    ParentFont = False
+    TabOrder = 41
+  end
+  object Check_delta_r: TCheckBox
+    Left = 826
+    Height = 35
+    Top = 90
+    Width = 110
+    Caption = 'delta_r'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_delta_rClick
+    ParentFont = False
+    TabOrder = 42
+  end
+  object Check_alpha_d: TCheckBox
+    Left = 826
+    Height = 35
+    Top = 130
+    Width = 122
+    Caption = 'alpha_d'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_alpha_dClick
+    ParentFont = False
+    TabOrder = 44
+  end
+  object Check_beta_d: TCheckBox
+    Left = 826
+    Height = 35
+    Top = 170
+    Width = 110
+    Caption = 'beta_d'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_beta_dClick
+    ParentFont = False
+    TabOrder = 43
+  end
+  object Check_gamma_d: TCheckBox
+    Left = 826
+    Height = 35
+    Top = 210
+    Width = 143
+    Caption = 'gamma_d'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_gamma_dClick
+    ParentFont = False
+    TabOrder = 45
+  end
+  object Check_delta_d: TCheckBox
+    Left = 826
+    Height = 35
+    Top = 250
+    Width = 116
+    Caption = 'delta_d'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_delta_dClick
+    ParentFont = False
+    TabOrder = 46
+  end
+  object Check_dummy: TCheckBox
+    Left = 826
+    Height = 35
+    Top = 290
+    Width = 114
+    Caption = 'dummy'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_dummyClick
+    ParentFont = False
+    TabOrder = 16
+  end
+  object Check_test: TCheckBox
+    Left = 826
+    Height = 35
+    Top = 330
+    Width = 74
+    Caption = 'test'
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Check_testClick
+    ParentFont = False
+    TabOrder = 48
+  end
+end

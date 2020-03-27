@@ -1,0 +1,58 @@
+object Mem_Info: TMem_Info
+  Left = 636
+  Height = 283
+  Top = 245
+  Width = 275
+  BorderStyle = bsDialog
+  Caption = 'Memory info'
+  ClientHeight = 283
+  ClientWidth = 275
+  Font.Height = -12
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.0.6.0'
+  object OKButton: TButton
+    Left = 96
+    Height = 25
+    Top = 248
+    Width = 72
+    Caption = 'OK'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -12
+    Font.Name = 'MS Sans Serif'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = OKButtonClick
+    ParentFont = False
+    TabOrder = 0
+  end
+  object MemoryList: TValueListEditor
+    Left = 16
+    Height = 232
+    Top = 8
+    Width = 240
+    DefaultColWidth = 100
+    Enabled = False
+    FixedCols = 0
+    RowCount = 7
+    TabOrder = 1
+    TitleFont.Height = -12
+    Strings.Strings = (
+      'Total RAM=-1'
+      'Free RAM=-1'
+      'Total Pagefile=-1'
+      'Free Pagefile='
+      'Total Virtual='
+      'Free Virtual='
+    )
+    TitleCaptions.Strings = (
+      'Memory type'
+      'MB'
+      ''
+    )
+    ColWidths = (
+      100
+      136
+    )
+  end
+end

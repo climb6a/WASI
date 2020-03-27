@@ -1,0 +1,246 @@
+object FormDir: TFormDir
+  Left = 1136
+  Height = 490
+  Top = 425
+  Width = 1474
+  Caption = 'Directories'
+  ClientHeight = 490
+  ClientWidth = 1474
+  Color = clBtnFace
+  DesignTimePPI = 192
+  Font.CharSet = GREEK_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -24
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '2.0.6.0'
+  object GroupBoxSave: TGroupBox
+    Left = 16
+    Height = 226
+    Top = 176
+    Width = 1440
+    Caption = 'Save results'
+    ClientHeight = 194
+    ClientWidth = 1436
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    ParentFont = False
+    TabOrder = 2
+    object Text_Save_Fwd: TStaticText
+      Left = 44
+      Height = 34
+      Top = 36
+      Width = 236
+      Caption = 'Forward calculations:'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentFont = False
+      TabOrder = 0
+    end
+    object Text_Save_Inv: TStaticText
+      Left = 44
+      Height = 34
+      Top = 84
+      Width = 142
+      Caption = 'Spectra fit:'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentFont = False
+      TabOrder = 1
+    end
+    object EditDirSaveFw: TEdit
+      Left = 284
+      Height = 35
+      Top = 32
+      Width = 1058
+      Enabled = False
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentFont = False
+      ReadOnly = True
+      TabStop = False
+      TabOrder = 2
+    end
+    object EditDirSaveInv: TEdit
+      Left = 284
+      Height = 35
+      Top = 80
+      Width = 1058
+      Enabled = False
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentFont = False
+      ReadOnly = True
+      TabStop = False
+      TabOrder = 3
+    end
+    object ButtonDirSaveFw: TButton
+      Left = 1360
+      Height = 38
+      Top = 36
+      Width = 58
+      Caption = 'set'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnClick = ButtonDirSaveFwClick
+      ParentFont = False
+      TabOrder = 4
+    end
+    object ButtonDirSaveInv: TButton
+      Left = 1360
+      Height = 42
+      Top = 80
+      Width = 58
+      Caption = 'set'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnClick = ButtonDirSaveInvClick
+      ParentFont = False
+      TabOrder = 5
+    end
+    object Text_Save_Fit: TStaticText
+      Left = 46
+      Height = 34
+      Top = 132
+      Width = 126
+      Caption = 'Image fit:'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentFont = False
+      TabOrder = 6
+    end
+    object EditDirSaveFit: TEdit
+      Left = 284
+      Height = 35
+      Top = 128
+      Width = 1058
+      Enabled = False
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentFont = False
+      ReadOnly = True
+      TabStop = False
+      TabOrder = 7
+    end
+    object ButtonDirSaveFit: TButton
+      Left = 1360
+      Height = 42
+      Top = 132
+      Width = 58
+      Caption = 'set'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnClick = ButtonDirSaveFitClick
+      ParentFont = False
+      TabOrder = 8
+    end
+  end
+  object GroupBoxRead: TGroupBox
+    Left = 16
+    Height = 130
+    Top = 32
+    Width = 1440
+    Caption = 'Read spectra'
+    ClientHeight = 98
+    ClientWidth = 1436
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    ParentFont = False
+    TabOrder = 3
+    object StaticText3: TStaticText
+      Left = 44
+      Height = 34
+      Top = 36
+      Width = 100
+      Caption = 'Inversion:'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentFont = False
+      TabOrder = 0
+    end
+    object EditFilesLoad: TEdit
+      Left = 284
+      Height = 35
+      Top = 28
+      Width = 1058
+      Enabled = False
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentFont = False
+      TabOrder = 1
+    end
+    object ButtonDirLoad: TButton
+      Left = 1360
+      Height = 42
+      Top = 28
+      Width = 58
+      Caption = 'set'
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnClick = ButtonDirLoadClick
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
+  object ButtonOK: TButton
+    Left = 656
+    Height = 50
+    Top = 424
+    Width = 150
+    Caption = 'OK'
+    Default = True
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    ModalResult = 1
+    OnClick = ButtonOKClick
+    ParentFont = False
+    TabOrder = 0
+  end
+  object ButtonCancel: TButton
+    Left = 816
+    Height = 50
+    Top = 424
+    Width = 150
+    Cancel = True
+    Caption = 'Cancel'
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    ModalResult = 2
+    OnClick = ButtonCancelClick
+    ParentFont = False
+    TabOrder = 1
+  end
+end

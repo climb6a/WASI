@@ -1,0 +1,167 @@
+object Format_2D: TFormat_2D
+  Left = 544
+  Height = 356
+  Top = 221
+  Width = 572
+  HorzScrollBar.Page = 336
+  HorzScrollBar.Tracking = True
+  VertScrollBar.Page = 320
+  VertScrollBar.Tracking = True
+  AutoScroll = True
+  Caption = 'WASI-2D'
+  ClientHeight = 356
+  ClientWidth = 572
+  Color = clBtnFace
+  DesignTimePPI = 192
+  Font.Height = -24
+  OnClick = show_spectrum
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  OnKeyPress = FormKeyPress
+  OnMouseDown = FormMouseDown
+  OnMouseMove = show_coordinates
+  OnMouseUp = FormMouseUp
+  OnPaint = FormPaint
+  Position = poDefault
+  LCLVersion = '2.0.6.0'
+  object Label_Scroll_BB: TLabel
+    Left = 16
+    Height = 32
+    Top = 240
+    Width = 54
+    Alignment = taRightJustify
+    BidiMode = bdRightToLeft
+    Caption = 'Band'
+    Font.Height = -24
+    ParentBidiMode = False
+    ParentColor = False
+    ParentFont = False
+  end
+  object Image_in: TImage
+    Left = 0
+    Height = 193
+    Top = 0
+    Width = 113
+    AutoSize = True
+    OnClick = show_spectrum
+    OnMouseDown = FormMouseDown
+    OnMouseMove = Image_inMouseMove
+    OnMouseUp = FormMouseUp
+    Proportional = True
+  end
+  object Label_min: TLabel
+    Left = 248
+    Height = 24
+    Top = 144
+    Width = 16
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = '-1'
+    Font.Height = -24
+    ParentBidiMode = False
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label_max: TLabel
+    Left = 288
+    Height = 32
+    Top = 144
+    Width = 23
+    Caption = '-1'
+    Font.Height = -24
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label_Band: TLabel
+    Left = 328
+    Height = 12
+    Top = 152
+    Width = 8
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '-1'
+    Color = clBtnFace
+    Font.Height = -24
+    ParentBidiMode = False
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object Label_Scroll_wB: TLabel
+    Left = 128
+    Height = 32
+    Top = 240
+    Width = 35
+    Caption = 'nm'
+    Font.Height = -24
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label_Scroll_BG: TLabel
+    Left = 16
+    Height = 32
+    Top = 264
+    Width = 54
+    Alignment = taRightJustify
+    Caption = 'Band'
+    Font.Height = -24
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label_Scroll_BR: TLabel
+    Left = 16
+    Height = 32
+    Top = 288
+    Width = 54
+    Alignment = taRightJustify
+    Caption = 'Band'
+    Font.Height = -24
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label_Scroll_wG: TLabel
+    Left = 128
+    Height = 32
+    Top = 264
+    Width = 35
+    Caption = 'nm'
+    Font.Height = -24
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label_Scroll_wR: TLabel
+    Left = 128
+    Height = 32
+    Top = 288
+    Width = 35
+    Caption = 'nm'
+    Font.Height = -24
+    ParentColor = False
+    ParentFont = False
+  end
+  object ScrollBar_Bands: TScrollBar
+    Left = 56
+    Height = 16
+    Top = 216
+    Width = 72
+    PageSize = 0
+    TabOrder = 0
+    OnScroll = ScrollBar_BandsScroll
+  end
+  object Button_ScrollBands: TButton
+    Left = 168
+    Height = 24
+    Top = 144
+    Width = 40
+    Caption = '>'
+    Font.Height = -24
+    OnClick = Button_ScrollBandsClick
+    ParentFont = False
+    TabOrder = 1
+  end
+  object SaveDialogFitresults: TSaveDialog
+    Options = [ofOverwritePrompt, ofHideReadOnly, ofEnableSizing]
+    left = 168
+    top = 8
+  end
+end

@@ -1,0 +1,155 @@
+object FormGeneral: TFormGeneral
+  Left = 1124
+  Height = 360
+  Top = 484
+  Width = 766
+  Caption = 'General options'
+  ClientHeight = 360
+  ClientWidth = 766
+  Color = clBtnFace
+  DesignTimePPI = 192
+  Font.Color = clWindowText
+  Font.Height = -24
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '2.0.6.0'
+  object CheckBoxSaveINI: TCheckBox
+    Left = 48
+    Height = 35
+    Top = 38
+    Width = 307
+    Caption = 'save INI file automatically'
+    Checked = True
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = CheckBoxSaveINIClick
+    ParentFont = False
+    State = cbChecked
+    TabOrder = 0
+  end
+  object ButtonOK: TButton
+    Left = 192
+    Height = 60
+    Top = 288
+    Width = 180
+    Caption = 'OK'
+    Default = True
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    ModalResult = 1
+    OnClick = ButtonOKClick
+    ParentFont = False
+    TabOrder = 1
+  end
+  object ButtonCancel: TButton
+    Left = 404
+    Height = 60
+    Top = 290
+    Width = 180
+    Cancel = True
+    Caption = 'Cancel'
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    ModalResult = 2
+    OnClick = ButtonCancelClick
+    ParentFont = False
+    TabOrder = 2
+  end
+  object CheckBox_E_factor: TCheckBox
+    Left = 48
+    Height = 35
+    Top = 96
+    Width = 381
+    Caption = 'multiply spectrum Ed with factor'
+    Checked = True
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = CheckBox_E_factorClick
+    ParentFont = False
+    State = cbChecked
+    TabOrder = 3
+  end
+  object Edit_Ed_factor: TEdit
+    Left = 538
+    Height = 35
+    Top = 96
+    Width = 196
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnChange = Edit_Ed_factorChange
+    ParentFont = False
+    TabOrder = 4
+    Text = '-1'
+  end
+  object CheckBox_Rrs: TCheckBox
+    Left = 48
+    Height = 35
+    Top = 212
+    Width = 379
+    Caption = 'multiply spectrum rrs with factor'
+    Checked = True
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = Rrs_factorClick
+    ParentFont = False
+    State = cbChecked
+    TabOrder = 5
+  end
+  object Edit_Rrs_factor: TEdit
+    Left = 538
+    Height = 35
+    Top = 212
+    Width = 196
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnChange = Edit_Rrs_factorChange
+    ParentFont = False
+    TabOrder = 6
+    Text = '-1'
+  end
+  object CheckBox_E0_factor: TCheckBox
+    Left = 48
+    Height = 35
+    Top = 154
+    Width = 380
+    Caption = 'multiply spectrum E0 with factor'
+    Checked = True
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnClick = CheckBox_E0_factorClick
+    ParentFont = False
+    State = cbChecked
+    TabOrder = 7
+  end
+  object Edit_E0_factor: TEdit
+    Left = 538
+    Height = 35
+    Top = 154
+    Width = 196
+    Font.CharSet = GREEK_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    OnChange = Edit_E0_factorChange
+    ParentFont = False
+    TabOrder = 8
+    Text = '-1'
+  end
+end
