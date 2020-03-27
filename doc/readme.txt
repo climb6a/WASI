@@ -1,0 +1,337 @@
+Änderungen am Programm WASI
+---------------------------
+
+13.11.2000  Programmierfehler behoben: Rho-plus wurde beim Fit immer konstant gehalten.
+13.11.2000  Programmierfehler behoben: Parameterliste für Inversprogramm war doppelt vorhanden;
+            beim Programmstart wurde die falsche angezeigt, welche nicht aktualisiert wird.
+13.11.2000  Schalter "Wavelength dependent surface reflections" angeschlossen
+13.11.2000  Inversion: Faktor f bei R = f*bb/(a+bb) ergänzt
+13.11.2000  Notation: "reflectance above water" durch "remote sensing reflectance" ersetzt
+13.11.2000  Gelöscht: rho_minus * R nicht mehr verfügbar (Vorwärtsmodell)
+13.11.2000  Programmierfehler behoben: S wurde immer vom Vorwärtsmodell geholt
+14.11.2000  Q-Faktor eingeführt anstelle von rho_plus = s/Q
+20.11.2000  Neuer Frame: Anzeige Iterationen, Residuum
+20.11.2000  Programmierfehler behoben: Übernahme aktualisierter Fitparameter vom Popup-Menü in Frame
+20.11.2000  Programmierfehler behoben: Schalter "Fit" bei Angström-Exponent Aerosole korrekt implementiert
+21.11.2000  R_rs einlesen und invertieren
+22.11.2000  Multiplikator für R_rs
+22.11.2000  WASI.INI: Radiance reduction factor s
+22.11.2000  Legende "measurement", "fit" bei Plot Inversion
+23.11.2000  Mode Batch ergänzt und Benutzereingabe vorbereitet
+23.11.2000  Popup-Menü "Batch" implementiert
+23.11.2000  WASI.INI: Parameter des Batch-Modes
+23.11.2000  Programmierfehler behoben: Wellenlängenabhängige Oberflächenspiegelungen nun berücksichtigt
+24.11.2000  Konsistente Reihenfolge der Parameter (vorwärts, invers)
+24.11.2000  Berechnung und Anzeige von R, a, aPh
+24.11.2000  Programmierfehler behoben: Autoscaling für negative Werte
+24.11.2000  Neues Icon
+26.11.2000  Batch-Mode: Grundgerüst für Vorwärtsrechnung programmiert
+26.11.2000  INI-File laden
+27.11.2000  Batch-Mode: Autoscale
+27.11.2000  Batch-Mode: Zähler eingebaut
+27.11.2000  Batch-Mode: Speichern der Spektren
+28.11.2000  Batch-Mode: Logarithmische Intervalle
+01.12.2000  Programmierfehler behoben: Anpassen der x-Werte
+04.12.2000  Programmierfehler behoben: Division by zero im Invers-Mode
+09.12.2000  Auswahl x-Werte-File mittels Menüpunkt
+29.12.2000  Hintergrundfarbe einstellbar
+30.12.2000  Inversion: Residuum-Typ einstellbar
+04.01.2001  Rekonstruktions-Mode: Inversion beliebig vieler Spektren aus Vorwärts-Rechnung
+05.01.2001  Inversion beliebig vieler Spektren, die aus Dateien eingelesen werden
+05.01.2001  Abspeichern der Inversionsergebnisse vieler Spektren
+05.01.2001  Gelöscht: Alter Forward-Mode
+08.01.2001  Inversion von R = irradiance reflectance
+12.01.2001  Programmierfehler behoben: Simplex konnte vom Minimum wieder wegwandern
+06.04.2001  Markierung nicht verwendeter Fitparameter
+06.04.2001  Inversion von L_up
+06.04.2001  Sanduhr während Inversion
+08.04.2001  Gelöscht: aktuelle Phytoplanktonklasse auswählen (forward)
+08.04.2001  Wellenlängenabhängige Oberflächenreflexionen: Unterscheidung forward/invers
+08.04.2001  Meldung, wenn Inversion nicht implementiert ist
+08.04.2001  Parameterliste für Absorption
+08.04.2001  Parameterliste für R
+30.10.2001  flag_gewicht gelöscht: Wellenlängengewichtung aus File wird immer verwendet
+04.11.2001  Startwertbestimmung von R optimiert
+06.11.2001  Unterschiedliche Parameter forward/invers im reconstruction mode
+06.11.2001  Ausgabe von Mean, Max und rel. Fehler in FITPARS.TXT
+11.11.2001  Popup-Window "Reconstruction mode" erzeugt 
+20.11.2001  WASI.INI: fwd und inv Parameters zusammen tabelliert
+20.11.2001  WASI.INI: Reihenfolge der Einträge geändert
+20.11.2001  WASI.INI: Parameter "shallow water" hinzugenommen
+20.11.2001  WASI.INI: LambdaLf und LambdaCY hinzugenommen
+28.11.2001  Einlesen von albedo[i], Ku, Kd
+30.11.2001  Public version: flag
+01.12.2001  Flachwasser-Parameter in R_rs-Liste
+05.02.2002  Inversion der Bodenreflexion
+05.02.2002  Neues Menü für Directories
+25.07.2002  Rauschen und radiometrische Auflösung
+28.07.2002  Fehler behoben: Spektren wurden im reconstruction-mode nicht gespeichert
+14.08.2002  Testspektrum als weiterer Spektrum-Typ
+21.08.2002  f-Faktor: diverse Modelle
+03.09.2002  Fehler behoben: Schrittweite der Fits wurde ignoriert, war immer 1 Kanal
+03.02.2003  Fehler behoben: Schleife für Inversion von Files wurde 2x durchlaufen
+14.02.2003  Neues Spektrum: Kd
+22.02.2003  GUI: Optionen des Invers-Modes geändert
+23.02.2003  R_surf: Berechnung von sigma* aus view mittels Fresnel-Gleichung
+01.03.2003  Sourcecode verkürzt für "Load"
+01.03.2003  Vorwärtsmode: Ed-Messung kann benutzt werden
+02.03.2003  Vorwärtsmode: Ls-Messung kann benutzt werden
+08.03.2003  Inversmode:   Ed- und Ls-Messungen können benutzt werden
+12.03.2003  Vorwärtsmode: Algorithmen von Andreas für R und R_rs eingebaut
+14.03.2003  Parameter C_P, C_Cl, C_Ch, C_D, C_DF, C_G durch C[i], i=0..5, ersetzt
+14.03.2003  Spektren aP, aCl, aCh, aD, aDF, aG durch aP[i], i=0..5, ersetzt
+20.06.2003  Parameterlisten: C_P, C_Cl, C_Ch, C_D, C_DF, C_G durch C[i] ersetzt
+20.06.2003  WASI.INI: eine Reihe neuer Parameter und Konstanten eingefügt
+15.08.2003  GUI: Model options - Registerkarte R_rs hinzugefügt
+15.08.2003  Neue Unit "Extras"
+30.08.2003  fw_calc: Alle Berechnung an Gleichungen in Paper Gege + Albert (2004) angepaßt
+30.08.2003  WASI.INI: neue Parameter eingefügt und überflüssige Spektren gelöscht
+31.08.2003  bb-Modell ergänzt
+03.09.2003  Plot der K's und k's
+07.09.2003  GUI: Surface reflections - use measurement L_sky or E_d
+23.10.2003  Neues Icon
+22.11.2003  Hilfe eingebaut: Teil des WASI-Manuals
+05.06.2004  2 Codes vereinigt (Andreas+Peter)
+05.06.2004  WASI.INI: einige neue Konstanten eingefügt, Version 2.3
+12.06.2004  Fehler behoben: Compilerfehler auf Laptop, wenn Unit1 in IDE - jetzt noch Speicherplatzproblem
+21.06.2004  Popup-Menüs: Darstellungsfehler behoben
+23.06.2004  XP-Problem lokalisiert und eliminiert (1 Woche gesucht!)
+04.07.2004  WASI.INI: einige neue Konstanten eingefügt, Version 2.4
+06.07.2004  WASI.INI: einige Konstanten für shallow water entfernt, Version 2.4
+22.07.2004  R_bottom: Auswahl radiance/irradiance sensor
+19.03.2005  fw_invers: Andreas' Prozeduren für analyt. Bestimmung von zB geändert
+19.03.2005  Fehler behoben: Berechnung der k's war falsch (fwd und inv gleichermaßen)
+03.04.2005  Fehlermeldung, wenn WASI.INI nicht vorhanden
+18.04.2005  calc_initial_zB: l = 1...100 ersetzt durch l = C_L.min...C_L.max & dl = 0.5
+18.04.2005  WASI.INI: Min-Werte von C[0], C_L, C_Y hochgesetzt
+22.05.2005  Shallow water: Neue Bodenalbedo-Spektren BOTTOM.PRN, SAND.PRN
+29.05.2005  Eingabespektren: Headerinformationen ergänzt
+05.06.2005  GUI: Irradiance reflectance of shallow water
+06.06.2005  WASI.INI: einige Parameter für shallow water ergänzt
+01.03.2008  GUI: Anzeige der Fitergebnisse nach Inversion
+01.03.2008  Laden von Spektrum von File: fehlerhafte Betriebsmodi-Verstellung behoben
+21.03.2008  Programmstart: Fehlermeldung ergänzt, wenn Inputfile nicht gefunden wird
+05.04.2008  fw_calc: z-Abhängigkeit eingebaut für Ed, R_sh, Rrs_sh
+18.04.2008  Fehler behoben: wenn Nutzer zB oder C_L festhalten wollte, sprangen sie auf unsinnige Werte
+13.04.2009  Fehler behoben: Display - [Spektrum] funktionierte oft erst beim 2. Aufruf
+13.04.2009  Fehler behoben: Berechnung des f-Faktors nach Albert & Mobley (2003) war falsch
+14.04.2009  Fehler behoben: Stellte man nach Inversion wieder auf fwd-Mode um, dann veränderten sich 
+            die fwd-Parameter, die Fitparameter waren.
+14.04.2009  Fehler behoben: Fitergebnisse wurden nicht angezeigt (ab 5.8.08)
+14.04.2009  Fehler behoben für Reconstruction mode: trotz Festhalten wurden Parameter gefittet
+08.12.2009  Vorwärtsmode: Ed-Modell von Gregg and Carder (1990) angefangen zu implementieren
+18.12.2009  Frame_Ed_GC: hinzugefügt (am 28.7.10 wieder gelöscht)
+19.12.2009  PRIVATE.INI: hinzugefügt
+30.12.2009  Inversion: Schleife über mehrere Spektren pro File
+02.01.2010  Modelle: Ed-Modell von Gregg & Carder (1990) fertig implementiert
+02.01.2010  Datenimport: Mehrdeutigkeit des Dateiformats korrigiert
+30.06.2010  fw_invers: Definition von "best" und "worst" geändert (Vektor --> Zahl)
+30.06.2010  Fehler behoben: Indexüberlauf map[j] in fw_invers
+01.07.2010  Fluoreszenz ergänzt
+23.07.2010  Eingabespektren: Erste Zeile als Plot-Beschriftung einlesen
+23.07.2010  Menü: Spektrum darstellbar, sobald beschreibender Text "ParText" nicht leer
+27.07.2010  Layout: Fenstergröße variabel
+28.07.2010  Layout: einheitliche Parameterliste (zweispaltig)
+28.07.2010  Fehler behoben: Anzeige eines falschen Dateinamens, wenn File nicht gefunden wird
+15.08.2010  Day of year ergänzt
+18.09.2010  Daten einlesen: Zeilenlänge > 256 nun erlaubt
+26.11.2010  Directories: Anpassung des Popup-Dialogs an lange Pfade durch Nutzer
+26.11.2010  Plot: bei wenigen Datenpunkten können Punkte gezeichnet werden
+27.03.2011  Spektrale Mittelung (Resampling)
+03.06.2011  Suspended particles --> Detritus
+08.06.2011  Ausgabespektren: Ausgabe des Mittelwerts
+11.06.2011  Startwertbestimmung von z für Ed-Fit
+11.01.2012  Kein Support mehr von AnsiStrings, da diese zu Fehlern führen können (Absturz) 
+13.01.2012  Fehler behoben: Es konnte vorkommen, dass einzeln importiertes Spektrum  beim Fit ignoriert wurde
+17.02.2012  WASI-2D: Import von Grafikfiles
+18.02.2012  WASI-2D: Menü "Options 2D"
+19.02.2012  WASI-2D: Lesen und Darstellen von Hyperspektral-Bildern (BIL, BSQ) als RGB
+20.02.2012  WASI-2D: Erweiterung der Datentypen, ENVI-Header lesen
+21.02.2012  WASI-2D: Einzelnes Spektrum selektieren, darstellen und fitten 
+29.02.2012  WASI-2D: Fitergebnis als mehrkanaliges Hyperspektralbild speichern
+01.03.2012  WASI-2D: ENVI-Header schreiben
+04.03.2012  WASI-2D: Dateinamen für Fitergebnis wählen, WASI-Einstellungen speichern
+05.03.2012  WASI-2D: Berechnung von Mittelwert und Standardabweichung für Auswahlrechteck
+09.03.2012  WASI-2D: Transfer von Wellenlängen und FWHM aus ENVI-Header in WAVELENGTH.TXT
+09.03.2012  WASI-2D: Spektrales Resampling entsprechend FWHM des Sensors
+30.03.2012  Spektrales Resampling entsprechend FWHM des Sensors
+31.03.2012  Fehler behoben: z hatte auch für Überwasserspektren den Wert, der für unter Wasser eingestellt war
+01.09.2012  Fehler behoben: Pfad für Batchmode wurde verstümmelt, daher lief Batchmode nicht 
+21.11.2012  Fehler behoben: Chlorophyll-Fluoreszenz im Invers-Mode
+06.02.2013  Berechnung der Eindringtiefe
+29.03.2013  WASI.INI: res_max ergänzt
+23.08.2013  Fehler behoben: Eingabe von z in 'Frame_par' wurde nicht übernommen
+24.08.2013  Fehler behoben: z hatte auch für Überwasserspektren den Wert, der für unter Wasser eingestellt war (fwd)
+23.10.2013  Vorwärtssimulation: Einlesen des Sensorrauschens
+26.10.2013  Popup_Tuning: Checkbox "automatic determination of initial values" und Folgeaktionen gelöscht
+26.10.2013  WASI.INI: flag_autoiniR gelöscht
+26.10.2013  Reconstruction mode: Abbruch durch 'Pause'-Taste eingebaut
+03.11.2013  WASI-2D: Inversion eines Ausschnitts
+09.11.2013  Vorwärtssimulation: Offset
+15.11.2013  WASI-2D: Anzeige geographischer Koordinaten
+16.11.2013  WASI-2D: Import von CalVal-Daten und Export zusammen mit Fitparametern als ASCII-Tabelle
+29.11.2013  WASI-2D: Anzeige des Bandnamens
+06.12.2013  WASI-2D: Initialisierung des Simplex durch Mittelwert vorhergehender Pixel und bei Bedarf durch Anfangswerte
+06.12.2013  Klarheit des Codes verbessert (set_fitparameters --> set_parameters_inverse, select_fit --> exclude_fit )
+07.12.2013  Fehler behoben: Sensortiefe wurde bei WASI-2D nicht immer Null gesetzt
+14.12.2013  WASI-2D: Bestimmung der Bodenreflexion
+20.12.2013  WASI-2D: Subtraktion von 2 Hyperspektralbildern
+31.12.2013  Fehler behoben: 'read from file' in GUI markiert, obwohl 'flag_b_LoadAll' in WASI.INI Null
+31.12.2013  Fehler behoben: Bei Start im Inverse Mode und dann Umschalten auf Forward Mode wurden alle Modellparameter auf Null gesetzt
+31.12.2013  Fehler behoben: Fehler des iterierten Parameters wurde im Reconstruction Mode falsch berechnet
+02.01.2014  Unit1: Sortiert, Kommentare ergänzt, 23 Prozeduren gelöscht
+11.01.2014  Datenbank: neue Spektren WATER.A und daWdT.txt (190-4000 nm)
+24.01.2014  fw_private: Mittelung von Spektren aus ASCII-Tabelle ergänzt
+01.02.2014  fw_private: Heatmap-Erzeugung aus ASCII-Tabelle ergänzt
+20.02.2014  Fehler behoben: WASI-2D stürzte bei kleinen sowie bei nicht-quadratischen Bildern ab
+22.02.2014  fw_private: Berechnung statistischer Größen aus ASCII-Tabelle ergänzt
+01.03.2014  GUI: Erläuternden Text für die Parameter ergänzt
+02.03.2014  WASI-2D: Tools - explore bands
+17.04.2014  WASI-2D: Importfilter des Envi-Headers für Wavelength und FWHM verbessert
+14.06.2014  Fehler behoben: n wurde im Inverse-Mode bei Rrs-Berechnung ignoriert
+15.06.2014  Optionale Ausgabe von Kd(PAR) ergänzt (private)
+15.06.2014  Blanks in FITPARS.TXT durch Tabulatoren ersetzt       
+15.06.2014  Prozedur "mittle_Fitparameter" deaktiviert
+16.06.2014  WASI-2D: Fehler bei kleinen Bildern behoben: Cursorposition war um Breite des linken Randes verschoben
+11.07.2014  Fehler behoben: aY wurde im Inverse-Mode teils mit S aus Forward-Mode initialisiert
+11.07.2014  Fehler behoben: Reskaliertes Rrs-Spektrum wurde unskaliert angezeigt
+12.07.2014  Secchi-Depth Algorithmus ergänzt (private)
+13.07.2014  Konzentrations-abhängiges Modell für a*_ph ergänzt (private)
+31.07.2014  Fehlermeldung bei fehlerhaftem Wellenlängenfile und wenn Inputspektren <3 Kanäle haben
+02.09.2014  Einlesen von Tabellen mit TAB und Blank als Trennzeichen
+29.10.2014  WASI-2D: Bei Extraktion eines Spektrums aus Bild werden Bildname und Koordinaten in Header geschrieben
+29.10.2014  WASI-2D: Auswahl 'invert image, invert area, invert spectrum' ergänzt
+30.10.2014  WASI-2D: Flags steuern Verwendung von ROI (private)
+20.12.2014  WASI-2D: Fehler bei kleinen Bildern behoben: Auswahl-Rechteck war um Abstand zum linken Randes verschoben
+27.12.2014  Fehler behoben: Die fw-Parameter wurden manchmal auf Null gesetzt (ungerechtfertigter Aufruf von set_actual_parameters)
+02.02.2015  Fehler behoben: beim Einlesen von Wellenlänge und FWHM aus Envi-Header wurde in erster Zeile Skalierung ignoriert
+03.02.2015  Einlesen von ASCII-Tabellen auf Unix- und Mac-Format erweitert
+06.02.2015  Delphi 7 durch XE7 ersetzt
+07.02.2015  Alternative Compilierung für 32bit oder 64bit implementiert
+17.02.2015  --- Update auf IOCCG Webseite ---
+26.02.2015  Fehler behoben: erster Kanal von ASCII-Spektren (incl. lambda.txt) wurde nicht eingelesen (Ursache: meine readlnS-Funktion)
+01.03.2015  WASI-2D: Anpassung der x-Skalierung entsprechend "wavelengths units" im ENVI-Headerfile
+01.03.2015  WASI-2D: Ausgabe von Warnungen bei Inkonsistenzen im ENVI-Headerfile
+09.03.2015  Fehler behoben: Batch-Mode lief nicht mehr
+08.04.2015  Fehler behoben: Vorwärtsparameter wurden beim Umschalten Inversmode --> Vorwärtsmode auf Null gesetzt
+15.08.2015  Einlesen von Messdaten: optional Multiplikation mit Spektrum
+03.09.2015  WASI.INI: R_nw, scaleS, flag_scale, flag_scale_c, scale_c ergänzt
+03.09.2015  Popup Dataformat: 'Change scaling of measurements' ergänzt
+04.09.2015  Unit2 umbenannt nach Popup_Display
+04.09.2015  Fitparameter f_nw ergänzt
+04.09.2015  Fehler behoben: Background mode funktionierte nicht mehr
+10.09.2015  Fehler behoben: Mauszeiger-Position stimmte bei grossen Bildern nicht
+10.09.2015  --- Update auf IOCCG Webseite ---
+11.10.2015  Fehler behoben: Bei Spektrum-Typ "Bottom reflectance" wurde beim Einlesen eines Spektrums albedo[0] durch das Spektrum überschrieben
+12.10.2015  fw_allg: Veraltete Funktionen 'assign', 'close' generell durch 'assignFile', 'closeFile' ersetzt
+17.10.2015  Private Version: Einlesen von view und dphi aus Header implementiert
+21.10.2015  Fehler behoben: Absturz bei Programmstart bei falschem Pfad in WASI4.INI (raise Exception.Create --> MessageBox)
+02.11.2015  PRIVATE.INI: Berücksichtigung eines Wellenlängenfehlers der Messung
+21.11.2015  Fehler behoben: Im Vorwärtsmode wurden Parametergrenzen des Inversmodes verwendet
+21.11.2015  GUI verbessert: bbW wurde nach Änderung eines Parameters aus Liste der darstellbaren Spektren gelöscht
+08.12.2015  WASI-2D: Beschränkung der Filegröße auf 2 GB aufgehoben
+08.01.2016  Fehler behoben: bei manchen Bildschirm-Auflösungen war GUI verzerrt (Ticket Xiadong Zhang)
+08.01.2016  Vorwärtsmode: Farbige Darstellung bei Serien von Spektren
+12.01.2016  Fehler behoben: Falsche Gleichung (2.54) für Beitrag der Wasserschicht zur Phytoplankton-Fluoreszenz
+22.01.2016  Einlesen und Darstellen von EEMs
+23.01.2016  Reabsorption von Fluoreszenz in Algenzelle (Faktor Q_a)
+24.01.2016  Angefangen, Phytoplankton- und CDOM-Fluoreszenz in Modell einzubauen 
+03.02.2016  Import von EEMs als ASCII-Matrix
+29.06.2016  Q(lambda): Berechnung als f/f_rs
+05.08.2016  Unit1: bei wenig Kanälen Punkte im Vorwärts-Mode einzeichnen
+09.08.2016  fw_private: Erste und zweite Ableitung nach Wellenlänge, Histogramm der Nullstellen
+11.08.2016  fw_private: Erste Ableitung nach Parameter
+23.08.2016  Unit1: Speichere Plotfenster in File (private mode)
+27.08.2016  Unit1: Font im Plotfenster geändert
+21.09.2016  fw_private: Fehler bei Berechnung von Lsky/Ed korrigiert
+29.09.2016  Loggen des Fortschritts bei Inversion in File "progress.txt"
+11-12/2016  fw_private: automatische Programmabläufe und Fileausgabe für CEOS-Sensitivätsanalysen
+21.12.2016  Popup_Models - Absorption - Gelbstoff: Fileformat konnte nicht geändert werden; behoben
+15.01.2017  --- Update auf IOCCG Webseite ---
+26.03.2017  GUI verbessert: Änderung von Bodenreflexionsspektren
+12.08.2017  WASI-2D: Prozessierung von Ausschnitten verbessert
+12.08.2017  WASI-2D: Zeitabschätzung in PROGRESS.TXT
+13.08.2017  Inversion: Individuelle Festlegung von steps und MaxErr für jeden Fitparameter
+
+
+--- Umstellung der Entwicklungsumgebung von Delphi nach Lazarus ---
+15.01.2018  GUI fehlerfrei unter Lazarus (dank Runa Römke)
+20.01.2018  Popup_2D_Format: Fehler durch ComboPrv.ItemIndex korrigiert (Zählung beginnt bei 0, vorher bei 1)
+23.01.2018  WASI5.INI: 2 LUTs
+23.01.2018  WASI5.INI: ldsb gelöscht
+23.01.2018  WASI5.INI: flag_bunt von PRIVATE.INI übernommen
+24.01.2018  misc: Ermittlung der Installationspfaden von WASI5.INI und PRIVATE.INI vereinfacht
+27.01.2018  WASI5.INI: f_step and f_err added to parameter table
+28.01.2018  INVERS: step_c and par_Err are initialized using f_step and f_err
+10.02.2018  Meltpond-Vorwärtsmodellierung von privater zu öffentlicher Version transferiert
+12.02.2018  Lazarus/Delphi-Inkompatibilität: Screenshot "repariert" (TForm1.SavePlotWindow)
+14.02.2018  WASI5.INI: Blickwinkel und Azimutdifferenz können aus Messdaten importiert werden
+06.07.2018  WASI-2D: Fehlerhafte Anzeige bei großen Bildern behoben (wenn Rollbalken vorhanden)
+07.07.2018  INVERS: Fehler behoben: Inversion lief nicht mehr mangels Initialisierung von step_c
+07.07.2018  INVERS: Spectral angle added to residual calculation
+08.07.2018  GUI: new picture
+08.07.2018  INVERS: initialization of zB using analytic equation of Albert (2004) for 2D-mode activated
+06.01.2019  Phytoplankton backscattering: included in forward and inverse mode
+06.01.2019  NAP concentration: now calculated as sum of C_X and C_Mie (previously separate parameter)
+06.01.2019  GUI: C_NAP gelöscht
+01.02.2019  File - save: First column are fit parameter names if input is fit image
+01.02.2019  GUI: Independent scaling of LUT and water mask implemented
+07.05.2019  GUI: Error of progress bar corrected
+03.06.2019  GUI: Monitor dependent scaling errors corrected
+16.06.2019  WASI-2D: Error corrected: lat/long had been imported as positive coordinates only
+17.06.2019  GUI: Bug corrected: when "data format - import series of spectra" was checked, inverse mode was always active
+17.06.2019  MISC: Error handling for corrupt or missing file 'Lambda.txt' added
+02.10.2019  GUI: Format of screenshots changed from BMP to PNG
+11.10.2019  Import entire multispectral image to RAM instead of selected bands or pixels
+18.10.2019  Popup Data format: Viewing angle added
+19.10.2019  --- Update on IOCCG Website: Version 5.1 ---
+19.10.2019  GUI: Error of progress bar for > 2 GByte of pixels corrected
+06.11.2019  Vorward mode: new coloring for accumulative plotting of 2 or 3 parameter iterations
+13.11.2019  WASI-2D, Save image: Fit parameter name and range automatically added to file name 
+14.11.2019  GUI: Combo box for sensor selection added (private mode)
+05.12.2019  INVERS: avoid access conflicts of PROGRESS.TXT
+16.12.2019  CEOS: Neue Unit für alle Simulationen mit Bezug zur CEOS-Studie
+07.02.2020  dpi-awareness (with help of Runa Römke)
+
+Noch einbauen in WASI
+---------------------
+- b als Spektrum-Typ
+- Darstellung von b/a, bb/a
+- Ramanstreuung
+- Gelbstoff-Fluoreszenz
+- Chlorophyll-Fluoreszenz bei 730 nm
+- Darstellung und Ausgabe von berechneten Parametern (z.B. Chl, FLH)
+- Atmosphäre
+- 2D: skip frame header (für ROSIS)
+- 2D: Berechnung und Darstellung impliziter Parameter und Spektren, z.B. Kd, z90
+- Korrelation zwischen Fitparametern (ähnlich fA[i])
+- Unterstützung des Dateiformats NetCDF? Kommt aus Atmosphären-Community. Macht nur Sinn, wenn auch in unserer Community verbreitet.
+- ... oder allgemeiner Integration aller Dateiformate von GDAL
+- Simulation und Ausgabe "interner" Spektren in Schleife; Dateiname "SPEC.fwd" --> Typ
+- Beschriftungen als Vektorgraphik: https://wiki.freepascal.org/fpvectorial
+
+Verbessern
+----------
+- Anfangswertbestimmung bei Rauschen
+- Abbruchkriterium des Fits
+- Gemessenes Spektrum Ed verwenden: Funktioniert bei Inversion jetzt nicht richtig, da derselbe
+  Vektor Ed für eingelesenes und berechnetes Spektrum benutzt wird (letzteres ändert sich ständig)
+- Berechnung von sigma_Lu aus theta_v
+- Fresnelgleichung bei Inversion verwenden
+- Beim Einlesen von Spektren mit dLambda > 1 nm Interpolation der y-Werte statt "Treppen" (z.B. X.A)
+- "select_fit" in fw_allg.pas vereinfachen mittels *.active in Frame_par und auf Konsistenz prüfen
+- Fit von multispektralen Daten mit hochauflösender Fitkurve
+- 2D-Preview: Position der Elemente an Größe des Eingabebilds anpassen
+- 2D-Ausgabe: IOPs; lassen sich auch nachträglich aus Fitergebnis berechnen (vgl. Papers von Lee u.a.)
+- 2D-Menü: welche IOPs sollen gespeichert werden
+- 2D: Multithread, damit's schneller geht. Tip von Tobias Kölling: ZeroMQ für Parallelprocessing (request-reply-pattern)
+- Tools - CalVal in öffentliche Version
+
+
+
+Bugs
+----
+- 2D, Einlesen des ENVI-Headers: Voreinstellungen "spectrum of x-values", "flag_fwhm" und "flag_x_file" werden überschrieben
+- Fluoreszenz unter Wasser bei Rrs unplausibel (sollte von z abhängen)
+- Bei Änderung von dx während der Laufzeit von WASI wird irgendeine Einstellung, die von dx abhängt, nicht aktualisiert; damit funktioniert Fitten nicht mehr
+- 2D: wurde Rahmen gezeichnet, wird nächster Mausklick nicht als Einzelklick für Spektrum behandelt, sondern als neuer Rahmen
