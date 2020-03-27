@@ -1,24 +1,31 @@
 # WASI
 Simulation and data analysis of measurements in deep and shallow waters.
+
+## Screenshot
 ![Example screenshot](./doc/GraphicalAbstract.tif)
 
 ## General info
-The Water Colour Simulator **WASI** is a tool for the simulation of optical properties and light field parameters of deep and shallow waters, and for data analysis of instruments disposed above the water surface and submerged in the water. Supported measurements are downwelling irradiance, upwelling radiance, irradiance reflectance, remote sensing reflectance, attenuation, and absorption. Data analysis is done by inverse modeling. The provided database covers the spectral range from 350 to 1000 nm in 1 nm intervals. It can be exchanged easily to represent the studied area. The module WASI-2D extends the functionality towards image processing of atmospherically corrected data from airborne sensors and satellite instruments. 
+The Water Colour Simulator **WASI** is a tool for the simulation of optical properties and light field parameters of deep and shallow waters, and for data analysis of spectrometers disposed above the water surface and submerged in the water. The module WASI-2D allows image processing of atmospherically corrected data from multi- and hyperspectral airborne sensors and satellite instruments. 
 
 ## Download
-The executable can be downloaded [here] (https://c.1und1.de/@519891561215951357/6PlmFxS0RAyf4FLNjVot4A)
+The executable and further documentation can be downloaded [here](https://c.1und1.de/@519891561215951357/6PlmFxS0RAyf4FLNjVot4A).
 
 ## Setup
-Run **INSTALL_WASI5_1.EXE** to unpack WASI version 5.1 to your computer. 
-WASI5.1 is installed by default in the directory D:\WASI5.1
-If you prefer installation in another directory, you need to edit the file WASI5_1.INI: 
-Replace in WASI5_1.INI all occurences of "D:\WASI5.1\" with your directory.
+Installation of version 5.1:
+* Execute **INSTALL_WASI5_1.EXE** 
+* Alternately, unzip **WASI5_1.ZIP** to directory
+* Check installation directory **D:/WASI5.1**. If the file WASI5.1.EXE is in an other directory, either change the directory, or replace in WASI5_1.INI all occurences of *D:\WASI5.1* with the installation directory.
+
+Installation of beta version 5.2:
+* Install version 5.1
+* Replace WASI5_1.EXE with WASI5_2.EXE
+* Rename WASI5_1.INI to WASI5_2.INI
 
 ## Major files and subdirectories
-* WASI5_1.EXE      the executable file
-* WASI5_1.INI      initialisation file
-* ./DATA     directory with input spectra and demo data
-* ./DOC      directory documentation
+* WASI5_1.EXE, the executable file
+* WASI5_1.INI, initialisation file
+* ./DAT, directory with input spectra and demo data
+* ./DOC, directory documentation
 
 ## Contact
 Created by peter.gege@dlr.de - feel free to contact me!
