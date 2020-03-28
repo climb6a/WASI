@@ -1,5 +1,5 @@
 # WASI
-Simulation and data analysis of measurements in deep and shallow waters.
+Simulation and data analysis of spectral measurements in deep and shallow waters.
 
 ## Screenshot
 ![Example screenshot](./doc/GraphicalAbstract.tif)
