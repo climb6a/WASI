@@ -3,7 +3,7 @@ unit gui;
 {$MODE Delphi}
 
 { Main unit of program WASI. }
-{ Version vom 13.3.2020 }
+{ Version vom 10.4.2020 }
 
 interface
 
@@ -4165,15 +4165,15 @@ begin
 procedure TForm1.medianimages1Click(Sender: TObject);
 begin
     Screen.Cursor:=crHourGlass;
-    Median_images(Sender);      { in unit privates }
+    Quantile_images(quantile, Sender);   { in unit privates }
     Screen.Cursor:=crDefault;
     end;
 
 procedure TForm1.averagespectra1Click(Sender: TObject);
 begin
     Screen.Cursor:=crHourGlass;
-    if flag_CEOS then CEOS_Median_max(Sender)     { in unit CEOS }
-                 else Average_spectra(TRUE);      { in unit privates }
+    if flag_CEOS then CEOS_Median_max(quantile, Sender)   { in unit CEOS }
+                 else Average_spectra(TRUE);          { in unit privates }
     Screen.Cursor:=crDefault;
     end;
 

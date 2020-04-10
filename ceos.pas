@@ -8,7 +8,7 @@ unit CEOS;
   - Set flag_CEOS = TRUE
   - Iterate the third parameter of the Selection panel for specifying the parameter iterations
 
-  Version vom 13.3.2020 }
+  Version vom 10.4.2020 }
 
 {$mode delphi}
 
@@ -46,7 +46,7 @@ var     CEOS_maxima   : text;                           { File with maxima of dR
 procedure CEOS_Average_images(Sender: TObject);
 procedure run_CEOS_simulation(Sender: TObject);
 procedure set_CEOS_settings(setting: integer);
-procedure CEOS_Median_max(Sender: TObject);
+procedure CEOS_Median_max(q: double; Sender: TObject);
 procedure derivate_lambda(p: double; flag_ytxt: boolean);
 procedure calc_spectral_resolution(max_dL: double);
 procedure calc_NEdR(S:Spektrum; Lmin, Lmax : double; flag_ytxt: boolean);
@@ -828,11 +828,12 @@ begin
     end;
 
 
-procedure CEOS_Median_max(Sender: TObject);
-{ Calculate median spectrum of files *.max.
+procedure CEOS_Median_max(q: double; Sender: TObject);
+{ Calculate quantile q spectrum of files *.max. p = 0.5 corresponds to
+  the median.
   Before running this module, open an image in that directory in order to
   initialize some image parameters.
-  Version from 7 December 2019 }
+  Version from 10 April 2020 }
 const Fmax_Header    = 6;           // Header lines of files *.max
       Fmax_lines     = 1000;        // Number of lines with data of files *.max
       Fmax_bands     = 401;         // Number of bands on x-axis of files *.max
@@ -889,7 +890,7 @@ begin
             band_thresh:=1;
             median_xmin:=Fmax_Lmin;
             median_dx:=1;
-            Median_images(Sender);
+            Quantile_images(q, Sender);
             DeleteAll(Pfad, '*_max.fit');
             DeleteAll(Pfad, '*_max.hdr');
             end;

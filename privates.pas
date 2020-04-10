@@ -2,7 +2,7 @@ unit privates;
 
 {$MODE Delphi}
 
-{ Version vom 12.3.2020 }
+{ Version vom 10.4.2020 }
 
 interface
 uses defaults, Classes, Graphics, ExtCtrls, Forms;
@@ -118,6 +118,7 @@ const   Dim_regr      : integer = 100;                  { Dimension of regressio
         N_max         : double = 47.82665;
         r_theta_fw    : double = 1.0;                   { Ratio of cosines of sun zenith angles, forward mode }
         r_theta_inv   : double = 1.0;                   { Ratio of cosines of sun zenith angles, inverse mode }
+        quantile      : double = 0.90;                  { Quantile for averaging images; 0.5 = median }
         flag_show_EEM : boolean = FALSE;                { Displayed image is EEM }
         refl_IR       : double = 0.0;                   { Reflectance in the infrared }
         Sensor_max    = 50;                             { Maximum number of sensors }
@@ -194,7 +195,7 @@ procedure calculate_statistics(zmin, zmax, dz, outlier: double);
 procedure estimate_bottom_reflectance(index:byte);
 procedure Average_spectra(relative:boolean);
 procedure Average_image_lines(name: string);
-procedure Median_images(Sender: TObject);
+procedure Quantile_images(q: double; Sender: TObject);
 function  import_ASCII_EEM(var E: EEMatrix):boolean;
 procedure EEM_to_image(var E: EEMatrix);
 procedure simulate_sensor_signal(t:double);
@@ -1442,11 +1443,11 @@ begin
     end;
 
 
-procedure Median_images(Sender: TObject);
-{ Calculate median of channel 'median_band' for all hyperspectral images
+procedure Quantile_images(q: double; Sender: TObject);
+{ Calculate quantile q of channel 'median_band' for all hyperspectral images
   in the current directory if the value of channel 'band_thresh' is above
-  'thresh_dRrs'. The x-values of the image are specified by 'median_xmin',
-  the differences of two x-values by 'median_dx'.
+  'thresh_dRrs'. q = 0.5 corresponds to the median. The x-values of the image
+  are specified by 'median_xmin', the differences of two x-values by 'median_dx'.
   Before running this module, open one of the images for which the median
   shall be calculated, in order to initialize some image parameters.
   Version from 7 December 2019 }
@@ -1507,23 +1508,23 @@ begin
            UNTIL (FindNext(sr)<>0);
            FindClose(sr);
 
-           // calculate mean and median
+           // calculate mean and quantile q
            for k:=0 to Width_in-1 do       // mean
                if spec[3]^.y[k+1]>1 then spec[1]^.y[k+1]:=spec[1]^.y[k+1]/spec[3]^.y[k+1];
            spec[1]^.FName:=HSI_img^.FName;
            Channel_number:=Width_in;
 
-           for k:=0 to Width_in-1 do begin // median
+           for k:=0 to Width_in-1 do begin // quantile
                sort(the_data, k, 0, Height_in*N_Files);
-               spec[2]^.y[k+1]:=the_data[k, round(Height_in*N_Files-0.5*spec[3]^.y[k+1]), 0];
+               spec[2]^.y[k+1]:=the_data[k, round(Height_in*N_Files-q*spec[3]^.y[k+1]), 0];
                end;
            end;
        NSpectra:=3;
        bandname[1]:='Mean';
-       bandname[2]:='Median';
+       bandname[2]:=schoen(q,2) + '_quantile';
        bandname[3]:='N';
        TimeCalc  :=MilliSecondsBetween(Now, TimeStartCalc)/1000;
-       saveSpecFw(Pfad+'Mean_Median_band'+IntToStr(median_band)+'.txt');
+       saveSpecFw(Pfad+bandname[1]+'_'+bandname[2]+'_band'+IntToStr(median_band)+'.txt');
         end
         else ShowMessage('ERROR: Less than 2 images in directory '+Pfad);
         y_scale:=tmp_yscale;
