@@ -292,6 +292,7 @@
 05.12.2019  INVERS: avoid access conflicts of PROGRESS.TXT
 16.12.2019  CEOS: Neue Unit für alle Simulationen mit Bezug zur CEOS-Studie
 07.02.2020  dpi-awareness (with help of Runa Römke)
+18.04.2020  GUI: Load any INI-file added
 
 Noch einbauen in WASI
 ---------------------

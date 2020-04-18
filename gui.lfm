@@ -1,11 +1,11 @@
 object Form1: TForm1
-  Left = 1097
-  Height = 1597
-  Top = 443
+  Left = 640
+  Height = 1449
+  Top = 540
   Width = 2086
   BorderStyle = bsSingle
   Caption = 'WASI - Water color simulator'
-  ClientHeight = 1558
+  ClientHeight = 1410
   ClientWidth = 2086
   Color = clBtnFace
   DesignTimePPI = 192
@@ -3468,9 +3468,13 @@ object Form1: TForm1
       object N2: TMenuItem
         Caption = '-'
       end
-      object LoadINIfile1: TMenuItem
-        Caption = 'Load INI-file'
-        OnClick = LoadINIfile1Click
+      object LoadINIfileLast: TMenuItem
+        Caption = 'Load last INI-file'
+        OnClick = LoadINIfileLastClick
+      end
+      object LoadINIfileAny: TMenuItem
+        Caption = 'Load any INI-file'
+        OnClick = LoadINIfileAnyClick
       end
       object SaveINIfile1: TMenuItem
         Caption = 'Save INI-file'

@@ -112,6 +112,7 @@ type
     MenuItem1: TMenuItem;
     cor1: TMenuItem;
     corDES: TMenuItem;
+    LoadINIfileAny: TMenuItem;
     MenuTrueColor: TMenuItem;
     Rrs1: TMenuItem;
     MenuNoise: TMenuItem;
@@ -225,7 +226,7 @@ type
     tC1: TMenuItem;
     aPhcalc: TMenuItem;
     acalc: TMenuItem;
-    LoadINIfile1: TMenuItem;
+    LoadINIfileLast: TMenuItem;
     N2: TMenuItem;
     Counter: TEdit;
     gew1: TMenuItem;
@@ -377,6 +378,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure DefineAreas;
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure LoadINIfileAnyClick(Sender: TObject);
     procedure medianimages1Click(Sender: TObject);
     procedure MemoryClick(Sender: TObject);
     procedure LTOA1Click(Sender: TObject);
@@ -462,7 +464,7 @@ type
     procedure Load_imgClick(Sender: TObject);
     procedure Speichern2Click(Sender: TObject);
     procedure Save_ImgClick(Sender: TObject);
-    procedure LoadINIfile1Click(Sender: TObject);
+    procedure LoadINIfileLastClick(Sender: TObject);
     procedure SaveINIfile1Click(Sender: TObject);
     procedure Beenden1Click(Sender: TObject);
     procedure Display2Click(Sender: TObject);
@@ -3250,10 +3252,10 @@ begin
         end;
     end;
 
-procedure TForm1.LoadINIfile1Click(Sender: TObject);     // File - Load INI-file
+procedure TForm1.LoadINIfileLastClick(Sender: TObject);     // File - Load last INI-file
 var FName : string;
 begin
-   if Application.MessageBox('Load parameters from INI file ?',
+   if Application.MessageBox('Load parameters from last INI file?',
         '', MB_OKCANCEL) = IDOK then begin
         if flag_background then FName:=path_exe + ParamStr(1)
                            else FName:=path_exe + INI_public;
@@ -3262,6 +3264,22 @@ begin
         update_GUI(Sender);
         end;
    end;
+
+procedure TForm1.LoadINIfileAnyClick(Sender: TObject);      // File - Load any INI-file
+begin
+   OpenDialog_HSI.FileName:=HSI_img^.FName;
+   OpenDialog_HSI.InitialDir:=ExtractFileDir(HSI_img^.FName);
+   OpenDialog_HSI.Filter :=
+       'INI files, fit results (*.ini;*.par)|*.ini;*.par|' +
+       'All files (*.*)|*.*|';
+   OpenDialog_HSI.FilterIndex := 1;
+   OpenDialog_HSI.Title := 'Load INI-file';
+   if OpenDialog_HSI.Execute then begin
+        LoadINI_public(OpenDialog_HSI.Filename);
+        update_GUI(Sender);
+        end;
+    end;
+
 
 procedure TForm1.SaveINIfile1Click(Sender: TObject);     // File - Save INI-file
 begin

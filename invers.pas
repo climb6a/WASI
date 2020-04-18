@@ -6,6 +6,7 @@ unit invers;
 
 interface
 
+// uses { $IFDEF private_version} privates, {meltpond,} { $ENDIF}
 uses   defaults, misc;
 
 type   PVector   = Array[1..M1+1] of double;    { Set of fit parameters }
@@ -93,10 +94,12 @@ var  Data      : DataSet;  { the data set }
      Em1       : byte;     { = Em+1, in GetData gesetzt } 
      sum       : double;
      Kurve     : function(j:integer):double;
+     r_theta_inv   : double = 1.0;                   { Ratio of cosines of sun zenith angles, inverse mode }
 
 implementation
 
-uses  fw_calc, privates, meltpond, math;
+uses { $IFDEF private_version} privates, meltpond, { $ENDIF}
+     fw_calc, math;
 
 { Downwelling irradiance; model of Gregg and Carder (1990) }
 

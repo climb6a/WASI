@@ -3,10 +3,11 @@ unit misc;
 {$MODE Delphi}
 
 { Collection of general-purpose procedures and functions of program WASI. }
-{ Version vom 18.1.2020 }
+{ Version vom 14.4.2020 }
 
 interface
-uses LCLIntf, LCLType, StdCtrls, classes, defaults, privates, Farbe, math, forms, fileutil;
+uses { $IFDEF private_version} privates, { $ENDIF}
+     LCLIntf, LCLType, StdCtrls, classes, defaults, Farbe, math, forms, fileutil;
 
 procedure complete_vers;
 procedure SaveINI(flag_public:boolean);    { Save INI file }
