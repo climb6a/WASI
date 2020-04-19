@@ -2898,6 +2898,7 @@ begin
     Format_2D.Write_Fitresult(Height_in-1);
     TimeCalc  :=MilliSecondsBetween(Now, TimeStartCalc)/1000;
     Format_2D.Write_Envi_Header_fit(Output_HSI);
+    restore_actual;    // Replace actual model parameters with the stored ones
     SavePAR_public(path_exe + INI_public,
         ChangeFileExt(ChangeFileExt(Output_HSI, '.' + INI_public), '.par'));
     if not flag_public then begin { Private WASI version }
@@ -2906,7 +2907,6 @@ begin
             if flag_2D_ASCII then Save_Fitresults_as_ASCII(ChangeFileExt(Output_HSI, '.txt'));
         end;
     Par1_type:=p1;  Par2_type:=p2;  Par3_type:=p3;
-    restore_actual;    // Replace actual model parameters with the stored ones
     pixel_min:=merk_pmin;
     pixel_max:=merk_pmax;
     frame_min:=merk_fmin;
@@ -3276,6 +3276,7 @@ begin
    OpenDialog_HSI.Title := 'Load INI-file';
    if OpenDialog_HSI.Execute then begin
         LoadINI_public(OpenDialog_HSI.Filename);
+        read_spectra;
         update_GUI(Sender);
         end;
     end;

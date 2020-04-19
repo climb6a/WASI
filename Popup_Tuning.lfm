@@ -2152,12 +2152,12 @@ object Popup_FitTuning: TPopup_FitTuning
     Height = 352
     Top = 88
     Width = 968
-    ActivePage = TabSheetWeight
+    ActivePage = TabSheetInitial
     Font.CharSet = GREEK_CHARSET
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
     ParentFont = False
-    TabIndex = 3
+    TabIndex = 0
     TabOrder = 3
     object TabSheetInitial: TTabSheet
       Caption = 'Initial values'
