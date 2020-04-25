@@ -2,7 +2,7 @@ unit invers;
 
 {$MODE Delphi}
 
-{ Version vom 17.11.2019 }
+{ Version vom 25.4.2020 }
 
 interface
 
@@ -1045,11 +1045,13 @@ Begin
 
 
 procedure simpl;
-{ Durchführung der Fitroutine.}
-{ by Marco Caceci, with help from William Caceris.   1983}
-{ from BYTE May 1984 }
-{ see Nelder J.A. & R. Mead, Computer J. 7, 308 (1965) and  }
-{ L.A. Yarbro & S.N. Deming, Anal. Chim. Acta 74, 391(1974) }
+{ Carrying out the fit routine. }
+{ The algorithm is published here:
+  - Nelder J.A. & R. Mead, Computer J. 7, 308 (1965)
+  - L.A. Yarbro & S.N. Deming, Anal. Chim. Acta 74, 391(1974)
+  The original Pascal procedure is from Marco Caceci, with help from
+  William Caceris, 1983. It was published in BYTE May 1984.
+  The procedure has been refined and adapted to WASI by Peter Gege. }
 
 var
     Done    : Boolean;                    { convergence }
@@ -1070,9 +1072,9 @@ var
     Procedure Order;    { gives high/low in each parameter dimension }
     var j : integer;
     begin
-            for j:=1 to Em1 do begin
-                If Simp[j,Em1] < Simp[Best,Em1] then  Best := j;
-                If Simp[j,Em1] > Simp[Worst,Em1] then Worst := j;
+            for j:=1 to Em1 do begin   // abs() added 24.4.2020
+                If abs(Simp[j,Em1]) < abs(Simp[Best,Em1])  then  Best := j;
+                If abs(Simp[j,Em1]) > abs(Simp[Worst,Em1]) then Worst := j;
                 end;
         end;
 
@@ -1142,7 +1144,7 @@ BEGIN     { SIMPLEX}
                 Else Begin
                     { still bad, shrink all bad vertexes towards best }
                     FOR j:=1 TO Em1 DO BEGIN
-                        FOR I:=1 TO Em DO
+                        if j<>Best then FOR I:=1 TO Em DO   // j<>Best new 24.4.2020
                             Simp[j,i] := Simp[j,i]*S_BETA
                                          +Simp[Best,i]*(1.0-S_BETA);
                         SumOfResiduals(Simp[j]);

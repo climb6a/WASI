@@ -348,8 +348,9 @@ begin
         readln(datei, Name_LdBatch);
         if not DirectoryExists(ExtractFileDir(Name_LdBatch)) then
         if not CreateDir(ExtractFileDir(Name_LdBatch)) then begin
-            MessageBox(0, PChar(Name_LdBatch), 'Cannot create directory', MB_ICONSTOP+MB_OK);
-            halt;
+ //           MessageBox(0, pchar(Name_LdBatch), 'WARNING', MB_OK);
+            MessageBox(0, PChar(Name_LdBatch), 'WARNING: Directory does not exist', MB_ICONSTOP+MB_OK);
+ //           halt;
             end;
 
         { Directories }

@@ -3,12 +3,12 @@ unit gui;
 {$MODE Delphi}
 
 { Main unit of program WASI. }
-{ Version vom 10.4.2020 }
+{ Version vom 23.4.2020 }
 
 interface
 
 uses
-  LCLIntf, LCLType, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  Windows, LCLIntf, LCLType, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   Menus, ComCtrls, StdCtrls, ExtCtrls, DateUtils, defaults, misc, fw_calc,
   meltpond, privates, Farbe, ActnList, Frame_Resid, Frame_Batch, Frame_par,
   ExtDlgs, FileUtil;
@@ -585,6 +585,7 @@ type
     procedure bb01Click(Sender: TObject);
     procedure averageimages1Click(Sender: TObject);
     procedure Update_DPI(Sender:TObject);
+    procedure WMQueryEndSession(var AMsg: TWMQueryEndSession);
 
   private
       DrawArea     : TRect;
@@ -617,7 +618,7 @@ implementation
 uses SCHOEN_, Popup_Display, popup_forward, Popup_General, About, math,
   invers, CEOS, Popup_Fitparameter, Popup_Directories, Popup_Reconstruction,
   Popup_Tuning, Popup_Models, Popup_Dataformat, Popup_2D_Format, Popup_2D_Options,
-  Popup_2D_Info, Popup_Rbottom, popup_info, Types;
+  Popup_2D_Info, Popup_Rbottom, popup_info, Types {, uscaledpi};
 
 {$R *.lfm}
 
@@ -652,6 +653,7 @@ procedure TForm1.FormCreate(Sender: TObject);
 { Create main window of GUI. }
 var i : integer;
 begin
+//    ScaleDPI(Self,96); // 96 ist der DPI-Wert beim Entwurf des Formulars; new 25.4.2020
     if flag_background then if flag_bk_2D then Load_imgClick(Sender);
     if flag_background then StartButtonClick(Sender);
 //    GUI_scale:=font.PixelsPerInch/96;
@@ -1970,13 +1972,63 @@ begin
     for j:=0 to 5 do fA[j].fit:=temp_fA_fit[j];
     end;
 
+
+function ShutdownBlockReasonCreate(hWnd: hWnd; pwszReason: LPCWSTR): Bool;
+  stdcall; external user32 name 'ShutdownBlockReasonCreate';
+
+function ShutdownBlockReasonDestroy(hWnd: hWnd): Bool; stdcall;
+  external user32 name 'ShutdownBlockReasonDestroy';
+
+
+//procedure WMQueryEndSession(var AMsg : TWMQueryEndSession); message WM_QUERYENDSESSION;
+procedure TForm1.WMQueryEndSession(var AMsg: TWMQueryEndSession);
+{ Confirm that WASI wants to block shutdown. See:
+  https://csharp.develop-bugs.com/article/25333640/Using+TEventLog+in+lazarus}
+begin
+    if flag_fit_running then AMsg.Result:=0 else inherited;
+    end;
+
 procedure TForm1.Run_Batch(Sender:TObject);
 { Depending on the flags, execute the apropriate batch mode. }
+{ Comment from 23 April 2020:
+  I added procedures which should disable Windows shutdown during data
+  processing. This is described here:
+  https://csharp.develop-bugs.com/article/25333640/Using+TEventLog+in+lazarus.
+  Not sure if it really works. If not, the reason could be the registry entries
+  ActiveHoursStart and ActiveHoursEnd. These should be changed to prohibit a
+  reboot. However, elevated privilege is needed to change these registry
+  settings. My philosophy is however not to touch the registry and operating
+  WASI should not require  administrator rights.
+  There are perhaps other programming options, but they are not clear to me:
+  https://www.lazarusforum.de/viewtopic.php?f=55&t=8269#
+  The safest way seems disabling shutdown directly in Windows:
+  https://www.pc-magazin.de/ratgeber/windows-10-automatische-neustarts-deaktivieren-unterbinden-3197200.html
+  }
+var  LErr: Cardinal;
+     warning : string;
 begin
     merk_fit;                                            // Note which parameters are fit parameters
     merk_fw;                                             // Note parameters of forward mode
     if flag_2D_inv then begin                            // 2D mode
+        // Disable computer shutdown
+        if (not ShutdownBlockReasonCreate(Application.MainForm.Handle,
+            'WASI image processing running')) then begin
+            LErr := GetLastError;
+            warning:=SysErrorMessage(LErr);
+            MessageBox(0, PChar(warning), 'Warning: Disabling computer shutdown failed:',
+                MB_ICONSTOP+MB_OK);
+            end;
+
+        // Invert image
         if (flag_b_Invert or flag_batch) then Invert_2D(Sender);
+
+        // Enable computer shutdown
+        if (not ShutdownBlockReasonDestroy(Application.MainForm.Handle)) then begin
+            LErr := GetLastError;
+            warning:=SysErrorMessage(LErr);
+            MessageBox(0, PChar(warning), 'Warning: Enabling computer shutdown failed:',
+                MB_ICONSTOP+MB_OK);
+            end;
         end;
     if flag_CEOS and (not flag_public) and (Par3_Type<>0)then begin // simulations for CEOS study
         scenario:= Dialogs.InputBox('Add scenario description to file name', 'Scenario:', #0);
@@ -2372,12 +2424,14 @@ begin
     define_curves;
     flag_aW_merk:=flag_aW;
     Frame_Res1.visible:=TRUE;
+    flag_fit_running:=TRUE;
     end;
 
 procedure TForm1.Q1Click(Sender: TObject);
 begin
     Plot_Spectrum(Q_f^, TRUE, Sender);
     end;
+
 
 procedure TForm1.Finalize_Invers(Sender:TObject);
 { Finalize Inverse Mode. }
@@ -2412,6 +2466,7 @@ if not flag_background then begin
            svFile:=DIR_saveInv+'\'+svFile;
            saveSpecInv(svFile+'.'+EXT_INV);
            end;
+   flag_fit_running:=FALSE;
    Application.ProcessMessages;     // refresh the GUI
    end;
    end;
@@ -2722,6 +2777,7 @@ begin
         end;
         end;
     ABBRUCH:=FALSE;                             // Reset flag used for break
+
     merk_pmin:=pixel_min;
     merk_pmax:=pixel_max;
     merk_fmin:=frame_min;

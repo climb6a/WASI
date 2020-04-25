@@ -293,7 +293,9 @@
 16.12.2019  CEOS: Neue Unit für alle Simulationen mit Bezug zur CEOS-Studie
 07.02.2020  dpi-awareness (with help of Runa Römke)
 18.04.2020  GUI: Load any INI-file added
-19.04.2020  WASI-2D: document initial values in "par" file
+19.04.2020  WASI-2D: write initial values to "par" file
+20.04.2020  WASI-2D: write computer info to ENVI header
+24.04.2020  Invers: Avoid changes of best vector in procedure 'Simpl'
 
 Noch einbauen in WASI
 ---------------------

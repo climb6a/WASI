@@ -13,7 +13,7 @@ uses LCLIntf, LCLType, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ExtCtrls;
 
 const ProgramInfo  = 'WASI - Water color simulator';
-      vers: string = 'Version 5.2 - Latest update: 19 April 2020';
+      vers: string = 'Version 5.2 - Latest update: 25 April 2020';
       flag_public  : boolean = TRUE;                     { public version of WASI? }
       INI_public   = 'WASI5_2.INI';                      { File with public default values }
       INI_private  = 'private\PRIVATE.INI';              { File with private default values }
@@ -589,7 +589,8 @@ var   { Model parameters calculated during run-time }
       ABBRUCH      : boolean;                         { stop processing after ^C }
 
       { Parameters used for inverse mode }
-      flag_Simpl_ini : boolean = TRUE;                { initialize Simplex? }
+      flag_fit_running : boolean = FALSE;             { fit is running }
+      flag_Simpl_ini : boolean = TRUE;                { initialize Simplex }
       fit_dk       : integer = 1;                     { difference between fitted channels }
       N_fit_bot    : integer = 0;                     { Number of bottom types which are fitted }
       NIter        : Integer;                         { number of iterations needed }
