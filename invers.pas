@@ -2,7 +2,7 @@ unit invers;
 
 {$MODE Delphi}
 
-{ Version vom 25.4.2020 }
+{ Version vom 27.4.2020 }
 
 interface
 
@@ -13,7 +13,7 @@ type   PVector   = Array[1..M1+1] of double;    { Set of fit parameters }
 
 const  ch_fit_min   : array[1..FC]of integer = (1, 1, 1, 1);  { first channel that is fitted }
        ch_fit_max   : array[1..FC]of integer = (MaxChannels, MaxChannels, MaxChannels, MaxChannels);  { last channel that is fitted }
-       best         : byte = 1;            { Vertex having best residuum }
+       best         : byte = 0;            { Vertex having best residuum }
        worst        : byte = 1;            { Vertex having worst residuum }
 var    ign_min, ign_max : double;          { ignore these wavelengths when fitting }
        ch_ign_min, ch_ign_max : integer;   { ignore these channels when fitting }
@@ -846,6 +846,7 @@ begin
     for p:=1 to M1 do if (par.fit[p]=1) then begin
         inc(Em);
         Simp[v,Em]:=par.c[p];
+        if (v=3) then if (p=26) then Simp[v,Em]:=20; // deep water
         end;
     Em1:=Em+1;
     if mean_R>0 then maxerr[Em1]:=2*mean_R;
@@ -1015,7 +1016,7 @@ Begin
         else if res_mode=1 then xx:=abs(t-m)        // absolute differences
         else begin                                  // relative differences
             if abs(m)>nenner_min then xx:=abs(1-t/m)
-            else xx:=abs(1-t/nenner_min);
+            else xx:=0;
             end;
         Sum := Sum + Gew^.y[k]*xx;
                                                     // spectral angle
@@ -1095,7 +1096,7 @@ BEGIN     { SIMPLEX}
             SumOfResiduals(Simp[j]);  { and their residuals }
             End;
         end;
-    Best:=1;
+    if Best=0 then Best:=1;    // Initialize only first fit, new 27.4.2020
     Worst:=1;
     Order;
 
@@ -1345,21 +1346,21 @@ begin
 with par do begin
     for j:=1 to M1 do par.map[j]:=0;
     case F of
-        2: begin { Fit C_L and sigma_L, and zB if shallow water }
-               if fit[7]=1  then map[7]:=7;     { fit of C_L }
-               if fit[15]=1 then map[15]:=15;   { fit of rho_L }
+        2: begin { Fit C_X and g_dd, and zB if shallow water }
+               if fit[7]=1  then map[7]:=7;     { fit of C_X }
                if (flag_shallow) and (fit[26]=1) then map[26]:=26;  { fit of zB }
+               if fit[37]=1 then map[37]:=37;   { fit of g_dd }
                end;
         3: begin { Fit only C_P, C_Y, S and Q, and zB if shallow water }
-               if fit[1]=1  then map[1]:=1;     { fit of C_P }
+               for j:=1 to 6 do if fit[j]=1 then map[j]:=j;  { fit of C_P }
                if fit[9]=1  then map[9]:=9;     { fit of C_Y }
                if fit[10]=1 then map[10]:=10;   { fit of S }
                if fit[13]=1 then map[13]:=13;   { fit of Q }
                if (flag_shallow) and (fit[26]=1) then map[26]:=26;  { fit of zB }
+               if fit[37]=1 then map[37]:=37;   { fit of g_dd }
                end;
         4: begin { Fit all parameters of R_rs model }
                for j:=1 to M1 do if fit[j]=1 then map[j]:=j;
-               map[19]:=0;                        // no fit of Angström exponent }
                for j:=41 to 44 do map[j]:=0;      // no fit of old Ed parameters }
                if not flag_shallow then begin     // optically deep water
                    map[26]:=0;                    // not fit of water depth
@@ -1399,26 +1400,18 @@ with par do begin
     for j:=1 to M1 do par.map[j]:=0;
     case F of
         // Pre-fit of infrared region
-        2: begin { Fit C_X, Q, rho_L, surface reflections, and zB if shallow water }
+        2: begin { Fit C_X, Q, g_dd, and zB if shallow water }
                if fit[7]=1  then map[7]:=7;     { fit of C_X }
                if fit[8]=1  then map[8]:=8;     { fit of C_Mie }
-               if fit[13]=1 then map[13]:=13;   { fit of Q }
-               if fit[15]=1 then map[15]:=15;   { fit of rho_L }
-        //       if fit[20]=1 then map[20]:=20;   { fit of f_dd }
-        //       if fit[21]=1 then map[21]:=21;   { fit of f_ds }
-               for j:=37 to 39 do if fit[j]=1 then map[j]:=j; { fit of sun and sky glint }
-               if fit[40]=1 then map[40]:=40;   { fit of delta_r }
                if (flag_shallow) and (fit[26]=1) then map[26]:=26;  { fit of zB }
+               if fit[37]=1 then map[37]:=37;   { fit of g_dd }
                end;
 
         // Pre-fit of blue region
         3: begin { Fit C_P, C_Y, S, Q and weights of Lu*, and zB if shallow water }
                for j:=1 to 6 do if fit[j]=1 then map[j]:=j; { fit of phytoplankton }
                if fit[9]=1  then map[9]:=9;     { fit of C_Y }
-           (*    if fit[10]=1 then map[10]:=10;   { fit of S } *)
-               if fit[13]=1 then map[13]:=13;   { fit of Q }
-           (*   if fit[19]=1 then map[19]:=19;   { fit of alpha } *)
-           (*    for j:=37 to 39 do if fit[j]=1 then map[j]:=j; { fit of sun and sky glint } *)
+               if fit[10]=1 then map[10]:=10;   { fit of S }
                if (flag_shallow) and (fit[26]=1) then map[26]:=26;  { fit of zB }
                end;
 

@@ -618,7 +618,7 @@ implementation
 uses SCHOEN_, Popup_Display, popup_forward, Popup_General, About, math,
   invers, CEOS, Popup_Fitparameter, Popup_Directories, Popup_Reconstruction,
   Popup_Tuning, Popup_Models, Popup_Dataformat, Popup_2D_Format, Popup_2D_Options,
-  Popup_2D_Info, Popup_Rbottom, popup_info, Types {, uscaledpi};
+  Popup_2D_Info, Popup_Rbottom, popup_info, Types;
 
 {$R *.lfm}
 
@@ -653,7 +653,6 @@ procedure TForm1.FormCreate(Sender: TObject);
 { Create main window of GUI. }
 var i : integer;
 begin
-//    ScaleDPI(Self,96); // 96 ist der DPI-Wert beim Entwurf des Formulars; new 25.4.2020
     if flag_background then if flag_bk_2D then Load_imgClick(Sender);
     if flag_background then StartButtonClick(Sender);
 //    GUI_scale:=font.PixelsPerInch/96;
@@ -2538,22 +2537,21 @@ begin
                dummy.actual, test.actual);
 
            (*
-           if flag_shallow and (not flag_2D_inv) then begin
+           if flag_shallow {and (not flag_2D_inv)} then begin
               if flag_Simpl_ini then begin    // 29.8.2018: funktioniert nicht
-                 { analytical estimation of start values in shallow water
-                  (Andreas Albert 2004) }
+                 { analytical estimation of start values in shallow water }
                   if (zB.fit=1) then begin  { zB is fit parameter }
                       kzB1:=Nachbar(LambdazB-dLambdazB);
                       kzB2:=Nachbar(LambdazB+dLambdazB);
                       if C_X.fit=1 then calc_initial_zB(0, kzB1, kzB2);
                       calc_initial_zB(1, kzB1, kzB2);
                       end;
-                  if (C_X.fit=1) and (MaxIter[2]>1) then calc_initial_X_shallow;
-                  if MaxIter[3]>1 then calc_initial_Y_C_shallow(Sender);
+ //                 if (C_X.fit=1) and (MaxIter[2]>1) then calc_initial_X_shallow;
+//                  if MaxIter[3]>1 then calc_initial_Y_C_shallow(Sender);
 //                  calc_initial_fa;
                   end;
               end;
-           *)
+              *)
            if flag_surf_inv then begin { wavelength dependent surface reflections }
                for k:=1 to Channel_number do kurve_Ed_GC(k);  // initialize Ed spectra
                if flag_Simpl_ini then if MaxIter[2]>1 then perform_fit_Rrs(2, Sender);
@@ -2881,6 +2879,7 @@ begin
 
                         set_parameters_inverse;    // Copy initial values to inverse parameters
                         GetData_2D(2);             // Copy inverse parameters to Simplex vertex #2
+                        if flag_shallow then GetData_2D(3);         // new 27.4.2020
                         end;
                     end
 

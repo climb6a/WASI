@@ -47,7 +47,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="33">
+    <Units Count="32">
       <Unit0>
         <Filename Value="WASI5_2.pas"/>
         <IsPartOfProject Value="True"/>
@@ -244,10 +244,6 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="uSMBIOS"/>
       </Unit31>
-      <Unit32>
-        <Filename Value="uscaledpi.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit32>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
