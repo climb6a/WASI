@@ -3,7 +3,7 @@ unit Popup_2D_Format;
 {$MODE Delphi}
 
 { Image visualisation and image processing }
-{ Version vom 3.1.2020 }
+{ Version vom 28.4.2020 }
 
 interface
 
@@ -834,6 +834,7 @@ function TFormat_2D.set_par(key:integer; CRLF:boolean):boolean;
 var i, b         : integer;
     dummy_int    : integer;
     code         : integer;
+    map_rot      : double;    { Rotation angle of image in degree }
 begin
     FormatSettings.DecimalSeparator := '.';
     set_par:=FALSE;
@@ -1008,6 +1009,17 @@ begin
                    map_dN:=1;
                    flag_map:=FALSE;
                    end;
+
+               { map_rot = rotation angle of image }
+               b:= Pos('rotation=', Zeile);
+               if b>0 then begin
+                   Zeile:=copy(Zeile, b+length('rotation='), length(Zeile)-b-length('rotation='));
+                   b:=0; repeat inc(b); until not (Zeile[b] in ['0'..'9','.','+','-','e','E']) or (b>length(Zeile));
+                   map_rot:=StrToFloat(copy(Zeile, 1, b-1));   // rotation angle in degree
+                   map_sinr:=sin(pi*map_rot/180);              // sinus of map_rot
+                   map_cosr:=cos(pi*map_rot/180);              // cosinus of map_rot
+                   end
+               else map_rot:=0;
 
                { Number of significant digits }
                map_SIG:=1 + max(round(ln(abs(map_N0/map_dN))/ln(10)),
@@ -1926,7 +1938,27 @@ begin
 procedure TFormat_2D.show_coordinates(Sender: TObject; Shift: TShiftState;
   X, Y: word);
 { Display coordinates of mouse pointer and values of the bands
-  selected for preview. }
+  selected for preview.
+
+  New 28.4.2020:
+  The coordinates for a rotated image are calculated using the transformation
+
+  x' = x0 + cos(a)*(x-x0) - sin(a)*(y-y0)
+  y' = y0 + sin(a)*(x-x0) + cos(a)*(y-y0)
+
+  The rotation angle a is the parameter 'rotation' in the ENVI hdr file.
+  (x0, y0) = (map_E0, map_N0) is the reference coordinate, i.e. the first image pixel.
+  x-x0 = pixel_x*map_dE is the difference of pixel x to pixel x0 for the non-rotated image.
+  y-y0 = pixel_y*map_dN is the difference of pixel y to pixel y0 for the non-rotated image.
+  As the first pixel is top left while the coordinate origin is bottom left,
+  the sign of the y-coordinates is reversed. This leads to
+
+  map_E = map_E0 + map_cosr*pixel_x*map_dE + map_sinr*pixel_y*map_dN
+  map_N = map_N0 + map_sinr*pixel_x*map_dE - map_cosr*pixel_y*map_dN,map_SIG
+
+  with map_cosr = cos(a) and map_sinr = sin(a) set during ENVI header import.
+  The implementation was validated by comparing the edge coordinates
+  of a rotated image in ENVI. }
 var pixel_x, pixel_y : word;
 begin
     if mouse_down then { restore original image }
@@ -1965,8 +1997,8 @@ begin
            Form_2D_Info.List_Statistics.visible:=FALSE;  // mean, sigma obsolete
            if flag_map then begin // show geographical coordinates
                Form_2D_Info.List_LatLong.Rows[1].CommaText :=
-                   schoen(map_N0-pixel_y*map_dN,map_SIG) + ', ' +
-                   schoen(map_E0+pixel_x*map_dE,map_SIG);
+                   schoen(map_N0+map_sinr*pixel_x*map_dE-map_cosr*pixel_y*map_dN,map_SIG) + ', ' +
+                   schoen(map_E0+map_cosr*pixel_x*map_dE+map_sinr*pixel_y*map_dN,map_SIG);
                if flag_show_EEM then
 (*                   Label_xy.Caption:=      // EEM matrix
                    'ex = ' + schoen(map_E0+pixel_x*map_dE,map_SIG) + ' nm, ' +
