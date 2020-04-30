@@ -755,7 +755,7 @@ begin
         readln(datei, ValSet.XColumn);
         readln(datei, ValSet.YColumn);
         readln(datei, Val_dotsize);
-        readln(datei, s9); if s9<>'' then clPlotBk:=StringToColor(trim(s9));
+        readln(datei, s9); if s9<>'' then clValData:=StringToColor(trim(s9));
 
         for i:=1 to 2 do readln(datei);
         readln(datei, HM.FName);
@@ -793,7 +793,6 @@ begin
         readln(datei, i); flag_drel:=i=1;
         readln(datei, i); flag_dnorm:=i=1;
         readln(datei, i); flag_dL:=i=1;
-        readln(datei, i); flag_minidot:=i=1;
         readln(datei, i); flag_cut_ROI:=i=1;
         readln(datei, i); flag_Martina:=i=1;
         readln(datei, i); flag_sim_NEL:=i=1;
@@ -1329,7 +1328,6 @@ begin
     if flag_drel      then s1:='1' else s1:='0'; writeINI(datei_in, datei_out, s1, 8);
     if flag_dnorm     then s1:='1' else s1:='0'; writeINI(datei_in, datei_out, s1, 8);
     if flag_dL        then s1:='1' else s1:='0'; writeINI(datei_in, datei_out, s1, 8);
-    if flag_minidot   then s1:='1' else s1:='0'; writeINI(datei_in, datei_out, s1, 8);
     if flag_cut_ROI   then s1:='1' else s1:='0'; writeINI(datei_in, datei_out, s1, 8);
     if flag_Martina   then s1:='1' else s1:='0'; writeINI(datei_in, datei_out, s1, 8);
     if flag_sim_NEL   then s1:='1' else s1:='0'; writeINI(datei_in, datei_out, s1, 8);

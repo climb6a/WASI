@@ -1759,6 +1759,8 @@ var i, x, y : integer;
     h, v    : integer;
 begin
     if (map_dN>0) and (map_dE>0) then for i:=1 to ValSet.N do begin
+        TheGraphic.Canvas.Pen.Color := clBlack;
+        TheGraphic.Canvas.Brush.Style := bsSolid;
         { Calculate image pixel coordinates corresponding to geographic position
           (map_E, map_N) of data set number i. }
          if map_sinr=0 then begin // image is oriented North-South
@@ -1778,42 +1780,11 @@ begin
         if abs(dp)<nenner_min then dp:=1;
         farbe:=max255(255*contrast*(ValSet.map_p[i]-Par0_Min)/dp);
         if dp<0 then if farbe=255 then farbe:=0;
-
         farbe:=LUT_R[2,farbe] + LUT_G[2,farbe] shl 8 + LUT_B[2,farbe] shl 16;
-
-        if (flag_public=FALSE) and
-           (ValSet.map_E[i]>E_min) and (ValSet.map_E[i]<E_max) and
-           (ValSet.map_N[i]>N_min) and (ValSet.map_N[i]<N_max) then
-           farbe:=clRed;
-
-        { Plot pixel +/- surrounding U }
-        for h:=x-Val_dotsize to x+Val_dotsize do
-        for v:=y-Val_dotsize to y+Val_dotsize do
-            if (h>=0) and (h<=Width_in) and (v>=0) and (v<=Height_in) then
-                TheGraphic.Canvas.Pixels[h,v] := farbe;
+        if flag_3bands then farbe:=clValData;
+        TheGraphic.Canvas.Brush.Color := farbe;
+        TheGraphic.Canvas.Ellipse(x-Val_dotsize, y-Val_dotsize, x+Val_dotsize, y+Val_dotsize);
         end;
-
-    if flag_minidot then
-        if (map_dN>0) and (map_dE>0) then for i:=1 to ValSet.N do begin
-
-        { Calculate image pixel coordinates corresponding to geographic position
-          (map_E, map_N) of data set number i. }
-        if map_sinr=0 then begin // image oriented North-South
-            x:=round((ValSet.map_E[i]-map_E0) / map_dE);
-            y:=round((map_N0-ValSet.map_N[i]) / map_dN);
-            end
-        else begin  // image rotated
-            x:=round((map_sinr*(ValSet.map_N[i]-map_N0)+
-               map_cosr*(ValSet.map_E[i]-map_E0))/map_dE);
-            y:=round((map_sinr*(ValSet.map_E[i]-map_E0)+
-               map_cosr*(-ValSet.map_N[i]+map_N0))/ map_dN);
-          end;
-
-        { Mark center pixel }
-        if (x>=0) and (x<=Width_in) and (y>=0) and (y<=Height_in) then
-            TheGraphic.Canvas.Pixels[x,y] := clMinidots;
-        end;
-
     FormPaint(Sender);  { Refresh image preview }
     end;
 
