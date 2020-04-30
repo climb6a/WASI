@@ -1,7 +1,7 @@
 unit defaults;
 
 {$MODE Delphi}
-{ $DEFINE private_version}                                { Activate for private version }
+{$DEFINE private_version}                                { Activate for private version }
 
 { Settings, global constants and global parameters of program WASI. }
 
@@ -13,7 +13,7 @@ uses LCLIntf, LCLType, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ExtCtrls;
 
 const ProgramInfo  = 'WASI - Water color simulator';
-      vers: string = 'Version 5.2 - Latest update: 28 April 2020';
+      vers: string = 'Version 5.2 - Latest update: 30 April 2020';
       flag_public  : boolean = TRUE;                     { public version of WASI? }
       INI_public   = 'WASI5_2.INI';                      { File with public default values }
       INI_private  = 'private\PRIVATE.INI';              { File with private default values }

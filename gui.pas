@@ -4132,7 +4132,7 @@ begin                                                    // private
         '|'+ 'All files (*.*)|*.*|';
     if OpenDialog_CalVal.Execute then begin
         ValSet.FName:=OpenDialog_CalVal.FileName;
-        read_CalVal(false);   { unit fw_private }
+        read_CalVal(false);   { unit privates }
         end;
     if flag_preview then begin
         Format_2D.plot_CalVal_data(Sender);

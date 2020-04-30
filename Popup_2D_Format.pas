@@ -3,7 +3,7 @@ unit Popup_2D_Format;
 {$MODE Delphi}
 
 { Image visualisation and image processing }
-{ Version vom 28.4.2020 }
+{ Version vom 30.4.2020 }
 
 interface
 
@@ -1282,7 +1282,9 @@ begin
 
 procedure TFormat_2D.exchange_ENVI_coordinates;
 { Exchange in the "map_info" string of the ENVI header file the coordinates of
-  the first image pixel by the coordinates of the first ROI pixel. }
+  the first image pixel by the coordinates of the first ROI pixel.
+  The coordinate transformation for rotated images is explained in the comment
+  of the procedure show_coordinates. }
 var b, b1, b2 : integer;
     Zeile     : string;
 begin
@@ -1295,9 +1297,12 @@ begin
     repeat inc(b); until (Zeile[b]=',') or (b>length(Zeile));        // fourth comma
     repeat inc(b); until (Zeile[b]=',') or (b>length(Zeile));        // fifth comma
     b2:=b;                     // length of string after coordinates of first pixel
-
-    map_info:=copy(Zeile, 0, b1) + ', ' + FloatToStrF(map_E0+pixel_min*map_dE, ffFixed, 8, 3)
-        + ', ' + FloatToStrF(map_N0-frame_min*map_dN, ffFixed, 8, 3)
+    map_info:=copy(Zeile, 0, b1) + ', '
+        + FloatToStrF(map_E0 + map_cosr*pixel_min*map_dE
+        + map_sinr*frame_min*map_dN, ffFixed, 8, 3)
+        + ', '
+        + FloatToStrF(map_N0 + map_sinr*pixel_min*map_dE
+        - map_cosr*frame_min*map_dN, ffFixed, 8, 3)
         + copy(Zeile, b2, length(Zeile)-(b2-b1));
     end;
 
@@ -1756,8 +1761,16 @@ begin
     if (map_dN>0) and (map_dE>0) then for i:=1 to ValSet.N do begin
         { Calculate image pixel coordinates corresponding to geographic position
           (map_E, map_N) of data set number i. }
-        x:=round((ValSet.map_E[i]-map_E0) / map_dE);
-        y:=round((map_N0-ValSet.map_N[i]) / map_dN);
+         if map_sinr=0 then begin // image is oriented North-South
+             x:=round((ValSet.map_E[i]-map_E0) / map_dE);
+             y:=round((map_N0-ValSet.map_N[i]) / map_dN);
+             end
+         else begin               // image is rotated
+             x:=round((map_sinr*(ValSet.map_N[i]-map_N0)+
+                map_cosr*(ValSet.map_E[i]-map_E0))/map_dE);
+             y:=round((map_sinr*(ValSet.map_E[i]-map_E0)+
+                map_cosr*(-ValSet.map_N[i]+map_N0))/ map_dN);
+             end;
 
         { Define pixel colour according to parameter value map_p.
           This colour scheme is useful to compare fit results with in-situ data. }
@@ -1782,10 +1795,20 @@ begin
 
     if flag_minidot then
         if (map_dN>0) and (map_dE>0) then for i:=1 to ValSet.N do begin
+
         { Calculate image pixel coordinates corresponding to geographic position
           (map_E, map_N) of data set number i. }
-        x:=round((ValSet.map_E[i]-map_E0) / map_dE);
-        y:=round((map_N0-ValSet.map_N[i]) / map_dN);
+        if map_sinr=0 then begin // image oriented North-South
+            x:=round((ValSet.map_E[i]-map_E0) / map_dE);
+            y:=round((map_N0-ValSet.map_N[i]) / map_dN);
+            end
+        else begin  // image rotated
+            x:=round((map_sinr*(ValSet.map_N[i]-map_N0)+
+               map_cosr*(ValSet.map_E[i]-map_E0))/map_dE);
+            y:=round((map_sinr*(ValSet.map_E[i]-map_E0)+
+               map_cosr*(-ValSet.map_N[i]+map_N0))/ map_dN);
+          end;
+
         { Mark center pixel }
         if (x>=0) and (x<=Width_in) and (y>=0) and (y<=Height_in) then
             TheGraphic.Canvas.Pixels[x,y] := clMinidots;
@@ -1821,8 +1844,16 @@ begin
         for z:=1 to N do begin
             { Calculate image pixel coordinates corresponding to geographic position
               (map_E, map_N) of data set number i. }
-            pix_x:=round((map_E[z]-map_E0) / map_dE);
-            pix_y:=round((map_N0-map_N[z]) / map_dN);
+            if map_sinr=0 then begin // image oriented North-South
+                pix_x:=round((ValSet.map_E[z]-map_E0) / map_dE);
+                pix_y:=round((map_N0-ValSet.map_N[z]) / map_dN);
+                end
+            else begin  // image rotated
+                pix_x:=round((map_sinr*(ValSet.map_N[z]-map_N0)+
+                   map_cosr*(ValSet.map_E[z]-map_E0))/map_dE);
+                pix_y:=round((map_sinr*(ValSet.map_E[z]-map_E0)+
+                   map_cosr*(-ValSet.map_N[z]+map_N0))/ map_dN);
+                end;
 
             { Consider only user-defined area and non-masked pixels }
             if (pix_x>=pixel_min) and (pix_x<=pixel_max) and
@@ -1907,8 +1938,16 @@ begin
         for z:=1 to N do begin
             { Calculate image pixel coordinates corresponding to geographic position
              (map_E, map_N) of data set number i. }
-            x:=round((map_E[z]-map_E0) / map_dE);
-            y:=round((map_N0-map_N[z]) / map_dN);
+            if map_sinr=0 then begin // image oriented North-South
+                x:=round((ValSet.map_E[z]-map_E0) / map_dE);
+                y:=round((map_N0-ValSet.map_N[z]) / map_dN);
+                end
+            else begin  // image rotated
+                x:=round((map_sinr*(ValSet.map_N[z]-map_N0)+
+                   map_cosr*(ValSet.map_E[z]-map_E0))/map_dE);
+                y:=round((map_sinr*(ValSet.map_E[z]-map_E0)+
+                   map_cosr*(-ValSet.map_N[z]+map_N0))/ map_dN);
+                end;
 
             if (x>0) and (x<Width_in) and (y>0) and (y<Height_in) then begin
                 extract_spektrum_new(HSI_img^, x, y, Sender);
@@ -1917,9 +1956,11 @@ begin
                 for c:=1 to Channels_in-3 do
                     if abs(spec[1]^.y[c])<nenner_min then inc(null);
                 valid:= null<Channels_in-3;
-                if valid and (spec[1]^.y[Channels_in]>=0) then begin { NIter >=0 }
-                    write(datei, schoen(map_E0+x*map_dE, map_SIG), #9,
-                          schoen(map_N0-y*map_dN, map_SIG), #9);
+                if valid and (spec[1]^.y[Channels_in]>=0) then begin  { NIter >=0 }
+                    write(datei, schoen(map_E0 + map_cosr*x*map_dE +
+                          map_sinr*y*map_dN, map_SIG), #9,
+                          schoen(map_N0 + map_sinr*x*map_dE -
+                          map_cosr*y*map_dN, map_SIG), #9);
                     write(datei, schoen(map_E[z], map_SIG), #9,
                              schoen(map_N[z], map_SIG), #9,
                              schoen(map_p[z],SIG), #9);
@@ -1940,25 +1981,29 @@ procedure TFormat_2D.show_coordinates(Sender: TObject; Shift: TShiftState;
 { Display coordinates of mouse pointer and values of the bands
   selected for preview.
 
-  New 28.4.2020:
-  The coordinates for a rotated image are calculated using the transformation
+  New 30.4.2020:
+  The geographic coordinates of a rotated image are calculated using the transformation
 
-  x' = x0 + cos(a)*(x-x0) - sin(a)*(y-y0)
-  y' = y0 + sin(a)*(x-x0) + cos(a)*(y-y0)
+  x' = x0 + cos(a)*Nx*dx - sin(a)*Ny*dy
+  y' = y0 + sin(a)*Nx*dx + cos(a)*Ny*dy
 
-  The rotation angle a is the parameter 'rotation' in the ENVI hdr file.
-  (x0, y0) = (map_E0, map_N0) is the reference coordinate, i.e. the first image pixel.
-  x-x0 = pixel_x*map_dE is the difference of pixel x to pixel x0 for the non-rotated image.
-  y-y0 = pixel_y*map_dN is the difference of pixel y to pixel y0 for the non-rotated image.
-  As the first pixel is top left while the coordinate origin is bottom left,
-  the sign of the y-coordinates is reversed. This leads to
+  a is the rotation angle.
+  (x0, y0) is the geographic coordinate of the first image pixel.
+  (Nx, Ny) are the pixel numbers in x- and y-direction.
+  (dx, dy) are the differences between two pixels of the input image in
+  (x, y) direction in units of geographic coordinates.
+  As the first pixel is top left while the coordinate system origin is bottom left,
+  it is dx ≥ 0 and dy ≤ 0 for all pixels. This reverses the sign for the y-terms
+  in pixel coordinates and leads to the following program code:
 
-  map_E = map_E0 + map_cosr*pixel_x*map_dE + map_sinr*pixel_y*map_dN
-  map_N = map_N0 + map_sinr*pixel_x*map_dE - map_cosr*pixel_y*map_dN,map_SIG
+   map_E = map_E0 + map_cosr*pixel_x*map_dE + map_sinr*pixel_y*map_dN
+   map_N = map_N0 + map_sinr*pixel_x*map_dE - map_cosr*pixel_y*map_dN
 
-  with map_cosr = cos(a) and map_sinr = sin(a) set during ENVI header import.
-  The implementation was validated by comparing the edge coordinates
-  of a rotated image in ENVI. }
+   WASI uses the following symbols: cos(a) = map_cosr, sin(a) = map_sinr,
+   x0 = map_E0, y0 = map_N0, dx = map_dE, dy = map_dN, Nx = pixel_x, Ny = pixel_y.
+   The parameters a, x0, y0, dx and dy are imported from the ENVI hdr file.
+   The implementation of the equation was validated by comparing the edge
+   coordinates of a rotated image in ENVI. }
 var pixel_x, pixel_y : word;
 begin
     if mouse_down then { restore original image }
@@ -2003,9 +2048,10 @@ begin
 (*                   Label_xy.Caption:=      // EEM matrix
                    'ex = ' + schoen(map_E0+pixel_x*map_dE,map_SIG) + ' nm, ' +
                    'em = ' + schoen(map_N0+pixel_y*map_dN,map_SIG) + ' nm';        *)
-               Form_2D_Info.List_LatLong.Rows[1].CommaText :=       // To do: check
-                   'nm ' + schoen(map_E0+pixel_x*map_dE,map_SIG) + ' '
-                   + schoen(map_N0+pixel_y*map_dN,map_SIG);
+               Form_2D_Info.List_LatLong.Rows[1].CommaText :=
+                   'nm ' +
+                   schoen(map_E0+map_cosr*pixel_x*map_dE+map_sinr*pixel_y*map_dN,map_SIG) + ' '
+                   + schoen(map_N0+map_sinr*pixel_x*map_dE-map_cosr*pixel_y*map_dN,map_SIG);
 
                end
                else          // show pixel coordinates (x, y)
