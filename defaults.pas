@@ -13,7 +13,7 @@ uses LCLIntf, LCLType, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ExtCtrls;
 
 const ProgramInfo  = 'WASI - Water color simulator';
-      vers: string = 'Version 5.2 - Latest update: 30 April 2020';
+      vers: string = 'Version 5.2 - Latest update: 12 May 2020';
       flag_public  : boolean = TRUE;                     { public version of WASI? }
       INI_public   = 'WASI5_2.INI';                      { File with public default values }
       INI_private  = 'private\PRIVATE.INI';              { File with private default values }
@@ -812,8 +812,8 @@ var   { Parameters of 2D module used during runtime }
       map_E0       : double = 0;                      { coordinate East of first pixel }
       map_dN       : double = 0;                      { pixel size North }
       map_dE       : double = 0;                      { pixel size East }
-      map_sinr     : double = 1;                      { Sinus of image rotation angle }
-      map_cosr     : double = 0;                      { Cosinus of image rotation angle  }
+      map_sinr     : double = 0;                      { Sinus of image rotation angle }
+      map_cosr     : double = 1;                      { Cosinus of image rotation angle  }
       map_SIG      : integer = 3;                     { significant digits for coordinate display }
       map_info     : string = '';                     { map info }
       HSI_Stream   : TFileStream;                     { Hyperspectral image file }
