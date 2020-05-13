@@ -9,8 +9,8 @@ object Format_2D: TFormat_2D
   VertScrollBar.Tracking = True
   AutoScroll = True
   Caption = 'WASI-2D'
-  ClientHeight = 356
-  ClientWidth = 572
+  ClientHeight = 0
+  ClientWidth = 0
   Color = clBtnFace
   DesignTimePPI = 192
   Font.Height = -24

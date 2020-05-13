@@ -17,7 +17,7 @@ interface
 uses    defaults, gui, misc, fw_calc, privates, schoen_, Popup_2D_Format, Classes, Dialogs,
         graphics, SysUtils, DateUtils;
 
-const   flag_CEOS     : boolean = TRUE;                 { Run simulations for CEOS study }
+const   flag_CEOS     : boolean = FALSE;                 { Run simulations for CEOS study }
         CEOS_LUT_dL   = 'D:\WASI5.1\private\LUT\8_Color.lut';
         CEOS_LUT_1    = 'D:\WASI5.1\private\LUT\Blue_Green_Red.lut';
         CEOS_dp       : double = 0.1;                   { CEOS study: parameter difference }

@@ -3,7 +3,7 @@ unit gui;
 {$MODE Delphi}
 
 { Main unit of program WASI. }
-{ Version vom 23.4.2020 }
+{ Version vom 13.5.2020 }
 
 interface
 
@@ -3192,7 +3192,7 @@ begin
     OpenDialog_HSI.FileName:=HSI_img^.FName;
     OpenDialog_HSI.InitialDir:=ExtractFileDir(HSI_img^.FName);
     OpenDialog_HSI.Filter := 'Previous image type (' +old_extension+')|' + old_extension+'|'+
-        'HSI files (*.bil;*.bsq;*.dat)|*.bil;*.bsq;*.dat|' +
+        'HSI files (*.bil;*.bsq;*.bip;*.dat)|*.bil;*.bsq;*.bip;*.dat|' +
         'Fit results (*.fit)|*.fit|' +
         'Grafik files (*.jpg;*.png;*.bmp;*.ico;*.emf;*.wmf)|*.jpg;*.png;*.bmp;*.ico;*.emf;*.wmf|'
         + 'All files (*.*)|*.*';

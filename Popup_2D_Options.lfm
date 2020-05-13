@@ -224,6 +224,7 @@ object Options_2D: TOptions_2D
       Items.Strings = (
         'BIL'
         'BSQ'
+        'BIP'
       )
       OnChange = ComboBox_interleaveChange
       ParentFont = False

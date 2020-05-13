@@ -298,6 +298,7 @@
 24.04.2020  Invers: Avoid changes of best vector in procedure 'Simpl'
 27.04.2020  Invers: Update pre-fits in NIR and Blue
 27.04.2020  Invers: Add 3rd initialization vector for Simplex in shallow water allowing for 2 zB's
+13.05.2020  WASI-2D: Support of BIP interleave
 
 Noch einbauen in WASI
 ---------------------

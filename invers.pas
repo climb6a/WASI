@@ -1040,7 +1040,7 @@ Begin
             if (SAngle>=-1) and (SAngle<=1) then SAngle:=abs(arccos(SAngle));
             end;
         Resid:=vec[Em1];
-        if flag_SAM then Resid:=Resid*SAngle;
+  //      if flag_SAM then Resid:=Resid*SAngle;
         end;
     End;
 

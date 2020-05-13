@@ -3,7 +3,7 @@ unit Popup_2D_Format;
 {$MODE Delphi}
 
 { Image visualisation and image processing }
-{ Version vom 30.4.2020 }
+{ Version vom 13.5.2020 }
 
 interface
 
@@ -884,6 +884,7 @@ begin
                Zeile:=AnsiLowerCase(copy(Zeile, b+1, length(Zeile)-b));
                if pos('bil', Zeile)<>0 then begin interleave_in:=0; set_par:=TRUE; end;
                if pos('bsq', Zeile)<>0 then begin interleave_in:=1; set_par:=TRUE; end;
+               if pos('bip', Zeile)<>0 then begin interleave_in:=2; set_par:=TRUE; end;
                end;
         7: begin { wavelength units }
                if Pos('nanometers', Zeile)<>0  then begin x_scale:=1; set_par:=TRUE; end;
@@ -1185,7 +1186,8 @@ begin
         writeln(datei, ENVI_Keyword[4], ' = ', 0);            { header offset = 0 }
         writeln(datei, ENVI_Keyword[5], ' = ', 4);            { data type = 4}
         if interleave_out=0 then writeln(datei, ENVI_Keyword[6], ' = bil')  { interleave }
-        else if interleave_out=1 then writeln(datei, ENVI_Keyword[6], ' = bsq');  { interleave }
+        else if interleave_out=1 then writeln(datei, ENVI_Keyword[6], ' = bsq')  { interleave }
+        else if interleave_out=2 then writeln(datei, ENVI_Keyword[6], ' = bip');  { interleave }
         writeln(datei, ENVI_Keyword[12], ' = {');             { band names}
         if (flag_CEOS and not flag_public) then Write_Envi_Band_Names(datei)
                      else Write_Envi_Fitp_Names(datei);
@@ -1229,7 +1231,8 @@ begin
         writeln(datei, ENVI_Keyword[4], ' = ', 0);            { header offset = 0 }
         writeln(datei, ENVI_Keyword[5], ' = ', 4);            { data type = 4}
         if interleave_out=0 then writeln(datei, ENVI_Keyword[6], ' = bil')  { interleave }
-        else if interleave_out=1 then writeln(datei, ENVI_Keyword[6], ' = bsq');  { interleave }
+        else if interleave_out=1 then writeln(datei, ENVI_Keyword[6], ' = bsq')  { interleave }
+        else if interleave_out=2 then writeln(datei, ENVI_Keyword[6], ' = bip');  { interleave }
         writeln(datei, ENVI_Keyword[7], ' nm');               { wavelength units }
         writeln(datei, ENVI_Keyword[8], ' {');                { wavelength }
         write(datei, '  ');
@@ -1273,6 +1276,11 @@ begin
             for c:=0 to Channels_out-1 do
             for f:=0 to Nf do
             for x:=0 to Nx do
+                Stream.Write(cube_fitpar[x,f,c], 4);
+        if interleave_out=1 then  { BIP }
+            for f:=0 to Nf do
+            for x:=0 to Nx do
+            for c:=0 to Channels_out-1 do
                 Stream.Write(cube_fitpar[x,f,c], 4);
     finally
         Stream.Free;
@@ -1381,10 +1389,13 @@ begin
     if Datentyp=12 then Len:=2;
 
     for b:=0 to Channels_in-1 do begin
-        if interleave_in=0 then { 0 = BIL, 1 = BSQ }
+        if interleave_in=0 then       { 0 = BIL }
             pos64:=HSI_Header + v*Channels_in*Width_in + b*Width_in + h
-        else
-            pos64:=HSI_Header + b*Width_in*Height_in + v*Width_in + h;
+        else if interleave_in=1 then  { 1 = BSQ }
+            pos64:=HSI_Header + b*Width_in*Height_in + v*Width_in + h
+        else                          { 2 = BIP }
+            pos64:=HSI_Header + v*Channels_in*Width_in + h*Channels_in + b;
+
 //        pos64:=HSI_Header + pos64*Len;
         if Datentyp=1 then begin
             x:=HSI_byte[pos64];

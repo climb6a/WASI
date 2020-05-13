@@ -2,7 +2,7 @@ unit Popup_2D_Options;
 
 {$MODE Delphi}
 
-{ Version vom 10.2.2020 }
+{ Version vom 13.5.2020 }
 
 interface
 

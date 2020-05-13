@@ -13,7 +13,7 @@ uses LCLIntf, LCLType, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ExtCtrls;
 
 const ProgramInfo  = 'WASI - Water color simulator';
-      vers: string = 'Version 5.2 - Latest update: 12 May 2020';
+      vers: string = 'Version 5.2 - Latest update: 13 May 2020';
       flag_public  : boolean = TRUE;                     { public version of WASI? }
       INI_public   = 'WASI5_2.INI';                      { File with public default values }
       INI_private  = 'private\PRIVATE.INI';              { File with private default values }
@@ -413,8 +413,8 @@ const { Files and directories specified in WASI.INI}
       band_G         : word = 7;                      { Preview band green }
       band_B         : word = 2;                      { Preview band blue }
       band_mask      : word = 15;                     { Preview band of mask }
-      interleave_in  : byte = 0;                      { Input image interleave: 0 = BIL, 1 = BSQ }
-      interleave_out : byte = 0;                      { Output image interleave: 0 = BIL, 1 = BSQ }
+      interleave_in  : byte = 0;                      { Input image interleave: 0=BIL, 1=BSQ, 2=BIP }
+      interleave_out : byte = 0;                      { Output image interleave: 0=BIL, 1=BSQ, 2=BIP }
       Datentyp       : byte = 2;                      { Input image data type:
                                                         1  = 8-bit  byte
                                                         2  = 16-bit signed integer
