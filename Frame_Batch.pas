@@ -2,7 +2,7 @@ unit Frame_Batch;
 
 {$MODE Delphi}
 
-{ Version vom 16.5.2019 }
+{ Version vom 22.7.2020 }
 
 interface
 

@@ -3,7 +3,7 @@ unit gui;
 {$MODE Delphi}
 
 { Main unit of program WASI. }
-{ Version vom 13.5.2020 }
+{ Version vom 22.7.2020 }
 
 interface
 
@@ -711,6 +711,7 @@ begin
         ComboBox.ItemIndex:=i;
     ProgressBar1.visible:=FALSE;
     set_parameter_names;
+    Counter.color:=clPlotBk;
     if flag_MP then begin
         ComboBox.Items[8]:='Melt pond reflectance';
         par.name[30]:='z_ice';
@@ -752,7 +753,6 @@ begin
                      else flag_panel_fw:=TRUE;
     show_bkgrd:=TRUE;
     Counter.hide;
-    Counter.color:=clPlotBk;
     if not flag_fluo then begin
         set_zero(Lf^);
         set_zero(RrsF^);
@@ -783,6 +783,8 @@ begin
     ImageBackground.stretch:=TRUE;
     ImageBackground.Constraints.MaxWidth:=Width-Frame_r1.width-4*DX_right;
     ImageBackground.BorderSpacing.Left:=Frame_r1.width+2*DX_right;
+    Counter.Top       :=RectArea.Top+20;
+    Counter.Left      :=RectArea.Right-Counter.Width-20;
     update_GUI(Sender);
     end;
 
@@ -1652,7 +1654,7 @@ begin
 
 procedure TForm1.FrameGroesse(Sender: TObject);
 { Define position of the elements of the main window. }
-const  dy = 20;
+const  dy = 9;
 begin
     Update_DPI(Sender);   //RR
 
@@ -1668,18 +1670,16 @@ begin
     DY_leg            :=DY_modes+DY_bottom+StartButton.Height+DY_bottom;
                         {+ComboBox.Height+dy}
     StartButton.Top   :=ComboBox.Top+ComboBox.Height+DY_bottom;
-    CheckShallow.Top  :=StartButton.Top+StartButton.Height+dy;
+    CheckShallow.Top  :=StartButton.Top+StartButton.Height+dy; {CheckInvert.Top -32;}
     CheckBoxaW.Top    :=CheckShallow.Top;
-    CheckAbove.Top    :=CheckShallow.Top+CheckShallow.Height+dy;
+    CheckAbove.Top    :=CheckShallow.Top+CheckShallow.Height+dy; //  CheckInvert.Top;
     CheckBoxL.Top     :=CheckAbove.Top;
-    CheckSurface.Top  :=CheckAbove.Top+CheckAbove.Height+dy;
-    CheckFresnel.Top  :=CheckSurface.Top+CheckSurface.Height+dy;
+    CheckSurface.Top  :=CheckAbove.Top+CheckAbove.Height+dy; //          CheckBatch.Top;
+    CheckFresnel.Top  :=CheckSurface.Top+CheckSurface.Height+dy; //    CheckReadFile.Top;
     Frame_Batch1.Top  :=Form1.ClientHeight-Frame_Batch1.Height;
     Frame_Batch1.Left :=Form1.ClientWidth-DX_right-Frame_Batch1.width;
     Frame_Res1.Top    :=Form1.ClientHeight-Frame_Res1.Height-DY_bottom;
     Frame_Res1.Left   :=Form1.ClientWidth-DX_right-Frame_Res1.width;
-    Counter.Top       :=RectArea.Top+20;
-    Counter.Left      :=RectArea.Right-Counter.Width-20;
     if show_bkgrd=FALSE then zeichne(Sender, TRUE);
     end;
 
@@ -1698,7 +1698,7 @@ begin
     if flag_b_Invert then CheckSurface.checked:=flag_surf_inv
                      else CheckSurface.checked:=flag_surf_fw;
     CheckShallow.checked:=flag_shallow;
-    if not flag_batch then counter.hide; { 1 file }
+    if not flag_batch then counter.text:=''; { 1 file }
     if flag_b_Invert then Frame_Batch1.Panel2Hide.visible:=
                           flag_b_LoadAll or not flag_batch
                      else Frame_Batch1.Panel2Hide.visible:=FALSE;
@@ -2109,7 +2109,6 @@ begin
    Nspectra:=1;
    N:=0;
    NoX:=0; NoY:=0;
-   Counter.color:=clPlotBk;
    Counter.show;
    flag_panel_fw:=TRUE;
    if flag_Y_exp then berechne_aY(S.fw);
@@ -2337,8 +2336,10 @@ begin
                    end;
 
                if Par3_Log then c3:=c3*exp(d3) else c3:=c3 + d3;
-               Counter.Text:=N_string+'/'+s_total;
-               if N_total>1 then Counter.refresh else Counter.hide;
+               if N_total>1 then Counter.Text:=N_string+'/'+s_total
+                            else Counter.Text:='';
+               Counter.Left:=RectArea.Right-Counter.Width-20;
+               Counter.refresh;
            until (c3<Par3_Min) or (c3>Par3_Max+d3/10) or (d3=0) or (N>N_total)
            or ABBRUCH;
            inc(NoY);
@@ -2396,8 +2397,10 @@ begin
        RGB.SaveShoe;
        RGB.SaveWindow;
        end;
-   Counter.Text:='N = '+IntToStr(N);
-   if N>1 then Counter.refresh else Counter.hide;
+   if N>1 then Counter.Text:='N = '+IntToStr(N)
+          else Counter.Text:='';
+   Counter.Left:=RectArea.Right-Counter.Width-20;
+   Counter.refresh;
    if NSpectra>2 then begin { earlier versions: >0 }
        saveSpecFw(DIR_saveFwd +'\'+FW_TABLE+'.'+EXT_FWD);
        zeichne(Sender, TRUE);     { earlier versions: deactivated }
@@ -3845,7 +3848,6 @@ begin
           dz_Eu:=FormRbottom.dzEu;
           dz_Lu:=FormRbottom.dzLu;
           flag_Rbottom:=FormRbottom.fl_Rbottom;
-          Counter.color:=clPlotBk;
           update_GUI(Sender);
           end;
     finally
@@ -4000,7 +4002,6 @@ begin
           flag_Autoscale:=FormDisplay.fl_autoscale;
           flag_ShowFile:=FormDisplay.fl_ShowFilename;
           flag_ShowPath:=FormDisplay.fl_path;
-          Counter.color:=clPlotBk;
           end;
     finally
       FormDisplay.Free;                         { Formular freigeben }

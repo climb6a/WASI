@@ -1,26 +1,25 @@
 object FrameBatch: TFrameBatch
   Left = 0
-  Height = 135
+  Height = 216
   Top = 0
-  Width = 454
-  ClientHeight = 135
-  ClientWidth = 454
+  Width = 726
+  ClientHeight = 216
+  ClientWidth = 726
   DesignTimePPI = 192
-  Font.Height = -128
+  Font.Height = -256
   ParentFont = False
-  Scaled = False
   TabOrder = 0
-  DesignLeft = 802
-  DesignTop = 253
+  DesignLeft = 1037
+  DesignTop = 319
   object ComboPar1: TComboBox
-    Left = 151
-    Height = 21
-    Top = 37
-    Width = 96
+    Left = 242
+    Height = 32
+    Top = 59
+    Width = 154
     AutoSelect = False
-    Font.Height = -12
+    Font.Height = -19
     Font.Name = 'MS Sans Serif'
-    ItemHeight = 13
+    ItemHeight = 24
     Items.Strings = (
       'none'
       'C[0]'
@@ -54,27 +53,27 @@ object FrameBatch: TFrameBatch
     TabOrder = 0
   end
   object RangeText3: TStaticText
-    Left = 270
-    Height = 17
-    Top = 9
-    Width = 28
+    Left = 432
+    Height = 27
+    Top = 14
+    Width = 45
     Caption = 'from'
     Font.Color = clWindowText
-    Font.Height = -12
+    Font.Height = -19
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
   end
   object ComboPar2: TComboBox
-    Left = 151
-    Height = 21
-    Top = 61
-    Width = 96
+    Left = 242
+    Height = 32
+    Top = 98
+    Width = 154
     AutoSelect = False
-    Font.Height = -12
+    Font.Height = -19
     Font.Name = 'MS Sans Serif'
-    ItemHeight = 13
+    ItemHeight = 24
     Items.Strings = (
       'none'
       'C[0]'
@@ -107,14 +106,14 @@ object FrameBatch: TFrameBatch
     TabOrder = 3
   end
   object ComboPar3: TComboBox
-    Left = 151
-    Height = 21
-    Top = 85
-    Width = 97
+    Left = 242
+    Height = 32
+    Top = 136
+    Width = 155
     AutoSelect = False
-    Font.Height = -12
+    Font.Height = -19
     Font.Name = 'MS Sans Serif'
-    ItemHeight = 13
+    ItemHeight = 24
     Items.Strings = (
       'none'
       'C[0]'
@@ -148,80 +147,80 @@ object FrameBatch: TFrameBatch
     TabOrder = 4
   end
   object StaticText7: TStaticText
-    Left = 334
-    Height = 17
-    Top = 9
-    Width = 15
+    Left = 534
+    Height = 27
+    Top = 14
+    Width = 24
     Caption = 'to'
     Font.Color = clWindowText
-    Font.Height = -12
+    Font.Height = -19
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 5
   end
   object StaticText11: TStaticText
-    Left = 382
-    Height = 17
-    Top = 9
-    Width = 34
+    Left = 611
+    Height = 27
+    Top = 14
+    Width = 54
     Caption = 'steps'
     Font.Color = clWindowText
-    Font.Height = -12
+    Font.Height = -19
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 6
   end
   object StaticText12: TStaticText
-    Left = 422
-    Height = 17
-    Top = 9
-    Width = 21
+    Left = 675
+    Height = 27
+    Top = 14
+    Width = 34
     Caption = 'log'
     Font.Color = clWindowText
-    Font.Height = -12
+    Font.Height = -19
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 7
   end
   object Log1: TCheckBox
-    Left = 424
+    Left = 678
     Height = 35
-    Top = 45
+    Top = 72
     Width = 36
-    Font.Height = -12
+    Font.Height = -19
     OnClick = Log1Click
     ParentFont = False
     TabOrder = 8
   end
   object Log2: TCheckBox
-    Left = 424
+    Left = 678
     Height = 35
-    Top = 70
+    Top = 112
     Width = 36
-    Font.Height = -12
+    Font.Height = -19
     OnClick = Log2Click
     ParentFont = False
     TabOrder = 9
   end
   object Log3: TCheckBox
-    Left = 424
+    Left = 678
     Height = 35
-    Top = 95
+    Top = 152
     Width = 36
-    Font.Height = -12
+    Font.Height = -19
     OnClick = Log3Click
     ParentFont = False
     TabOrder = 10
   end
   object Start2: TEdit
-    Left = 255
-    Height = 21
-    Top = 75
-    Width = 57
-    Font.Height = -12
+    Left = 408
+    Height = 32
+    Top = 120
+    Width = 91
+    Font.Height = -19
     Font.Name = 'MS Sans Serif'
     OnChange = Start2Change
     ParentFont = False
@@ -229,11 +228,11 @@ object FrameBatch: TFrameBatch
     Text = '0.1'
   end
   object Start1: TEdit
-    Left = 255
-    Height = 21
-    Top = 50
-    Width = 57
-    Font.Height = -12
+    Left = 408
+    Height = 32
+    Top = 80
+    Width = 91
+    Font.Height = -19
     Font.Name = 'MS Sans Serif'
     OnChange = Start1Change
     ParentFont = False
@@ -241,11 +240,11 @@ object FrameBatch: TFrameBatch
     Text = '0.1'
   end
   object Start3: TEdit
-    Left = 255
-    Height = 21
-    Top = 100
-    Width = 57
-    Font.Height = -12
+    Left = 408
+    Height = 32
+    Top = 160
+    Width = 91
+    Font.Height = -19
     Font.Name = 'MS Sans Serif'
     OnChange = Start3Change
     ParentFont = False
@@ -253,11 +252,11 @@ object FrameBatch: TFrameBatch
     Text = '0.1'
   end
   object End1: TEdit
-    Left = 319
-    Height = 21
-    Top = 50
-    Width = 57
-    Font.Height = -12
+    Left = 510
+    Height = 32
+    Top = 80
+    Width = 91
+    Font.Height = -19
     Font.Name = 'MS Sans Serif'
     OnChange = End1Change
     ParentFont = False
@@ -265,11 +264,11 @@ object FrameBatch: TFrameBatch
     Text = '10'
   end
   object End2: TEdit
-    Left = 319
-    Height = 21
-    Top = 75
-    Width = 57
-    Font.Height = -12
+    Left = 510
+    Height = 32
+    Top = 120
+    Width = 91
+    Font.Height = -19
     Font.Name = 'MS Sans Serif'
     OnChange = End2Change
     ParentFont = False
@@ -277,11 +276,11 @@ object FrameBatch: TFrameBatch
     Text = '10'
   end
   object End3: TEdit
-    Left = 319
-    Height = 21
-    Top = 100
-    Width = 57
-    Font.Height = -12
+    Left = 510
+    Height = 32
+    Top = 160
+    Width = 91
+    Font.Height = -19
     Font.Name = 'MS Sans Serif'
     OnChange = End3Change
     ParentFont = False
@@ -289,11 +288,11 @@ object FrameBatch: TFrameBatch
     Text = '10'
   end
   object Steps1: TEdit
-    Left = 383
-    Height = 21
-    Top = 50
-    Width = 34
-    Font.Height = -12
+    Left = 613
+    Height = 32
+    Top = 80
+    Width = 54
+    Font.Height = -19
     Font.Name = 'MS Sans Serif'
     OnChange = Steps1Change
     ParentFont = False
@@ -301,11 +300,11 @@ object FrameBatch: TFrameBatch
     Text = '11'
   end
   object Steps2: TEdit
-    Left = 383
-    Height = 21
-    Top = 75
-    Width = 34
-    Font.Height = -12
+    Left = 613
+    Height = 32
+    Top = 120
+    Width = 54
+    Font.Height = -19
     Font.Name = 'MS Sans Serif'
     OnChange = Steps2Change
     ParentFont = False
@@ -313,11 +312,11 @@ object FrameBatch: TFrameBatch
     Text = '11'
   end
   object Steps3: TEdit
-    Left = 383
-    Height = 21
-    Top = 100
-    Width = 34
-    Font.Height = -12
+    Left = 613
+    Height = 32
+    Top = 160
+    Width = 54
+    Font.Height = -19
     Font.Name = 'MS Sans Serif'
     OnChange = Steps3Change
     ParentFont = False
@@ -325,62 +324,63 @@ object FrameBatch: TFrameBatch
     Text = '11'
   end
   object CheckInvert: TCheckBox
-    Left = 7
+    Left = 11
     Height = 35
-    Top = 50
-    Width = 100
+    Top = 80
+    Width = 147
     Caption = 'invert spectra'
-    Font.Height = -12
+    Font.Height = -19
     Font.Name = 'MS Sans Serif'
     OnClick = CheckInvertClick
     ParentFont = False
     TabOrder = 20
   end
   object CheckBatch: TCheckBox
-    Left = 7
+    Left = 11
     Height = 35
-    Top = 75
-    Width = 92
+    Top = 120
+    Width = 136
     Caption = 'batch mode'
-    Font.Height = -12
+    Font.Height = -19
     Font.Name = 'MS Sans Serif'
     OnClick = CheckBatchClick
     ParentFont = False
     TabOrder = 21
   end
   object CheckReadFile: TCheckBox
-    Left = 7
+    Left = 11
     Height = 35
-    Top = 100
-    Width = 96
+    Top = 160
+    Width = 148
     Caption = 'read from file'
-    Font.Height = -12
+    Font.CharSet = GREEK_CHARSET
+    Font.Height = -19
     Font.Name = 'MS Sans Serif'
     OnClick = CheckReadFileClick
     ParentFont = False
     TabOrder = 22
   end
   object Panel2Hide: TPanel
-    Left = 48
-    Height = 29
-    Top = 8
-    Width = 51
+    Left = 77
+    Height = 46
+    Top = 13
+    Width = 82
     BevelOuter = bvNone
     Color = clGradientInactiveCaption
-    Font.Height = -12
+    Font.Height = -19
     ParentColor = False
     ParentFont = False
     TabOrder = 23
     UseDockManager = False
   end
   object StaticText3: TStaticText
-    Left = 157
-    Height = 22
-    Top = 9
-    Width = 61
+    Left = 251
+    Height = 35
+    Top = 14
+    Width = 98
     Caption = 'Parameter'
     Font.Color = clWindowText
-    Font.Height = -12
+    Font.Height = -19
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentFont = False
