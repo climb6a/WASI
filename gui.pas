@@ -3,7 +3,7 @@ unit gui;
 {$MODE Delphi}
 
 { Main unit of program WASI. }
-{ Version vom 22.7.2020 }
+{ Version vom 24.7.2020 }
 
 interface
 
@@ -2328,7 +2328,7 @@ begin
                    if N=1 then openFITPARS(DIR_saveInv+'\');
                    saveFITPARS(N_file, 0, c1, c2, c3);
                    if flag_b_SaveInv then
-                       saveSpecInv(DIR_saveInv+'\'+N_file+'.'+EXT_INV);
+                       saveSpecInv(DIR_saveInv+'\'+N_file+'.'+EXT_INV, 0);
                    flag_panel_fw:=TRUE;
                    if flag_Y_exp then berechne_aY(S.fw);
                    berechne_bbMie;
@@ -2466,7 +2466,7 @@ if not flag_background then begin
            svFile:=ChangeFileExt(ExtractFileName(meas^.FName), '');
            svFile:=svFile+'_col'+schoen(meas^.YColumn,0);
            svFile:=DIR_saveInv+'\'+svFile;
-           saveSpecInv(svFile+'.'+EXT_INV);
+           saveSpecInv(svFile+'.'+EXT_INV, 0);
            end;
    flag_fit_running:=FALSE;
    Application.ProcessMessages;     // refresh the GUI
@@ -2664,26 +2664,38 @@ begin
                if flag_read_view then lies_view(actualFile);
                if flag_read_dphi then lies_dphi(actualFile);
                while (lies_spektrum(spec[1]^, actualFile, meas^.XColumn,
-                        meas^.YColumn+sp, meas^.Header, ch, flag_tab)=0) and (sp<ycol_max) do begin
+                        meas^.YColumn+sp, meas^.Header, ch, flag_tab)=0) and (meas^.YColumn+sp<ycol_max) do begin
                    x_anpassen(spec[1]^.y, ch, error_x);
+
+                   { If the specified YColumn doesn't exist, it can happen that
+                     'lies_spektrum' imports the x-values. Spectral resampling
+                     can lead to sub-nm-differences of the two imported
+                     wavelengths. This problem only happens for the last
+                     column, thus a loop break terminates data import from
+                     that file. }
+                   if (trunc(x^.y[1])=trunc(spec[1]^.y[1])) and
+                      (trunc(x^.y[2])=trunc(spec[1]^.y[2])) and
+                      (trunc(x^.y[ch div 2])=trunc(spec[1]^.y[ch div 2])) then break;
+
                    if (spec_type=S_Rrs) and flag_mult_Rrs then
                        for c:=1 to ch do spec[1]^.y[c]:=Rrs_factor * spec[1]^.y[c];
                    if flag_scale then rescale_measurement(spec[1]^.y);
                    Run_Invers(Sender);  { Inversion }
                    svFile:=ChangeFileExt(ExtractFileName(sr.Name), '');
                    if N=0 then openFITPARS(DIR_saveInv+'\');
-                   saveFITPARS(svFile, meas^.YColumn+sp, 0, 0, 0);     
+                   saveFITPARS(svFile, sp+1, 0, 0, 0);
                    if flag_b_SaveInv then begin
                        svFile:=DIR_saveInv+'\'+svFile;
                        if flag_multi then begin { multiple columns }
-                           if meas^.YColumn+sp<=9 then
-                               svFile:=svFile+'_0'+inttostr(meas^.YColumn+sp)
-                               else svFile:=svFile+'_'+inttostr(meas^.YColumn+sp)
+                           if sp+1<=9 then
+                               svFile:=svFile+'_0'+inttostr(sp+1)
+                           else svFile:=svFile+'_'+inttostr(sp+1)
                            end;
-                       saveSpecInv(svFile+'.'+EXT_INV);
+                       if flag_read_view then svFile:=svFile + '_VZA' + schoen(view.actual,0);
+                       saveSpecInv(svFile+'.'+EXT_INV, sp+1);
                        end;
                    if (spec_type=S_Ed_GC) and flag_trenn_Ed then
-                       save_Ed_temp(tmp, actualFile, meas^.YColumn+sp, par.c[20], par.c[21]);
+                       save_Ed_temp(tmp, actualFile, sp+1, par.c[20], par.c[21]);
                    inc(sp);
                    if not flag_multi then sp:=ycol_max;
                    inc(N);

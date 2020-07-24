@@ -5,7 +5,7 @@ object Frame_Res: TFrame_Res
   Width = 238
   ClientHeight = 77
   ClientWidth = 238
-  DesignTimePPI = 192
+  DesignTimePPI = 120
   ParentFont = False
   Scaled = False
   TabOrder = 0
@@ -14,19 +14,21 @@ object Frame_Res: TFrame_Res
   object Text_Iter: TStaticText
     Left = 12
     Height = 26
-    Top = 9
+    Top = 8
     Width = 70
     Caption = 'Iterations'
-    Font.Height = -12
+    Font.CharSet = GREEK_CHARSET
+    Font.Height = -15
     ParentFont = False
     TabOrder = 0
   end
   object Iterations: TEdit
     Left = 144
-    Height = 24
+    Height = 25
     Top = 3
     Width = 75
     Enabled = False
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -15
     Font.Name = 'MS Sans Serif'
@@ -40,16 +42,18 @@ object Frame_Res: TFrame_Res
     Top = 45
     Width = 76
     Caption = 'Residuum'
-    Font.Height = -12
+    Font.CharSet = GREEK_CHARSET
+    Font.Height = -15
     ParentFont = False
     TabOrder = 2
   end
   object Residuum: TEdit
     Left = 144
-    Height = 24
+    Height = 25
     Top = 39
     Width = 75
     Enabled = False
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -15
     Font.Name = 'MS Sans Serif'

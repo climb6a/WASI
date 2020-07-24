@@ -2,7 +2,7 @@ unit Popup_Dataformat;
 
 {$MODE Delphi}
 
-{ Version vom 10.2.2020 }
+{ Version vom 24.7.2020 }
 
 interface
 
@@ -76,6 +76,7 @@ type
     Radio_tab_no: TRadioButton;
     CheckBoxFWHM: TCheckBox;
     Static_FWHM: TStaticText;
+    Static_FWHM1: TStaticText;
     EditFWHM: TEdit;
     Text_FWHM: TStaticText;
     EditFWHMcolumn: TEdit;
@@ -242,6 +243,7 @@ begin
     EditdX.Text  :=schoen(dxx, 3);
     EditFWHM.Text:=schoen(t_fwhm0, 2);
     EditFWHM.visible:=fl_fwhm;
+    Static_FWHM1.visible:=fl_fwhm;
     Static_FWHM.visible:=fl_fwhm;
     Edit_dxs.Text:=schoen(t_dxs,0);
     EditFilesLoad.text:='*'+ext_LdBatch;
@@ -637,6 +639,7 @@ begin
     fl_fwhm:=CheckBoxFWHM.checked;
     EditFWHM.visible:=fl_fwhm;
     Static_FWHM.visible:=fl_fwhm;
+    Static_FWHM1.visible:=fl_fwhm;
     end;
 
 

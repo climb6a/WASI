@@ -3,7 +3,7 @@ unit misc;
 {$MODE Delphi}
 
 { Collection of general-purpose procedures and functions of program WASI. }
-{ Version vom 14.4.2020 }
+{ Version vom 24.7.2020 }
 
 interface
 uses { $IFDEF private_version} privates, { $ENDIF}
@@ -16,7 +16,7 @@ function  LoadINI_private:boolean;         { Read private INI file }
 procedure SavePAR_public(vorlage, ausgabe:String);
 procedure SavePAR_private(vorlage, ausgabe:String);
 procedure saveSpecFw(name:String);         { Save spectra of forward calculations  }
-procedure saveSpecInv(name:String);        { Save spectra of invers calculation }
+procedure saveSpecInv(name:String; col:integer); { Save spectra of invers calculation }
 procedure openCHANGES(pfad:String);        { Open file with changed parameters }
 procedure saveCHANGES(spektrum:String; c1, c2, c3: double);
 procedure openFITPARS(pfad:String);        { Open file with fitted parameters }
@@ -127,23 +127,25 @@ function ASCII_is_Windows(var fn:string):boolean;
   #13 = LF: Linux, Unix
   #10#13 = CRLF: Windows }
 const cmax=10000;
-var f     : text;
+var f     : textFile;
     c, cc : char;
     i     : integer;
 begin
     {$i-}
     AssignFile(f, fn);
     FileMode := 0;  {Set file access to read-only. }
-    reset(f);
     cc:=#0;
-    i:=0;
-    repeat
-        read(f, c);
-        inc(i);
-    until (c=#10) or (c=#13) or (i>cmax);
-    if (c=#13) then read(f,cc);
+    reset(f);
+    if ioresult=0 then begin
+        i:=0;
+        repeat
+            read(f, c);
+            inc(i);
+        until (c=#10) or (c=#13) or (i>cmax);
+        if (c=#13) then read(f,cc);
+        CloseFile(f);
+        end;
     ASCII_is_Windows:=cc=#10;
-    CloseFile(f);
     {$i+}
     end;
 
@@ -1451,8 +1453,8 @@ begin
     end;
 
 
-procedure saveSpecInv(name:String);
-{ Save spectra of invers calculation }
+procedure saveSpecInv(name:String; Col: integer);
+{ Save spectra of invers calculation. Col = column of multi-column table. }
 var datei : text;
     nr, k : integer;
 begin
@@ -1466,37 +1468,29 @@ begin
     writeln(datei, 'Parameter values in files: ', INI_public, ', ', FITPARS);
     writeln(datei);
     if flag_scale then writeln(datei, 'Measured spectrum was multiplied with ',
-        ScaleS^. FName) else writeln(datei);
+        ScaleS^. FName);
+    writeln(datei, 'Input file: ', trim(actualFile));
+    writeln(datei, 'Measurement number:      ', #9, inttostr(col));
+    write(datei, 'Day of year:             ', #9);
+    if flag_read_day then writeln(datei, day) else writeln(datei, '-');
+    write(datei, 'Sun zenith angle [°]:    ', #9);
+    if flag_read_sun then writeln(datei, sun.actual:5:2) else writeln(datei, '-');
+    write(datei, 'Viewing zenith angle [°]:', #9);
+    if flag_read_view then writeln(datei, view.actual:5:2) else writeln(datei, '-');
+    write(datei, 'Azimuth difference [°]:  ', #9);
+    if flag_read_dphi then writeln(datei, dphi.actual:5:2) else writeln(datei, '-');
     writeln(datei);
-    (*
-    writeln(datei, 'Parameters determined during inverse modeling:');
-    writeln(datei, 'p1 = ', a^.ParText);
-    writeln(datei, 'p2 = ', a_calc^.ParText);
-    writeln(datei, 'p3 = ', bb_calc^.ParText);
-    writeln(datei, 'p4 = ', Kd^.ParText);
-    writeln(datei);
-    *)
+
     if flag_b_LoadAll then write(datei, 'Lambda', #9, 'Meas.', #9)
                       else write(datei, 'Lambda', #9, 'fwd', #9);
- (*   writeln(datei, 'Fit', #9, 'p1', #9, 'p2', #9, 'p3', #9, 'p4'); *)
     writeln(datei, 'Fit', #9, 'Rrs_surf', #9, 'R_rs');
- (*   write(datei, 'Mean', #9);
-    for nr:=1 to 2 do write(datei, schoen(spec[nr]^.avg,4), #9);
-    writeln(datei);        *)
-
     writeln(datei);
     for k:=1 to Channel_number do begin
         write(datei, x^.y[k]:5:2, #9);
         for nr:=1 to 2 do
              write(datei, schoen(spec[nr]^.y[k],4), #9);
         write(datei, schoen(Rrs_surf^.y[k],4), #9);
-        write(datei, schoen(spec[1]^.y[k]-Rrs_surf^.y[k],4), #9);
-        (*                      R_rs^.y[k]
-        write(datei, schoen(a^.y[k],4), #9);
-        write(datei, schoen(a_calc^.y[k],4), #9);
-        write(datei, schoen(bb_calc^.y[k],4), #9);
-        write(datei, schoen(Kd^.y[k],4), #9);
-        *)
+        write(datei, schoen(spec[1]^.y[k]-Rrs_surf^.y[k],4));
         writeln(datei);
         end;
     CloseFile(datei);
@@ -1698,7 +1692,7 @@ begin
     writeln(fileFitpars);
 
     write(fileFitpars, 'File', #9);
-    if flag_multi then write(fileFitpars, ' col', #9);
+    if flag_multi then write(fileFitpars, 'meas', #9);
     if Par1_Type<>0 then write(fileFitpars, par.name[Par1_Type], #9);
     if Par2_Type<>0 then write(fileFitpars, par.name[Par2_Type], #9);
     if Par3_Type<>0 then write(fileFitpars, par.name[Par3_Type], #9);
@@ -3486,7 +3480,7 @@ function lies_spektrum(var spek: Attr_spec; name:String; PosX, PosY: byte; Heade
                 3 = error in file
                 4 = file not found}
 var k, l      : word;
-    datei     : text;
+    datei     : textFile;
     flag      : boolean;
     ok        : byte;
     tabfile   : string;  { data columns separated by tab (#9 }
@@ -3505,7 +3499,6 @@ begin
     {$i-}
     AssignFile(datei, tempfile);
     reset(datei);
-    {$i+}
     if ioresult<>0 then ok:=4
     else begin
         readlnS(datei, spek.ParText, flag_CRLF);
@@ -3523,12 +3516,16 @@ begin
             if (k=1) and (l<1000) then flag:=TRUE;
             end;
         anzahl:=k;
-        if anzahl<3 then ok:=3;
+        if anzahl<3 then ok:=3 else
+            if (trunc(xx^.y[1])=trunc(spek.y[1])) and
+               (trunc(xx^.y[2])=trunc(spek.y[2])) and
+               (trunc(xx^.y[k div 2])=trunc(spek.y[k div 2])) then ok:=5;
         CloseFile(datei);
         end;
     lies_spektrum:=ok;
     if not flag_tab then deletefile(tabfile);
     average(spek);
+    {$i+}
     end;
 
 
@@ -4601,11 +4598,13 @@ begin
     {$i-}
     assignFile(input, FName);
     reset(input);
-    for i:=1 to line_day-1 do readlnS(input, dummyS, flag_CRLF);
-    lies(input,flag_CRLF,col_day-1,col_day,d1,d2);
-    if (d2>0) and (d2<=365) then day:=round(d2);
-    sun_earth:=sqr(1+0.0167*cos(2*pi*(day-3)/365));
-    closeFile(input);
+    if ioresult=0 then begin
+        for i:=1 to line_day-1 do readlnS(input, dummyS, flag_CRLF);
+        lies(input,flag_CRLF,col_day-1,col_day,d1,d2);
+        if (d2>0) and (d2<=365) then day:=round(d2);
+        sun_earth:=sqr(1+0.0167*cos(2*pi*(day-3)/365));
+        closeFile(input);
+        end;
     {$i+}
     end;
 

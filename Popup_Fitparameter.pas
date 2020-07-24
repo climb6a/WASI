@@ -2,7 +2,7 @@ unit Popup_Fitparameter;
 
 {$MODE Delphi}
 
-{ Version vom 12.6.2019 }
+{ Version vom 24.7.2020 }
 
 interface
 

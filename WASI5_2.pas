@@ -10,8 +10,8 @@ uses  Forms, Interfaces, gui, defaults,
 begin
   Application.Initialize;
   Application.Title := 'WASI5.2';
-  Application.Scaled := true;
   Application.CreateForm(TForm1, Form1);
+  Application.Scaled:=TRUE;
   Application.CreateForm(TFormDataFormatAdvanced, FormDataFormatAdvanced);
   if flag_background then begin
       Application.ShowMainForm := false;

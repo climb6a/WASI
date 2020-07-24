@@ -1,75 +1,78 @@
 object Popup_Fitparameters: TPopup_Fitparameters
   Left = 1283
-  Height = 858
+  Height = 536
   Top = 516
-  Width = 1340
+  Width = 838
   Caption = 'Fit parameters'
-  ClientHeight = 858
-  ClientWidth = 1340
+  ClientHeight = 536
+  ClientWidth = 838
   Color = clBtnFace
-  DesignTimePPI = 192
+  DesignTimePPI = 120
   Font.Color = clWindowText
-  Font.Height = -24
+  Font.Height = -15
   Font.Name = 'MS Sans Serif'
   OnCreate = FormCreate
   Position = poMainFormCenter
-  LCLVersion = '2.0.6.0'
+  LCLVersion = '2.0.10.0'
   object Model_parameters: TPageControl
-    Left = 34
-    Height = 704
-    Top = 32
-    Width = 1230
-    ActivePage = Miscellaneous
+    Left = 21
+    Height = 440
+    Top = 20
+    Width = 769
+    ActivePage = Geometry
     Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
-    Font.Height = -24
+    Font.Height = -15
     Font.Name = 'MS Sans Serif'
     ParentFont = False
-    TabIndex = 6
+    TabIndex = 0
     TabOrder = 0
     OnChange = Model_parametersChange
     object Geometry: TTabSheet
       Caption = 'Geometry'
-      ClientHeight = 326
-      ClientWidth = 607
+      ClientHeight = 410
+      ClientWidth = 761
       Font.Color = clWindowText
-      Font.Height = -24
+      Font.Height = -15
       Font.Name = 'MS Sans Serif'
       ImageIndex = 7
       ParentFont = False
       object Panel1: TPanel
         Left = 0
-        Height = 668
+        Height = 418
         Top = 0
-        Width = 1248
-        ClientHeight = 668
-        ClientWidth = 1248
+        Width = 780
+        ClientHeight = 418
+        ClientWidth = 780
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
-        Font.Height = -24
+        Font.Height = -15
         Font.Name = 'MS Sans Serif'
         ParentFont = False
         TabOrder = 0
         object Label_Q_units: TLabel
-          Left = 424
-          Height = 13
-          Top = 438
-          Width = 8
+          Left = 265
+          Height = 17
+          Top = 274
+          Width = 13
           Alignment = taRightJustify
           Caption = 'sr'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label_z: TLabel
-          Left = 70
-          Height = 13
-          Top = 282
-          Width = 63
+          Left = 44
+          Height = 17
+          Top = 176
+          Width = 87
           Caption = 'Sensor depth'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -77,52 +80,56 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_units_z: TLabel
-          Left = 428
-          Height = 13
-          Top = 282
-          Width = 8
+          Left = 268
+          Height = 17
+          Top = 176
+          Width = 13
           Alignment = taRightJustify
           Caption = 'm'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label18: TLabel
-          Left = 432
-          Height = 13
-          Top = 386
-          Width = 6
+          Left = 270
+          Height = 17
+          Top = 241
+          Width = 8
           Alignment = taRightJustify
           Caption = '1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label19: TLabel
-          Left = 428
-          Height = 13
-          Top = 332
-          Width = 8
+          Left = 268
+          Height = 17
+          Top = 208
+          Width = 13
           Alignment = taRightJustify
           Caption = 'm'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label_sun: TLabel
-          Left = 70
-          Height = 13
-          Top = 176
-          Width = 79
+          Left = 44
+          Height = 17
+          Top = 110
+          Width = 108
           Caption = 'Sun zenith angle'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -130,26 +137,28 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_sun_units: TLabel
-          Left = 438
-          Height = 13
-          Top = 176
-          Width = 4
+          Left = 274
+          Height = 17
+          Top = 110
+          Width = 6
           Alignment = taRightJustify
           Caption = '°'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label_view: TLabel
-          Left = 70
-          Height = 13
-          Top = 228
-          Width = 66
+          Left = 44
+          Height = 17
+          Top = 142
+          Width = 89
           Caption = 'Viewing angle'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -157,42 +166,45 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_view_units: TLabel
-          Left = 438
-          Height = 13
-          Top = 228
-          Width = 4
+          Left = 274
+          Height = 17
+          Top = 142
+          Width = 6
           Alignment = taRightJustify
           Caption = '°'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label_Header: TLabel
-          Left = 70
-          Height = 16
-          Top = 54
-          Width = 77
+          Left = 44
+          Height = 19
+          Top = 34
+          Width = 82
           Caption = 'Parameter '
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Q_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 438
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 274
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'Q'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = Q_fitClick
           ParentFont = False
@@ -200,12 +212,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 0
         end
         object Q_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 438
-          Width = 110
+          Left = 450
+          Height = 25
+          Top = 274
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = Q_0Change
           ParentFont = False
@@ -213,12 +226,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '5'
         end
         object Q_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 438
-          Width = 110
+          Left = 526
+          Height = 25
+          Top = 274
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = Q_minChange
           ParentFont = False
@@ -226,12 +240,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '3'
         end
         object Q_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 438
-          Width = 110
+          Left = 604
+          Height = 25
+          Top = 274
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = Q_maxChange
           ParentFont = False
@@ -239,16 +254,17 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '10'
         end
         object z_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 282
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 176
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'z'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = z_fitClick
           ParentFont = False
@@ -256,12 +272,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 4
         end
         object z_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 282
-          Width = 110
+          Left = 450
+          Height = 25
+          Top = 176
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = z_0Change
           ParentFont = False
@@ -269,12 +286,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.1'
         end
         object z_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 282
-          Width = 110
+          Left = 526
+          Height = 25
+          Top = 176
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = z_minChange
           ParentFont = False
@@ -282,12 +300,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.0001'
         end
         object z_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 282
-          Width = 110
+          Left = 604
+          Height = 25
+          Top = 176
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = z_maxChange
           ParentFont = False
@@ -295,27 +314,29 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object f_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 386
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 241
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'f'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = f_fitClick
           ParentFont = False
           TabOrder = 8
         end
         object f_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 386
-          Width = 110
+          Left = 450
+          Height = 25
+          Top = 241
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = f_0Change
           ParentFont = False
@@ -323,12 +344,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.33'
         end
         object f_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 386
-          Width = 110
+          Left = 526
+          Height = 25
+          Top = 241
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = f_minChange
           ParentFont = False
@@ -336,12 +358,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.1'
         end
         object f_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 386
-          Width = 110
+          Left = 604
+          Height = 25
+          Top = 241
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = f_maxChange
           ParentFont = False
@@ -349,12 +372,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.9'
         end
         object zB_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 332
-          Width = 110
+          Left = 526
+          Height = 25
+          Top = 208
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = zB_minChange
           ParentFont = False
@@ -362,27 +386,29 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object zB_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 332
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 208
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'zB'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = zB_fitClick
           ParentFont = False
           TabOrder = 13
         end
         object zB_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 332
-          Width = 110
+          Left = 450
+          Height = 25
+          Top = 208
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = zB_0Change
           ParentFont = False
@@ -390,12 +416,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object zB_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 332
-          Width = 110
+          Left = 604
+          Height = 25
+          Top = 208
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = zB_maxChange
           ParentFont = False
@@ -403,12 +430,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '100'
         end
         object sun_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 176
-          Width = 110
+          Left = 604
+          Height = 25
+          Top = 110
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = sun_maxChange
           ParentFont = False
@@ -416,16 +444,17 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object sun_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 176
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 110
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'sun'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = sun_fitClick
           ParentFont = False
@@ -433,12 +462,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 17
         end
         object sun_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 176
-          Width = 110
+          Left = 450
+          Height = 25
+          Top = 110
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = sun_0Change
           ParentFont = False
@@ -446,12 +476,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.3'
         end
         object sun_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 176
-          Width = 110
+          Left = 526
+          Height = 25
+          Top = 110
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = sun_minChange
           ParentFont = False
@@ -459,16 +490,17 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object view_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 228
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 142
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'view'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = view_fitClick
           ParentFont = False
@@ -476,12 +508,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 20
         end
         object view_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 228
-          Width = 110
+          Left = 450
+          Height = 25
+          Top = 142
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = view_0Change
           ParentFont = False
@@ -489,12 +522,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '5'
         end
         object view_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 228
-          Width = 110
+          Left = 526
+          Height = 25
+          Top = 142
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = view_minChange
           ParentFont = False
@@ -502,12 +536,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '3'
         end
         object view_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 228
-          Width = 110
+          Left = 604
+          Height = 25
+          Top = 142
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = view_maxChange
           ParentFont = False
@@ -515,26 +550,28 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '10'
         end
         object Button_Default_Geometry: TButton
-          Left = 438
-          Height = 54
-          Top = 570
-          Width = 266
+          Left = 274
+          Height = 34
+          Top = 356
+          Width = 166
           Caption = 'Default values'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = Button_Default_GeometryClick
           ParentFont = False
           TabOrder = 24
         end
         object Label_zB: TLabel
-          Left = 70
-          Height = 13
-          Top = 332
-          Width = 63
+          Left = 44
+          Height = 17
+          Top = 208
+          Width = 87
           Caption = 'Bottom depth'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -542,13 +579,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_f: TLabel
-          Left = 70
-          Height = 13
-          Top = 386
-          Width = 33
+          Left = 44
+          Height = 17
+          Top = 241
+          Width = 46
           Caption = 'f-factor'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -556,13 +594,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_sr: TLabel
-          Left = 70
-          Height = 13
-          Top = 438
-          Width = 38
+          Left = 44
+          Height = 17
+          Top = 274
+          Width = 54
           Caption = 'Q-factor'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -570,78 +609,84 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_Header1: TLabel
-          Left = 976
-          Height = 16
-          Top = 54
-          Width = 29
+          Left = 610
+          Height = 19
+          Top = 34
+          Width = 31
           Caption = 'Max'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header2: TLabel
-          Left = 864
-          Height = 16
-          Top = 54
-          Width = 25
+          Left = 540
+          Height = 19
+          Top = 34
+          Width = 27
           Caption = 'Min'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header3: TLabel
-          Left = 736
-          Height = 16
-          Top = 54
-          Width = 33
+          Left = 460
+          Height = 19
+          Top = 34
+          Width = 36
           Caption = 'Start'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header4: TLabel
-          Left = 640
-          Height = 16
-          Top = 54
-          Width = 22
+          Left = 400
+          Height = 19
+          Top = 34
+          Width = 23
           Caption = 'Fit '
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header5: TLabel
-          Left = 496
-          Height = 16
-          Top = 54
-          Width = 53
+          Left = 310
+          Height = 19
+          Top = 34
+          Width = 58
           Caption = 'Symbol'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header6: TLabel
-          Left = 374
-          Height = 16
-          Top = 54
-          Width = 36
+          Left = 234
+          Height = 19
+          Top = 34
+          Width = 40
           Caption = 'Units'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
@@ -651,33 +696,36 @@ object Popup_Fitparameters: TPopup_Fitparameters
     end
     object Illumination: TTabSheet
       Caption = 'Illumination'
-      ClientHeight = 326
-      ClientWidth = 607
+      ClientHeight = 651
+      ClientWidth = 1214
+      Font.CharSet = GREEK_CHARSET
       Font.Color = clWindowText
-      Font.Height = -24
+      Font.Height = -15
       Font.Name = 'MS Sans Serif'
       ImageIndex = 6
       ParentFont = False
       object Panel2: TPanel
         Left = 0
-        Height = 668
+        Height = 418
         Top = 0
-        Width = 1248
-        ClientHeight = 668
-        ClientWidth = 1248
+        Width = 780
+        ClientHeight = 418
+        ClientWidth = 780
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
-        Font.Height = -24
+        Font.Height = -15
         Font.Name = 'MS Sans Serif'
         ParentFont = False
         TabOrder = 0
         object Label_fdd: TLabel
-          Left = 70
-          Height = 13
-          Top = 176
-          Width = 128
+          Left = 44
+          Height = 27
+          Top = 110
+          Width = 292
           Caption = 'Fraction of direct irradiance'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -685,26 +733,28 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_units_fdd: TLabel
-          Left = 450
-          Height = 13
-          Top = 176
-          Width = 6
+          Left = 281
+          Height = 27
+          Top = 110
+          Width = 13
           Alignment = taRightJustify
           Caption = '1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label_fds: TLabel
-          Left = 70
-          Height = 13
-          Top = 228
-          Width = 133
+          Left = 44
+          Height = 27
+          Top = 142
+          Width = 305
           Caption = 'Fraction of diffuse irradiance'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -712,26 +762,28 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_units_fds: TLabel
-          Left = 450
-          Height = 13
-          Top = 228
-          Width = 6
+          Left = 281
+          Height = 27
+          Top = 142
+          Width = 13
           Alignment = taRightJustify
           Caption = '1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label_H_oz: TLabel
-          Left = 70
-          Height = 13
-          Top = 282
-          Width = 91
+          Left = 44
+          Height = 27
+          Top = 176
+          Width = 208
           Caption = 'Ozone scale height'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -739,26 +791,28 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_units_H_oz: TLabel
-          Left = 432
-          Height = 13
-          Top = 282
-          Width = 14
+          Left = 270
+          Height = 27
+          Top = 176
+          Width = 32
           Alignment = taRightJustify
           Caption = 'cm'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label_WV: TLabel
-          Left = 70
-          Height = 13
-          Top = 332
-          Width = 119
+          Left = 44
+          Height = 27
+          Top = 208
+          Width = 266
           Caption = 'Water vapor scale height'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -766,26 +820,28 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_units_WV: TLabel
-          Left = 432
-          Height = 13
-          Top = 332
-          Width = 14
+          Left = 270
+          Height = 27
+          Top = 208
+          Width = 32
           Alignment = taRightJustify
           Caption = 'cm'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label_beta: TLabel
-          Left = 70
-          Height = 13
-          Top = 386
-          Width = 40
+          Left = 44
+          Height = 27
+          Top = 241
+          Width = 92
           Caption = 'Turbidity'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -793,26 +849,28 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_units_beta: TLabel
-          Left = 450
-          Height = 13
-          Top = 386
-          Width = 6
+          Left = 281
+          Height = 27
+          Top = 241
+          Width = 13
           Alignment = taRightJustify
           Caption = '1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label_alpha: TLabel
-          Left = 70
-          Height = 13
-          Top = 438
-          Width = 151
+          Left = 44
+          Height = 27
+          Top = 274
+          Width = 346
           Caption = 'Angstroem exponent of aerosols'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -820,42 +878,45 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_units_alpha: TLabel
-          Left = 450
-          Height = 13
-          Top = 438
-          Width = 6
+          Left = 281
+          Height = 27
+          Top = 274
+          Width = 13
           Alignment = taRightJustify
           Caption = '1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label17: TLabel
-          Left = 70
-          Height = 16
-          Top = 54
-          Width = 73
+          Left = 44
+          Height = 30
+          Top = 34
+          Width = 127
           Caption = 'Parameter'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object f_dd_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 176
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 110
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'f_dd'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           OnClick = f_dd_fitClick
           ParentFont = False
@@ -863,12 +924,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 0
         end
         object f_dd_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 176
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 110
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = f_dd_0Change
           ParentFont = False
@@ -876,12 +938,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.3'
         end
         object f_dd_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 176
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 110
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = f_dd_minChange
           ParentFont = False
@@ -889,12 +952,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object f_dd_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 176
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 110
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = f_dd_maxChange
           ParentFont = False
@@ -902,16 +966,17 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object f_ds_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 228
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 142
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'f_ds'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = f_ds_fitClick
           ParentFont = False
@@ -919,12 +984,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 4
         end
         object f_ds_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 228
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 142
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = f_ds_0Change
           ParentFont = False
@@ -932,12 +998,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.3'
         end
         object f_ds_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 228
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 142
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = f_ds_minChange
           ParentFont = False
@@ -945,12 +1012,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object f_ds_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 228
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 142
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = f_ds_maxChange
           ParentFont = False
@@ -958,16 +1026,17 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object H_oz_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 282
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 176
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'H_oz'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = H_oz_fitClick
           ParentFont = False
@@ -975,12 +1044,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 8
         end
         object H_oz_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 282
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 176
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = H_oz_0Change
           ParentFont = False
@@ -988,12 +1058,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.3'
         end
         object H_oz_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 282
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 176
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = H_oz_minChange
           ParentFont = False
@@ -1001,12 +1072,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object H_oz_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 282
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 176
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = H_oz_maxChange
           ParentFont = False
@@ -1014,16 +1086,17 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object WV_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 332
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 208
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'WV'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = WV_fitClick
           ParentFont = False
@@ -1031,12 +1104,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 12
         end
         object WV_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 332
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 208
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = WV_0Change
           ParentFont = False
@@ -1044,12 +1118,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.3'
         end
         object WV_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 332
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 208
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = WV_minChange
           ParentFont = False
@@ -1057,12 +1132,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object WV_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 332
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 208
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = WV_maxChange
           ParentFont = False
@@ -1070,16 +1146,17 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object beta_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 386
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 241
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'beta'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = beta_fitClick
           ParentFont = False
@@ -1087,12 +1164,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 16
         end
         object beta_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 386
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 241
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = beta_0Change
           ParentFont = False
@@ -1100,12 +1178,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.3'
         end
         object beta_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 386
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 241
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = beta_minChange
           ParentFont = False
@@ -1113,12 +1192,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object beta_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 386
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 241
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = beta_maxChange
           ParentFont = False
@@ -1126,27 +1206,29 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object alpha_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 438
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 274
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'alpha'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = alpha_fitClick
           ParentFont = False
           TabOrder = 20
         end
         object alpha_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 438
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 274
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = alpha_0Change
           ParentFont = False
@@ -1154,12 +1236,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object alpha_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 438
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 274
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = alpha_minChange
           ParentFont = False
@@ -1167,12 +1250,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '-2'
         end
         object alpha_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 438
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 274
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = alpha_maxChange
           ParentFont = False
@@ -1180,91 +1264,98 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '2'
         end
         object Button_Default_Illumination: TButton
-          Left = 438
-          Height = 54
-          Top = 570
-          Width = 266
+          Left = 274
+          Height = 34
+          Top = 356
+          Width = 166
           Caption = 'Default values'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = Button_Default_IlluminationClick
           ParentFont = False
           TabOrder = 24
         end
         object Label_Header7: TLabel
-          Left = 374
-          Height = 16
-          Top = 54
-          Width = 36
+          Left = 234
+          Height = 30
+          Top = 34
+          Width = 66
           Caption = 'Units'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header8: TLabel
-          Left = 976
-          Height = 16
-          Top = 54
-          Width = 29
+          Left = 610
+          Height = 30
+          Top = 34
+          Width = 51
           Caption = 'Max'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header9: TLabel
-          Left = 864
-          Height = 16
-          Top = 54
-          Width = 25
+          Left = 540
+          Height = 30
+          Top = 34
+          Width = 47
           Caption = 'Min'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header10: TLabel
-          Left = 736
-          Height = 16
-          Top = 54
-          Width = 33
+          Left = 460
+          Height = 30
+          Top = 34
+          Width = 59
           Caption = 'Start'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header11: TLabel
-          Left = 640
-          Height = 16
-          Top = 54
-          Width = 22
+          Left = 400
+          Height = 30
+          Top = 34
+          Width = 40
           Caption = 'Fit '
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header12: TLabel
-          Left = 496
-          Height = 16
-          Top = 54
-          Width = 53
+          Left = 310
+          Height = 30
+          Top = 34
+          Width = 96
           Caption = 'Symbol'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
@@ -1274,136 +1365,147 @@ object Popup_Fitparameters: TPopup_Fitparameters
     end
     object Surface: TTabSheet
       Caption = 'Surface'
-      ClientHeight = 326
-      ClientWidth = 607
+      ClientHeight = 651
+      ClientWidth = 1214
+      Font.CharSet = GREEK_CHARSET
       Font.Color = clWindowText
-      Font.Height = -24
+      Font.Height = -15
       Font.Name = 'MS Sans Serif'
       ImageIndex = 1
       ParentFont = False
       object Panel3: TPanel
         Left = 0
-        Height = 668
+        Height = 418
         Top = 0
-        Width = 1298
-        ClientHeight = 668
-        ClientWidth = 1298
+        Width = 811
+        ClientHeight = 418
+        ClientWidth = 811
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
-        Font.Height = -24
+        Font.Height = -15
         Font.Name = 'MS Sans Serif'
         ParentFont = False
         TabOrder = 0
         object Label_rho_dd_units: TLabel
-          Left = 450
-          Height = 13
-          Top = 176
-          Width = 6
+          Left = 281
+          Height = 27
+          Top = 110
+          Width = 13
           Alignment = taRightJustify
           Caption = '1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label_rho_ds_units: TLabel
-          Left = 450
-          Height = 13
-          Top = 228
-          Width = 6
+          Left = 281
+          Height = 27
+          Top = 142
+          Width = 13
           Alignment = taRightJustify
           Caption = '1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label_rho_L_units: TLabel
-          Left = 450
-          Height = 13
-          Top = 282
-          Width = 6
+          Left = 281
+          Height = 27
+          Top = 176
+          Width = 13
           Alignment = taRightJustify
           Caption = '1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label_g_dd_units: TLabel
-          Left = 422
-          Height = 13
-          Top = 332
-          Width = 19
+          Left = 264
+          Height = 27
+          Top = 208
+          Width = 40
           Alignment = taRightJustify
           Caption = '1/sr'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label_g_dsr_units: TLabel
-          Left = 422
-          Height = 13
-          Top = 386
-          Width = 19
+          Left = 264
+          Height = 27
+          Top = 241
+          Width = 40
           Alignment = taRightJustify
           Caption = '1/sr'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label_g_dsa_units: TLabel
-          Left = 422
-          Height = 13
-          Top = 438
-          Width = 19
+          Left = 264
+          Height = 27
+          Top = 274
+          Width = 40
           Alignment = taRightJustify
           Caption = '1/sr'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label23: TLabel
-          Left = 70
-          Height = 16
-          Top = 54
-          Width = 73
+          Left = 44
+          Height = 30
+          Top = 34
+          Width = 127
           Caption = 'Parameter'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Button_Default_Surface: TButton
-          Left = 438
-          Height = 54
-          Top = 570
-          Width = 266
+          Left = 274
+          Height = 34
+          Top = 356
+          Width = 166
           Caption = 'Default values'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = Button_Default_SurfaceClick
           ParentFont = False
           TabOrder = 0
         end
         object rho_dd_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 176
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 110
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = rho_dd_maxChange
           ParentFont = False
@@ -1411,16 +1513,17 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object rho_dd_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 176
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 110
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'rho_dd'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = rho_dd_fitClick
           ParentFont = False
@@ -1428,12 +1531,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 2
         end
         object rho_dd_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 176
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 110
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = rho_dd_0Change
           ParentFont = False
@@ -1441,12 +1545,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.1'
         end
         object rho_dd_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 176
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 110
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = rho_dd_minChange
           ParentFont = False
@@ -1454,16 +1559,17 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.0001'
         end
         object rho_ds_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 228
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 142
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'rho_ds'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = rho_ds_fitClick
           ParentFont = False
@@ -1471,12 +1577,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 5
         end
         object rho_ds_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 228
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 142
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = rho_ds_0Change
           ParentFont = False
@@ -1484,12 +1591,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.1'
         end
         object rho_ds_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 228
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 142
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = rho_ds_minChange
           ParentFont = False
@@ -1497,12 +1605,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.0001'
         end
         object rho_ds_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 228
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 142
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = rho_ds_maxChange
           ParentFont = False
@@ -1510,16 +1619,17 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object rho_L_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 282
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 176
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'rho_L'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = rho_L_fitClick
           ParentFont = False
@@ -1527,12 +1637,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 9
         end
         object rho_L_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 282
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 176
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = rho_L_0Change
           ParentFont = False
@@ -1540,12 +1651,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.1'
         end
         object rho_L_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 282
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 176
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = rho_L_minChange
           ParentFont = False
@@ -1553,12 +1665,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.0001'
         end
         object rho_L_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 282
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 176
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = rho_L_maxChange
           ParentFont = False
@@ -1566,16 +1679,17 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object g_dd_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 332
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 208
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'g_dd'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = g_dd_fitClick
           ParentFont = False
@@ -1583,12 +1697,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 13
         end
         object g_dd_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 332
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 208
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = g_dd_0Change
           ParentFont = False
@@ -1596,12 +1711,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.1'
         end
         object g_dd_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 332
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 208
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = g_dd_minChange
           ParentFont = False
@@ -1609,12 +1725,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.0001'
         end
         object g_dd_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 332
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 208
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = g_dd_maxChange
           ParentFont = False
@@ -1622,16 +1739,17 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object g_dsr_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 386
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 241
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'g_dsr'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = g_dsr_fitClick
           ParentFont = False
@@ -1639,12 +1757,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 17
         end
         object g_dsr_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 386
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 241
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = g_dsr_0Change
           ParentFont = False
@@ -1652,12 +1771,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.1'
         end
         object g_dsr_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 386
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 241
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = g_dsr_minChange
           ParentFont = False
@@ -1665,12 +1785,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.0001'
         end
         object g_dsr_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 386
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 241
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = g_dsr_maxChange
           ParentFont = False
@@ -1678,16 +1799,17 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object g_dsa_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 438
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 274
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'g_dsa'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = g_dsa_fitClick
           ParentFont = False
@@ -1695,12 +1817,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 21
         end
         object g_dsa_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 438
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 274
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = g_dsa_0Change
           ParentFont = False
@@ -1708,12 +1831,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.1'
         end
         object g_dsa_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 438
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 274
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = g_dsa_minChange
           ParentFont = False
@@ -1721,12 +1845,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.0001'
         end
         object g_dsa_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 438
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 274
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = g_dsa_maxChange
           ParentFont = False
@@ -1734,13 +1859,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object Label_rho_dd: TLabel
-          Left = 70
-          Height = 13
-          Top = 176
-          Width = 112
+          Left = 44
+          Height = 27
+          Top = 110
+          Width = 252
           Caption = 'Reflection factor of Edd'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -1748,13 +1874,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_rho_ds: TLabel
-          Left = 70
-          Height = 13
-          Top = 228
-          Width = 111
+          Left = 44
+          Height = 27
+          Top = 142
+          Width = 250
           Caption = 'Reflection factor of Eds'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -1762,13 +1889,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_rho_L: TLabel
-          Left = 70
-          Height = 13
-          Top = 278
-          Width = 104
+          Left = 44
+          Height = 27
+          Top = 174
+          Width = 233
           Caption = 'Reflection factor of Ls'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -1776,13 +1904,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_g_dd: TLabel
-          Left = 70
-          Height = 13
-          Top = 332
-          Width = 119
+          Left = 44
+          Height = 27
+          Top = 208
+          Width = 272
           Caption = 'Fraction of Ls due to Edd'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -1790,13 +1919,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_g_dsr: TLabel
-          Left = 70
-          Height = 13
-          Top = 386
-          Width = 121
+          Left = 44
+          Height = 27
+          Top = 241
+          Width = 278
           Caption = 'Fraction of Ls due to Edsr'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -1804,13 +1934,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_g_dsa: TLabel
-          Left = 70
-          Height = 13
-          Top = 438
-          Width = 124
+          Left = 44
+          Height = 27
+          Top = 274
+          Width = 283
           Caption = 'Fraction of Ls due to Edsa'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -1818,78 +1949,84 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_Header13: TLabel
-          Left = 496
-          Height = 16
-          Top = 54
-          Width = 53
+          Left = 310
+          Height = 30
+          Top = 34
+          Width = 96
           Caption = 'Symbol'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header14: TLabel
-          Left = 374
-          Height = 16
-          Top = 54
-          Width = 36
+          Left = 234
+          Height = 30
+          Top = 34
+          Width = 66
           Caption = 'Units'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header15: TLabel
-          Left = 976
-          Height = 16
-          Top = 54
-          Width = 29
+          Left = 610
+          Height = 30
+          Top = 34
+          Width = 51
           Caption = 'Max'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header16: TLabel
-          Left = 864
-          Height = 16
-          Top = 54
-          Width = 25
+          Left = 540
+          Height = 30
+          Top = 34
+          Width = 47
           Caption = 'Min'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header17: TLabel
-          Left = 736
-          Height = 16
-          Top = 54
-          Width = 33
+          Left = 460
+          Height = 30
+          Top = 34
+          Width = 59
           Caption = 'Start'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header18: TLabel
-          Left = 640
-          Height = 16
-          Top = 54
-          Width = 22
+          Left = 400
+          Height = 30
+          Top = 34
+          Width = 40
           Caption = 'Fit '
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
@@ -1899,111 +2036,120 @@ object Popup_Fitparameters: TPopup_Fitparameters
     end
     object Reflectance: TTabSheet
       Caption = 'Water constituents'
-      ClientHeight = 326
-      ClientWidth = 607
+      ClientHeight = 651
+      ClientWidth = 1214
+      Font.CharSet = GREEK_CHARSET
       Font.Color = clWindowText
-      Font.Height = -24
+      Font.Height = -15
       Font.Name = 'MS Sans Serif'
       ImageIndex = 2
       ParentFont = False
       object Panel4: TPanel
         Left = 0
-        Height = 684
+        Height = 428
         Top = 0
-        Width = 1248
-        ClientHeight = 684
-        ClientWidth = 1248
+        Width = 780
+        ClientHeight = 428
+        ClientWidth = 780
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
-        Font.Height = -24
+        Font.Height = -15
         Font.Name = 'MS Sans Serif'
         ParentFont = False
         TabOrder = 0
         object Label26: TLabel
-          Left = 404
-          Height = 13
-          Top = 386
-          Width = 19
+          Left = 252
+          Height = 27
+          Top = 241
+          Width = 40
           Alignment = taRightJustify
           Caption = '1/m'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label27: TLabel
-          Left = 392
-          Height = 13
-          Top = 438
-          Width = 25
+          Left = 245
+          Height = 27
+          Top = 274
+          Width = 54
           Alignment = taRightJustify
           Caption = '1/nm'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label28: TLabel
-          Left = 398
-          Height = 13
-          Top = 228
-          Width = 21
+          Left = 249
+          Height = 27
+          Top = 142
+          Width = 47
           Alignment = taRightJustify
           Caption = 'mg/l'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label29: TLabel
-          Left = 398
-          Height = 13
-          Top = 282
-          Width = 21
+          Left = 249
+          Height = 27
+          Top = 176
+          Width = 47
           Alignment = taRightJustify
           Caption = 'mg/l'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label52: TLabel
-          Left = 432
-          Height = 13
-          Top = 492
-          Width = 6
+          Left = 270
+          Height = 27
+          Top = 308
+          Width = 13
           Alignment = taRightJustify
           Caption = '1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label78: TLabel
-          Left = 432
-          Height = 13
-          Top = 176
-          Width = 6
+          Left = 270
+          Height = 27
+          Top = 110
+          Width = 13
           Alignment = taRightJustify
           Caption = '1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label_bbs_phy: TLabel
-          Left = 70
-          Height = 13
-          Top = 332
-          Width = 87
+          Left = 44
+          Height = 27
+          Top = 208
+          Width = 199
           Caption = 'Phytoplankton bb*'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -2011,42 +2157,45 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_units_detritus: TLabel
-          Left = 370
-          Height = 13
-          Top = 332
-          Width = 33
+          Left = 231
+          Height = 27
+          Top = 208
+          Width = 74
           Alignment = taRightJustify
           Caption = 'm2/mg'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label2: TLabel
-          Left = 70
-          Height = 16
-          Top = 54
-          Width = 77
+          Left = 44
+          Height = 30
+          Top = 34
+          Width = 134
           Caption = 'Parameter '
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object CY_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 386
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 241
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'C_Y'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = CY_fitClick
           ParentFont = False
@@ -2054,12 +2203,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 0
         end
         object CY_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 386
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 241
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CY_0Change
           ParentFont = False
@@ -2067,12 +2217,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.5'
         end
         object CY_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 386
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 241
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CY_minChange
           ParentFont = False
@@ -2080,12 +2231,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1e-3'
         end
         object CY_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 386
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 241
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CY_maxChange
           ParentFont = False
@@ -2093,27 +2245,29 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '10'
         end
         object S_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 438
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 274
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'S'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = S_fitClick
           ParentFont = False
           TabOrder = 4
         end
         object S_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 438
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 274
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = S_0Change
           ParentFont = False
@@ -2121,12 +2275,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.014'
         end
         object S_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 438
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 274
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = S_minChange
           ParentFont = False
@@ -2134,12 +2289,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.005'
         end
         object S_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 438
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 274
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = S_maxChange
           ParentFont = False
@@ -2147,16 +2303,17 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.025'
         end
         object CL_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 228
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 142
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'X'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = CL_fitClick
           ParentFont = False
@@ -2164,12 +2321,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 8
         end
         object CL_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 228
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 142
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CL_0Change
           ParentFont = False
@@ -2177,12 +2335,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object CL_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 228
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 142
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CL_minChange
           ParentFont = False
@@ -2190,12 +2349,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1e-3'
         end
         object CL_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 228
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 142
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CL_maxChange
           ParentFont = False
@@ -2203,27 +2363,29 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '100'
         end
         object CMie_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 282
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 176
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'C_Mie'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = CMie_fitClick
           ParentFont = False
           TabOrder = 12
         end
         object CMie_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 282
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 176
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CMie_0Change
           ParentFont = False
@@ -2231,12 +2393,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object CMie_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 282
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 176
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CMie_minChange
           ParentFont = False
@@ -2244,12 +2407,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object CMie_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 282
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 176
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CMie_maxChange
           ParentFont = False
@@ -2257,40 +2421,43 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '100'
         end
         object Button_Default_WC: TButton
-          Left = 438
-          Height = 54
-          Top = 570
-          Width = 266
+          Left = 274
+          Height = 34
+          Top = 356
+          Width = 166
           Caption = 'Default values'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = Button_Default_WCClick
           ParentFont = False
           TabOrder = 16
         end
         object n_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 492
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 308
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'n'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = n_fitClick
           ParentFont = False
           TabOrder = 17
         end
         object n_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 492
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 308
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = n_0Change
           ParentFont = False
@@ -2298,12 +2465,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '-1'
         end
         object n_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 492
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 308
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = _minChange
           ParentFont = False
@@ -2311,12 +2479,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '-2'
         end
         object n_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 492
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 308
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = n_maxChange
           ParentFont = False
@@ -2324,27 +2493,29 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '2'
         end
         object fluo_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 176
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 110
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'fluo'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = fluo_fitClick
           ParentFont = False
           TabOrder = 21
         end
         object fluo_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 176
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 110
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fluo_0Change
           ParentFont = False
@@ -2352,12 +2523,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.01'
         end
         object fluo_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 176
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 110
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fluo_minChange
           ParentFont = False
@@ -2365,12 +2537,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.001'
         end
         object fluo_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 176
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 110
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fluo_maxChange
           ParentFont = False
@@ -2378,16 +2551,17 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.9'
         end
         object C_D_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 332
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 208
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'bbs_phy'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = C_D_fitClick
           ParentFont = False
@@ -2395,12 +2569,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 25
         end
         object C_D_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 332
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 208
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = C_D_0Change
           ParentFont = False
@@ -2408,12 +2583,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.5'
         end
         object C_D_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 332
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 208
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = C_D_minChange
           ParentFont = False
@@ -2421,12 +2597,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1e-3'
         end
         object C_D_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 332
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 208
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = C_D_maxChange
           ParentFont = False
@@ -2434,13 +2611,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '10'
         end
         object Label_C_Mie: TLabel
-          Left = 70
-          Height = 13
-          Top = 278
-          Width = 119
+          Left = 44
+          Height = 27
+          Top = 174
+          Width = 273
           Caption = 'Non-algal particles type II'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -2448,13 +2626,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_X: TLabel
-          Left = 70
-          Height = 13
-          Top = 228
-          Width = 120
+          Left = 44
+          Height = 27
+          Top = 142
+          Width = 273
           Caption = 'Non-algal particles Type I'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -2462,13 +2641,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_fluo: TLabel
-          Left = 70
-          Height = 13
-          Top = 176
-          Width = 132
+          Left = 44
+          Height = 27
+          Top = 110
+          Width = 305
           Caption = 'Fluorescence quantum yield'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -2476,13 +2656,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_C_Y: TLabel
-          Left = 70
-          Height = 13
-          Top = 386
-          Width = 32
+          Left = 44
+          Height = 27
+          Top = 241
+          Width = 72
           Caption = 'CDOM'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -2490,13 +2671,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_S: TLabel
-          Left = 70
-          Height = 13
-          Top = 438
-          Width = 79
+          Left = 44
+          Height = 27
+          Top = 274
+          Width = 178
           Caption = 'CDOM exponent'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -2504,13 +2686,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_angstroem: TLabel
-          Left = 70
-          Height = 13
-          Top = 492
-          Width = 116
+          Left = 44
+          Height = 27
+          Top = 308
+          Width = 264
           Caption = 'Angström exponent NAP'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -2518,78 +2701,84 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_Header19: TLabel
-          Left = 640
-          Height = 16
-          Top = 54
-          Width = 22
+          Left = 400
+          Height = 30
+          Top = 34
+          Width = 40
           Caption = 'Fit '
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header20: TLabel
-          Left = 496
-          Height = 16
-          Top = 54
-          Width = 53
+          Left = 310
+          Height = 30
+          Top = 34
+          Width = 96
           Caption = 'Symbol'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header21: TLabel
-          Left = 374
-          Height = 16
-          Top = 54
-          Width = 36
+          Left = 234
+          Height = 30
+          Top = 34
+          Width = 66
           Caption = 'Units'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header22: TLabel
-          Left = 976
-          Height = 16
-          Top = 54
-          Width = 29
+          Left = 610
+          Height = 30
+          Top = 34
+          Width = 51
           Caption = 'Max'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header23: TLabel
-          Left = 864
-          Height = 16
-          Top = 54
-          Width = 25
+          Left = 540
+          Height = 30
+          Top = 34
+          Width = 47
           Caption = 'Min'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header24: TLabel
-          Left = 736
-          Height = 16
-          Top = 54
-          Width = 33
+          Left = 460
+          Height = 30
+          Top = 34
+          Width = 59
           Caption = 'Start'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
@@ -2599,125 +2788,135 @@ object Popup_Fitparameters: TPopup_Fitparameters
     end
     object Algae: TTabSheet
       Caption = 'Algae classes'
-      ClientHeight = 326
-      ClientWidth = 607
+      ClientHeight = 651
+      ClientWidth = 1214
+      Font.CharSet = GREEK_CHARSET
       Font.Color = clWindowText
-      Font.Height = -24
+      Font.Height = -15
       Font.Name = 'MS Sans Serif'
       ImageIndex = 4
       ParentFont = False
       object Panel5: TPanel
         Left = 0
-        Height = 684
+        Height = 428
         Top = 0
-        Width = 1290
-        ClientHeight = 684
-        ClientWidth = 1290
+        Width = 806
+        ClientHeight = 428
+        ClientWidth = 806
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
-        Font.Height = -24
+        Font.Height = -15
         Font.Name = 'MS Sans Serif'
         ParentFont = False
         TabOrder = 0
         object Label60: TLabel
-          Left = 404
-          Height = 13
-          Top = 176
-          Width = 19
+          Left = 252
+          Height = 27
+          Top = 110
+          Width = 41
           Alignment = taRightJustify
           Caption = 'ug/l'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label61: TLabel
-          Left = 404
-          Height = 13
-          Top = 228
-          Width = 19
+          Left = 252
+          Height = 27
+          Top = 142
+          Width = 41
           Alignment = taRightJustify
           Caption = 'ug/l'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label62: TLabel
-          Left = 404
-          Height = 13
-          Top = 282
-          Width = 19
+          Left = 252
+          Height = 27
+          Top = 176
+          Width = 41
           Alignment = taRightJustify
           Caption = 'ug/l'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label63: TLabel
-          Left = 404
-          Height = 13
-          Top = 332
-          Width = 19
+          Left = 252
+          Height = 27
+          Top = 208
+          Width = 41
           Alignment = taRightJustify
           Caption = 'ug/l'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label64: TLabel
-          Left = 404
-          Height = 13
-          Top = 386
-          Width = 19
+          Left = 252
+          Height = 27
+          Top = 241
+          Width = 41
           Alignment = taRightJustify
           Caption = 'ug/l'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label3: TLabel
-          Left = 70
-          Height = 16
-          Top = 54
-          Width = 73
+          Left = 44
+          Height = 30
+          Top = 34
+          Width = 127
           Caption = 'Parameter'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Ccl_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 176
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 110
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'C[1]'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = Ccl_fitClick
           ParentFont = False
           TabOrder = 0
         end
         object CCl_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 176
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 110
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CCl_0Change
           ParentFont = False
@@ -2725,12 +2924,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object Ccl_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 176
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 110
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = Ccl_minChange
           ParentFont = False
@@ -2738,12 +2938,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object Ccl_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 176
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 110
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = Ccl_maxChange
           ParentFont = False
@@ -2751,27 +2952,29 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '100'
         end
         object CCh_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 228
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 142
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'C[2]'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = CCh_fitClick
           ParentFont = False
           TabOrder = 4
         end
         object Cch_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 228
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 142
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = Cch_0Change
           ParentFont = False
@@ -2779,12 +2982,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object Cch_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 228
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 142
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = Cch_minChange
           ParentFont = False
@@ -2792,12 +2996,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object CCh_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 228
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 142
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CCh_maxChange
           ParentFont = False
@@ -2805,27 +3010,29 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '100'
         end
         object CD_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 282
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 176
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'C[3]'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = CD_fitClick
           ParentFont = False
           TabOrder = 8
         end
         object CD_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 282
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 176
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CD_0Change
           ParentFont = False
@@ -2833,12 +3040,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object CD_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 282
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 176
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CD_minChange
           ParentFont = False
@@ -2846,12 +3054,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object CD_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 282
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 176
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CD_maxChange
           ParentFont = False
@@ -2859,27 +3068,29 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '100'
         end
         object CDF_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 332
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 208
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'C[4]'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = CDF_fitClick
           ParentFont = False
           TabOrder = 12
         end
         object CDF_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 332
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 208
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CDF_0Change
           ParentFont = False
@@ -2887,12 +3098,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object CDF_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 332
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 208
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CDF_minChange
           ParentFont = False
@@ -2900,12 +3112,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object CDF_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 332
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 208
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CDF_maxChange
           ParentFont = False
@@ -2913,27 +3126,29 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '100'
         end
         object CG_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 386
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 241
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'C[5]'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = CG_fitClick
           ParentFont = False
           TabOrder = 16
         end
         object CG_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 386
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 241
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CG_0Change
           ParentFont = False
@@ -2941,12 +3156,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object CG_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 386
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 241
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CG_minChange
           ParentFont = False
@@ -2954,12 +3170,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object CG_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 386
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 241
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CG_maxChange
           ParentFont = False
@@ -2967,26 +3184,28 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '100'
         end
         object Button_Default_Algae: TButton
-          Left = 438
-          Height = 54
-          Top = 570
-          Width = 266
+          Left = 274
+          Height = 34
+          Top = 356
+          Width = 166
           Caption = 'Default values'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = Button_Default_AlgaeClick
           ParentFont = False
           TabOrder = 20
         end
         object Label_C4: TLabel
-          Left = 70
-          Height = 13
-          Top = 332
-          Width = 107
+          Left = 44
+          Height = 27
+          Top = 208
+          Width = 245
           Caption = 'Phytoplankton group 4'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -2994,13 +3213,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_C2: TLabel
-          Left = 70
-          Height = 13
-          Top = 228
-          Width = 107
+          Left = 44
+          Height = 27
+          Top = 142
+          Width = 245
           Caption = 'Phytoplankton group 2'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -3008,13 +3228,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_c1: TLabel
-          Left = 70
-          Height = 13
-          Top = 176
-          Width = 107
+          Left = 44
+          Height = 27
+          Top = 110
+          Width = 245
           Caption = 'Phytoplankton group 1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -3022,13 +3243,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_C3: TLabel
-          Left = 70
-          Height = 13
-          Top = 278
-          Width = 107
+          Left = 44
+          Height = 27
+          Top = 174
+          Width = 245
           Caption = 'Phytoplankton group 3'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -3036,13 +3258,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_C5: TLabel
-          Left = 70
-          Height = 13
-          Top = 386
-          Width = 107
+          Left = 44
+          Height = 27
+          Top = 241
+          Width = 245
           Caption = 'Phytoplankton group 5'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -3050,13 +3273,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_C0: TLabel
-          Left = 70
-          Height = 13
-          Top = 122
-          Width = 107
+          Left = 44
+          Height = 27
+          Top = 76
+          Width = 245
           Caption = 'Phytoplankton group 0'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -3064,29 +3288,31 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label16: TLabel
-          Left = 404
-          Height = 13
-          Top = 122
-          Width = 19
+          Left = 252
+          Height = 27
+          Top = 76
+          Width = 41
           Alignment = taRightJustify
           Caption = 'ug/l'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Cp_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 122
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 76
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'C[0]'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = Cp_fitClick
           ParentFont = False
@@ -3094,12 +3320,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 21
         end
         object CP_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 122
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 76
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CP_0Change
           ParentFont = False
@@ -3107,12 +3334,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '5'
         end
         object CP_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 122
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 76
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CP_minChange
           ParentFont = False
@@ -3120,12 +3348,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1e-3'
         end
         object CP_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 122
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 76
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = CP_maxChange
           ParentFont = False
@@ -3133,78 +3362,84 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '100'
         end
         object Label_Header25: TLabel
-          Left = 736
-          Height = 16
-          Top = 54
-          Width = 33
+          Left = 460
+          Height = 30
+          Top = 34
+          Width = 59
           Caption = 'Start'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header26: TLabel
-          Left = 640
-          Height = 16
-          Top = 54
-          Width = 22
+          Left = 400
+          Height = 30
+          Top = 34
+          Width = 40
           Caption = 'Fit '
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header27: TLabel
-          Left = 496
-          Height = 16
-          Top = 54
-          Width = 53
+          Left = 310
+          Height = 30
+          Top = 34
+          Width = 96
           Caption = 'Symbol'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header28: TLabel
-          Left = 374
-          Height = 16
-          Top = 54
-          Width = 36
+          Left = 234
+          Height = 30
+          Top = 34
+          Width = 66
           Caption = 'Units'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header29: TLabel
-          Left = 976
-          Height = 16
-          Top = 54
-          Width = 29
+          Left = 610
+          Height = 30
+          Top = 34
+          Width = 51
           Caption = 'Max'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header30: TLabel
-          Left = 864
-          Height = 16
-          Top = 54
-          Width = 25
+          Left = 540
+          Height = 30
+          Top = 34
+          Width = 47
           Caption = 'Min'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
@@ -3214,138 +3449,149 @@ object Popup_Fitparameters: TPopup_Fitparameters
     end
     object Shallow: TTabSheet
       Caption = 'Ground cover'
-      ClientHeight = 326
-      ClientWidth = 607
+      ClientHeight = 651
+      ClientWidth = 1214
+      Font.CharSet = GREEK_CHARSET
       Font.Color = clWindowText
-      Font.Height = -24
+      Font.Height = -15
       Font.Name = 'MS Sans Serif'
       ImageIndex = 5
       ParentFont = False
       object Panel6: TPanel
         Left = 0
-        Height = 684
+        Height = 428
         Top = 0
-        Width = 1290
-        ClientHeight = 684
-        ClientWidth = 1290
+        Width = 806
+        ClientHeight = 428
+        ClientWidth = 806
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
-        Font.Height = -24
+        Font.Height = -15
         Font.Name = 'MS Sans Serif'
         ParentFont = False
         TabOrder = 0
         object Label71: TLabel
-          Left = 432
-          Height = 13
-          Top = 176
-          Width = 6
+          Left = 270
+          Height = 27
+          Top = 110
+          Width = 13
           Alignment = taRightJustify
           Caption = '1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label72: TLabel
-          Left = 432
-          Height = 13
-          Top = 228
-          Width = 6
+          Left = 270
+          Height = 27
+          Top = 142
+          Width = 13
           Alignment = taRightJustify
           Caption = '1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label73: TLabel
-          Left = 432
-          Height = 13
-          Top = 282
-          Width = 6
+          Left = 270
+          Height = 27
+          Top = 176
+          Width = 13
           Alignment = taRightJustify
           Caption = '1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label74: TLabel
-          Left = 432
-          Height = 13
-          Top = 332
-          Width = 6
+          Left = 270
+          Height = 27
+          Top = 208
+          Width = 13
           Alignment = taRightJustify
           Caption = '1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label75: TLabel
-          Left = 432
-          Height = 13
-          Top = 386
-          Width = 6
+          Left = 270
+          Height = 27
+          Top = 241
+          Width = 13
           Alignment = taRightJustify
           Caption = '1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label76: TLabel
-          Left = 432
-          Height = 13
-          Top = 438
-          Width = 6
+          Left = 270
+          Height = 27
+          Top = 274
+          Width = 13
           Alignment = taRightJustify
           Caption = '1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label4: TLabel
-          Left = 70
-          Height = 16
-          Top = 54
-          Width = 73
+          Left = 44
+          Height = 30
+          Top = 34
+          Width = 127
           Caption = 'Parameter'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object fA0_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 176
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 110
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'fA[0]'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = fA0_fitClick
           ParentFont = False
           TabOrder = 0
         end
         object fA0_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 176
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 110
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fA0_0Change
           ParentFont = False
@@ -3353,12 +3599,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object fA0_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 176
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 110
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fA0_minChange
           ParentFont = False
@@ -3366,12 +3613,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object fA0_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 176
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 110
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fA0_maxChange
           ParentFont = False
@@ -3379,27 +3627,29 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '100'
         end
         object fA1_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 228
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 142
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'fA[1]'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = fA1_fitClick
           ParentFont = False
           TabOrder = 4
         end
         object fA1_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 228
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 142
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fA1_0Change
           ParentFont = False
@@ -3407,12 +3657,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object fA1_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 228
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 142
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fA1_minChange
           ParentFont = False
@@ -3420,12 +3671,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object fA1_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 228
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 142
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fA1_maxChange
           ParentFont = False
@@ -3433,27 +3685,29 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '100'
         end
         object fA2_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 282
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 176
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'fA[2]'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = fA2_fitClick
           ParentFont = False
           TabOrder = 8
         end
         object fA2_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 282
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 176
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fA2_0Change
           ParentFont = False
@@ -3461,12 +3715,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object fA2_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 282
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 176
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fA2_minChange
           ParentFont = False
@@ -3474,12 +3729,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object fA2_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 282
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 176
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fA2_maxChange
           ParentFont = False
@@ -3487,15 +3743,16 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '100'
         end
         object fA3_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 332
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 208
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'fA[3]'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fA3_fitChange
           OnClick = fA3_fitClick
@@ -3503,12 +3760,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 12
         end
         object fA3_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 332
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 208
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fA3_0Change
           ParentFont = False
@@ -3516,12 +3774,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object fA3_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 332
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 208
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fA3_minChange
           ParentFont = False
@@ -3529,12 +3788,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object fA3_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 332
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 208
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fA3_maxChange
           ParentFont = False
@@ -3542,27 +3802,29 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '100'
         end
         object fA4_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 386
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 241
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'fA[4]'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = fA4_fitClick
           ParentFont = False
           TabOrder = 16
         end
         object fA4_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 386
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 241
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fA4_0Change
           ParentFont = False
@@ -3570,12 +3832,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object fA4_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 386
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 241
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fA4_minChange
           ParentFont = False
@@ -3583,12 +3846,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object fA4_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 386
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 241
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fA4_maxChange
           ParentFont = False
@@ -3596,27 +3860,29 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '100'
         end
         object fA5_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 438
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 274
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'fA[5]'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = fA5_fitClick
           ParentFont = False
           TabOrder = 20
         end
         object fA5_0: TEdit
-          Left = 720
-          Height = 21
-          Top = 438
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 274
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fA5_0Change
           ParentFont = False
@@ -3624,12 +3890,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object fA5_min: TEdit
-          Left = 842
-          Height = 21
-          Top = 438
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 274
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fA5_minChange
           ParentFont = False
@@ -3637,12 +3904,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object fA5_max: TEdit
-          Left = 966
-          Height = 21
-          Top = 438
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 274
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = fA5_maxChange
           ParentFont = False
@@ -3650,26 +3918,28 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '100'
         end
         object Button_Default_Ground: TButton
-          Left = 438
-          Height = 54
-          Top = 570
-          Width = 266
+          Left = 274
+          Height = 34
+          Top = 356
+          Width = 166
           Caption = 'Default values'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = Button_Default_GroundClick
           ParentFont = False
           TabOrder = 24
         end
         object Label_fA2: TLabel
-          Left = 70
-          Height = 13
-          Top = 278
-          Width = 140
+          Left = 44
+          Height = 27
+          Top = 174
+          Width = 321
           Caption = 'Fraction bottom albedo type 2'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -3677,13 +3947,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_fA3: TLabel
-          Left = 70
-          Height = 13
-          Top = 332
-          Width = 140
+          Left = 44
+          Height = 27
+          Top = 208
+          Width = 321
           Caption = 'Fraction bottom albedo type 3'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -3691,13 +3962,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_fa4: TLabel
-          Left = 70
-          Height = 13
-          Top = 386
-          Width = 140
+          Left = 44
+          Height = 27
+          Top = 241
+          Width = 321
           Caption = 'Fraction bottom albedo type 4'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -3705,13 +3977,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_fA1: TLabel
-          Left = 70
-          Height = 13
-          Top = 228
-          Width = 140
+          Left = 44
+          Height = 27
+          Top = 142
+          Width = 321
           Caption = 'Fraction bottom albedo type 1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -3719,13 +3992,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_fA0: TLabel
-          Left = 70
-          Height = 13
-          Top = 176
-          Width = 140
+          Left = 44
+          Height = 27
+          Top = 110
+          Width = 321
           Caption = 'Fraction bottom albedo type 0'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -3733,13 +4007,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_fA5: TLabel
-          Left = 70
-          Height = 13
-          Top = 438
-          Width = 140
+          Left = 44
+          Height = 27
+          Top = 274
+          Width = 321
           Caption = 'Fraction bottom albedo type 5'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -3747,78 +4022,84 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_Header31: TLabel
-          Left = 864
-          Height = 16
-          Top = 54
-          Width = 25
+          Left = 540
+          Height = 30
+          Top = 34
+          Width = 47
           Caption = 'Min'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header32: TLabel
-          Left = 736
-          Height = 16
-          Top = 54
-          Width = 33
+          Left = 460
+          Height = 30
+          Top = 34
+          Width = 59
           Caption = 'Start'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header33: TLabel
-          Left = 640
-          Height = 16
-          Top = 54
-          Width = 22
+          Left = 400
+          Height = 30
+          Top = 34
+          Width = 40
           Caption = 'Fit '
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header34: TLabel
-          Left = 496
-          Height = 16
-          Top = 54
-          Width = 53
+          Left = 310
+          Height = 30
+          Top = 34
+          Width = 96
           Caption = 'Symbol'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header35: TLabel
-          Left = 374
-          Height = 16
-          Top = 54
-          Width = 36
+          Left = 234
+          Height = 30
+          Top = 34
+          Width = 66
           Caption = 'Units'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header36: TLabel
-          Left = 976
-          Height = 16
-          Top = 54
-          Width = 29
+          Left = 610
+          Height = 30
+          Top = 34
+          Width = 51
           Caption = 'Max'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
@@ -3828,46 +4109,50 @@ object Popup_Fitparameters: TPopup_Fitparameters
     end
     object Miscellaneous: TTabSheet
       Caption = 'Miscellaneous'
-      ClientHeight = 649
+      ClientHeight = 651
       ClientWidth = 1214
+      Font.CharSet = GREEK_CHARSET
       Font.Color = clWindowText
-      Font.Height = -24
+      Font.Height = -15
       Font.Name = 'MS Sans Serif'
       ImageIndex = 3
       ParentFont = False
       object Panel7: TPanel
         Left = 0
-        Height = 684
+        Height = 428
         Top = 0
-        Width = 1264
-        ClientHeight = 684
-        ClientWidth = 1264
+        Width = 790
+        ClientHeight = 428
+        ClientWidth = 790
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
-        Font.Height = -24
+        Font.Height = -15
         Font.Name = 'MS Sans Serif'
         ParentFont = False
         TabOrder = 0
         object Label37: TLabel
-          Left = 420
-          Height = 29
-          Top = 176
-          Width = 25
+          Left = 262
+          Height = 27
+          Top = 110
+          Width = 27
           Alignment = taRightJustify
           Caption = '°C'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label_test: TLabel
-          Left = 70
-          Height = 29
-          Top = 228
-          Width = 38
+          Left = 44
+          Height = 27
+          Top = 142
+          Width = 39
           Caption = 'test'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -3875,54 +4160,57 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_units_test: TLabel
-          Left = 432
-          Height = 29
-          Top = 228
+          Left = 270
+          Height = 27
+          Top = 142
           Width = 13
           Alignment = taRightJustify
           Caption = '1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label5: TLabel
-          Left = 70
+          Left = 44
           Height = 30
-          Top = 54
+          Top = 34
           Width = 127
           Caption = 'Parameter'
           Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object TW_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 176
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 110
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'T_W'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = TW_fitClick
           ParentFont = False
           TabOrder = 0
         end
         object TW_0: TEdit
-          Left = 720
-          Height = 37
-          Top = 176
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 110
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = TW_0Change
           ParentFont = False
@@ -3930,12 +4218,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '18'
         end
         object TW_min: TEdit
-          Left = 842
-          Height = 37
-          Top = 176
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 110
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = TW_minChange
           ParentFont = False
@@ -3943,12 +4232,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object TW_max: TEdit
-          Left = 966
-          Height = 37
-          Top = 176
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 110
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = TW_maxChange
           ParentFont = False
@@ -3956,29 +4246,31 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '35'
         end
         object Button_Default_Misc: TButton
-          Left = 438
-          Height = 54
-          Top = 570
-          Width = 266
+          Left = 274
+          Height = 34
+          Top = 356
+          Width = 166
           Caption = 'Default values'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = Button_Default_MiscClick
           ParentFont = False
           TabOrder = 4
         end
         object test_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 228
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 142
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'test'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = test_fitClick
           ParentFont = False
@@ -3986,12 +4278,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 5
         end
         object test_0: TEdit
-          Left = 720
-          Height = 37
-          Top = 228
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 142
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = test_0Change
           ParentFont = False
@@ -3999,12 +4292,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.1'
         end
         object test_min: TEdit
-          Left = 842
-          Height = 37
-          Top = 228
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 142
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = test_minChange
           ParentFont = False
@@ -4012,12 +4306,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.0001'
         end
         object test_max: TEdit
-          Left = 966
-          Height = 37
-          Top = 228
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 142
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = test_maxChange
           ParentFont = False
@@ -4025,13 +4320,14 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object Label_T_W: TLabel
-          Left = 70
-          Height = 29
-          Top = 176
-          Width = 199
+          Left = 44
+          Height = 27
+          Top = 110
+          Width = 200
           Caption = 'Water temperature'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
@@ -4039,78 +4335,84 @@ object Popup_Fitparameters: TPopup_Fitparameters
           ShowHint = True
         end
         object Label_Header37: TLabel
-          Left = 976
-          Height = 32
-          Top = 54
-          Width = 54
+          Left = 610
+          Height = 30
+          Top = 34
+          Width = 51
           Caption = 'Max'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header38: TLabel
-          Left = 864
-          Height = 32
-          Top = 54
-          Width = 46
+          Left = 540
+          Height = 30
+          Top = 34
+          Width = 47
           Caption = 'Min'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header39: TLabel
-          Left = 736
-          Height = 32
-          Top = 54
-          Width = 60
+          Left = 460
+          Height = 30
+          Top = 34
+          Width = 59
           Caption = 'Start'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header40: TLabel
-          Left = 640
-          Height = 32
-          Top = 54
-          Width = 39
+          Left = 400
+          Height = 30
+          Top = 34
+          Width = 40
           Caption = 'Fit '
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header41: TLabel
-          Left = 496
-          Height = 32
-          Top = 54
-          Width = 99
+          Left = 310
+          Height = 30
+          Top = 34
+          Width = 96
           Caption = 'Symbol'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header42: TLabel
-          Left = 374
-          Height = 32
-          Top = 54
+          Left = 234
+          Height = 30
+          Top = 34
           Width = 66
           Caption = 'Units'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
@@ -4120,154 +4422,165 @@ object Popup_Fitparameters: TPopup_Fitparameters
     end
     object Par_private: TTabSheet
       Caption = 'Private'
-      ClientHeight = 649
+      ClientHeight = 651
       ClientWidth = 1214
+      Font.CharSet = GREEK_CHARSET
       Font.Color = clWindowText
-      Font.Height = -24
+      Font.Height = -15
       Font.Name = 'MS Sans Serif'
       ImageIndex = 3
       ParentFont = False
       object Panel8: TPanel
         Left = 0
-        Height = 698
+        Height = 436
         Top = 0
-        Width = 1304
-        ClientHeight = 698
-        ClientWidth = 1304
+        Width = 815
+        ClientHeight = 436
+        ClientWidth = 815
         Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
-        Font.Height = -24
+        Font.Height = -15
         Font.Name = 'MS Sans Serif'
         ParentFont = False
         TabOrder = 0
         object Label1: TLabel
-          Left = 450
-          Height = 29
-          Top = 122
+          Left = 281
+          Height = 27
+          Top = 76
           Width = 13
           Alignment = taRightJustify
           Caption = '1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label20: TLabel
-          Left = 450
-          Height = 29
-          Top = 176
+          Left = 281
+          Height = 27
+          Top = 110
           Width = 13
           Alignment = taRightJustify
           Caption = '1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label21: TLabel
-          Left = 450
-          Height = 29
-          Top = 228
+          Left = 281
+          Height = 27
+          Top = 142
           Width = 13
           Alignment = taRightJustify
           Caption = '1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label22: TLabel
-          Left = 450
-          Height = 29
-          Top = 282
+          Left = 281
+          Height = 27
+          Top = 176
           Width = 13
           Alignment = taRightJustify
           Caption = '1'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label47: TLabel
-          Left = 420
-          Height = 29
-          Top = 332
+          Left = 262
+          Height = 27
+          Top = 208
           Width = 40
           Alignment = taRightJustify
           Caption = '1/sr'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label48: TLabel
-          Left = 420
-          Height = 29
-          Top = 386
+          Left = 262
+          Height = 27
+          Top = 241
           Width = 40
           Alignment = taRightJustify
           Caption = '1/sr'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label49: TLabel
-          Left = 420
-          Height = 29
-          Top = 438
+          Left = 262
+          Height = 27
+          Top = 274
           Width = 40
           Alignment = taRightJustify
           Caption = '1/sr'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label50: TLabel
-          Left = 420
-          Height = 29
-          Top = 492
+          Left = 262
+          Height = 27
+          Top = 308
           Width = 40
           Alignment = taRightJustify
           Caption = '1/sr'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           ParentColor = False
           ParentFont = False
         end
         object Label6: TLabel
-          Left = 70
-          Height = 32
-          Top = 54
-          Width = 136
+          Left = 44
+          Height = 30
+          Top = 34
+          Width = 127
           Caption = 'Parameter'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object alpha_d_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 114
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 71
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'alpha_d'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = alpha_d_fitClick
           ParentFont = False
@@ -4275,12 +4588,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 0
         end
         object alpha_d_0: TEdit
-          Left = 720
-          Height = 37
-          Top = 106
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 66
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = alpha_d_0Change
           ParentFont = False
@@ -4288,12 +4602,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.3'
         end
         object alpha_d_min: TEdit
-          Left = 842
-          Height = 37
-          Top = 106
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 66
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = alpha_d_minChange
           ParentFont = False
@@ -4301,12 +4616,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object alpha_d_max: TEdit
-          Left = 966
-          Height = 37
-          Top = 106
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 66
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = alpha_d_maxChange
           ParentFont = False
@@ -4314,16 +4630,17 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object beta_d_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 166
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 104
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'beta_d'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = beta_d_fitClick
           ParentFont = False
@@ -4331,12 +4648,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 4
         end
         object beta_d0: TEdit
-          Left = 720
-          Height = 37
-          Top = 158
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 99
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = beta_d0Change
           ParentFont = False
@@ -4344,12 +4662,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.1'
         end
         object beta_dmin: TEdit
-          Left = 842
-          Height = 37
-          Top = 158
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 99
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = beta_dminChange
           ParentFont = False
@@ -4357,12 +4676,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object beta_dmax: TEdit
-          Left = 966
-          Height = 37
-          Top = 158
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 99
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = beta_dmaxChange
           ParentFont = False
@@ -4370,16 +4690,17 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object gamma_d_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 220
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 138
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'gamma_d'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = gamma_d_fitClick
           ParentFont = False
@@ -4387,12 +4708,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 8
         end
         object gamma_0: TEdit
-          Left = 720
-          Height = 37
-          Top = 210
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 131
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = gamma_0Change
           ParentFont = False
@@ -4400,12 +4722,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.1'
         end
         object gamma_min: TEdit
-          Left = 842
-          Height = 37
-          Top = 210
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 131
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = gamma_minChange
           ParentFont = False
@@ -4413,12 +4736,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object gamma_max: TEdit
-          Left = 966
-          Height = 37
-          Top = 210
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 131
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = gamma_maxChange
           ParentFont = False
@@ -4426,16 +4750,17 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object delta_d_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 272
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 170
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'delta_d'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = delta_d_fitClick
           ParentFont = False
@@ -4443,12 +4768,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 12
         end
         object delta_0: TEdit
-          Left = 720
-          Height = 37
-          Top = 264
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 165
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = delta_0Change
           ParentFont = False
@@ -4456,12 +4782,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.1'
         end
         object delta_min: TEdit
-          Left = 842
-          Height = 37
-          Top = 264
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 165
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = delta_minChange
           ParentFont = False
@@ -4469,12 +4796,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object delta_max: TEdit
-          Left = 966
-          Height = 37
-          Top = 264
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 165
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = delta_maxChange
           ParentFont = False
@@ -4482,29 +4810,31 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object Button_Default_Ed_old: TButton
-          Left = 438
-          Height = 54
-          Top = 570
-          Width = 266
+          Left = 274
+          Height = 34
+          Top = 356
+          Width = 166
           Caption = 'Default values'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = Button_Default_Ed_oldClick
           ParentFont = False
           TabOrder = 16
         end
         object alpha_r_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 326
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 204
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'alpha_r'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = alpha_r_fitClick
           ParentFont = False
@@ -4512,12 +4842,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 17
         end
         object alpha_r_0: TEdit
-          Left = 720
-          Height = 37
-          Top = 316
-          Width = 108
+          Left = 450
+          Height = 35
+          Top = 198
+          Width = 68
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = alpha_r_0Change
           ParentFont = False
@@ -4525,12 +4856,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.3'
         end
         object alpha_r_min: TEdit
-          Left = 842
-          Height = 37
-          Top = 316
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 198
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = alpha_r_minChange
           ParentFont = False
@@ -4538,12 +4870,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object alpha_r_max: TEdit
-          Left = 966
-          Height = 37
-          Top = 316
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 198
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = alpha_r_maxChange
           ParentFont = False
@@ -4551,16 +4884,17 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object beta_r_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 376
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 235
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'beta_r'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = beta_r_fitClick
           ParentFont = False
@@ -4568,12 +4902,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 21
         end
         object beta_r_0: TEdit
-          Left = 720
-          Height = 37
-          Top = 370
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 231
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = beta_r_0Change
           ParentFont = False
@@ -4581,12 +4916,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.1'
         end
         object beta_r_min: TEdit
-          Left = 842
-          Height = 37
-          Top = 370
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 231
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = beta_r_minChange
           ParentFont = False
@@ -4594,12 +4930,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object beta_r_max: TEdit
-          Left = 966
-          Height = 37
-          Top = 370
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 231
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = beta_r_maxChange
           ParentFont = False
@@ -4607,16 +4944,17 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object gamma_r_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 430
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 269
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'gamma_r'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = gamma_r_fitClick
           ParentFont = False
@@ -4624,12 +4962,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 25
         end
         object gamma_r_0: TEdit
-          Left = 720
-          Height = 37
-          Top = 420
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 262
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = gamma_r_0Change
           ParentFont = False
@@ -4637,12 +4976,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.1'
         end
         object gamma_r_min: TEdit
-          Left = 842
-          Height = 37
-          Top = 420
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 262
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = gamma_r_minChange
           ParentFont = False
@@ -4650,12 +4990,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object gamma_r_max: TEdit
-          Left = 966
-          Height = 37
-          Top = 420
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 262
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = gamma_r_maxChange
           ParentFont = False
@@ -4663,16 +5004,17 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object delta_r_fit: TCheckBox
-          Left = 508
-          Height = 42
-          Top = 482
-          Width = 158
+          Left = 318
+          Height = 26
+          Top = 301
+          Width = 99
           Alignment = taLeftJustify
           AutoSize = False
           Caption = 'delta_r'
           Checked = True
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnClick = delta_r_fitClick
           ParentFont = False
@@ -4680,12 +5022,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           TabOrder = 29
         end
         object delta_r_0: TEdit
-          Left = 720
-          Height = 37
-          Top = 474
-          Width = 110
+          Left = 450
+          Height = 35
+          Top = 296
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = delta_r_0Change
           ParentFont = False
@@ -4693,12 +5036,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0.1'
         end
         object delta_r_min: TEdit
-          Left = 842
-          Height = 37
-          Top = 474
-          Width = 110
+          Left = 526
+          Height = 35
+          Top = 296
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = delta_r_minChange
           ParentFont = False
@@ -4706,12 +5050,13 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '0'
         end
         object delta_r_max: TEdit
-          Left = 966
-          Height = 37
-          Top = 474
-          Width = 110
+          Left = 604
+          Height = 35
+          Top = 296
+          Width = 69
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -24
+          Font.Height = -15
           Font.Name = 'MS Sans Serif'
           OnChange = delta_r_maxChange
           ParentFont = False
@@ -4719,78 +5064,84 @@ object Popup_Fitparameters: TPopup_Fitparameters
           Text = '1'
         end
         object Label_Header43: TLabel
-          Left = 976
-          Height = 32
-          Top = 54
-          Width = 54
+          Left = 610
+          Height = 30
+          Top = 34
+          Width = 51
           Caption = 'Max'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header44: TLabel
-          Left = 864
-          Height = 32
-          Top = 54
-          Width = 46
+          Left = 540
+          Height = 30
+          Top = 34
+          Width = 47
           Caption = 'Min'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header45: TLabel
-          Left = 736
-          Height = 32
-          Top = 54
-          Width = 60
+          Left = 460
+          Height = 30
+          Top = 34
+          Width = 59
           Caption = 'Start'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header46: TLabel
-          Left = 640
-          Height = 32
-          Top = 54
-          Width = 39
+          Left = 400
+          Height = 30
+          Top = 34
+          Width = 40
           Caption = 'Fit '
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header47: TLabel
-          Left = 496
-          Height = 32
-          Top = 54
-          Width = 99
+          Left = 310
+          Height = 30
+          Top = 34
+          Width = 96
           Caption = 'Symbol'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object Label_Header48: TLabel
-          Left = 374
-          Height = 32
-          Top = 54
+          Left = 234
+          Height = 30
+          Top = 34
           Width = 66
           Caption = 'Units'
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
-          Font.Height = -26
+          Font.Height = -16
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
           ParentColor = False
@@ -4800,30 +5151,30 @@ object Popup_Fitparameters: TPopup_Fitparameters
     end
   end
   object ButtonOK: TButton
-    Left = 458
-    Height = 54
-    Top = 764
-    Width = 164
+    Left = 286
+    Height = 34
+    Top = 478
+    Width = 102
     Caption = 'OK'
     Default = True
     Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
-    Font.Height = -24
+    Font.Height = -15
     Font.Name = 'MS Sans Serif'
     OnClick = ButtonOKClick
     ParentFont = False
     TabOrder = 1
   end
   object ButtonCancel: TButton
-    Left = 632
-    Height = 54
-    Top = 764
-    Width = 164
+    Left = 395
+    Height = 34
+    Top = 478
+    Width = 102
     Cancel = True
     Caption = 'Cancel'
     Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
-    Font.Height = -24
+    Font.Height = -15
     Font.Name = 'MS Sans Serif'
     OnClick = ButtonCancelClick
     ParentFont = False

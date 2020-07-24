@@ -10,18 +10,18 @@ object Popup_FitTuning: TPopup_FitTuning
   DesignTimePPI = 192
   OnCreate = FormCreate
   Position = poMainFormCenter
-  LCLVersion = '2.0.6.0'
+  LCLVersion = '2.0.10.0'
   object RegTuning: TPageControl
     Left = 34
     Height = 738
     Top = 544
     Width = 968
-    ActivePage = TabSheetRsh
+    ActivePage = TabSheetRrs
     Font.CharSet = GREEK_CHARSET
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
     ParentFont = False
-    TabIndex = 2
+    TabIndex = 3
     TabOrder = 0
     OnChange = RegTuningChange
     object TabSheetEd: TTabSheet
@@ -58,8 +58,9 @@ object Popup_FitTuning: TPopup_FitTuning
             Left = 12
             Height = 35
             Top = 22
-            Width = 504
+            Width = 516
             Caption = 'use Ed measurement (no fit of Ed, only of R)'
+            Font.CharSet = GREEK_CHARSET
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
             OnClick = CheckEdUseEdClick
@@ -69,9 +70,10 @@ object Popup_FitTuning: TPopup_FitTuning
           object TextFileEd2: TStaticText
             Left = 54
             Height = 36
-            Top = 88
+            Top = 96
             Width = 54
             Caption = 'File:'
+            Font.CharSet = GREEK_CHARSET
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
             ParentFont = False
@@ -83,6 +85,7 @@ object Popup_FitTuning: TPopup_FitTuning
             Top = 158
             Width = 194
             Caption = 'Header lines'
+            Font.CharSet = GREEK_CHARSET
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
             ParentFont = False
@@ -102,9 +105,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object EditXColEd2: TEdit
             Left = 352
-            Height = 37
+            Height = 35
             Top = 210
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
             OnChange = EditXColEd2Change
@@ -114,9 +118,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object EditYColEd2: TEdit
             Left = 352
-            Height = 37
+            Height = 35
             Top = 264
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
             OnChange = EditYColEd2Change
@@ -130,6 +135,7 @@ object Popup_FitTuning: TPopup_FitTuning
             Top = 264
             Width = 156
             Caption = 'Y-Column'
+            Font.CharSet = GREEK_CHARSET
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
             ParentFont = False
@@ -141,6 +147,7 @@ object Popup_FitTuning: TPopup_FitTuning
             Top = 210
             Width = 176
             Caption = 'X-Column'
+            Font.CharSet = GREEK_CHARSET
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
             ParentFont = False
@@ -149,10 +156,11 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object EditEdFile2: TEdit
           Left = 158
-          Height = 37
+          Height = 35
           Top = 176
           Width = 688
           Enabled = False
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           ParentFont = False
@@ -164,6 +172,7 @@ object Popup_FitTuning: TPopup_FitTuning
           Top = 174
           Width = 54
           Caption = 'set'
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           OnClick = ButtonEdFileClick
@@ -186,11 +195,12 @@ object Popup_FitTuning: TPopup_FitTuning
           TabOrder = 3
           object Text_z: TStaticText
             Left = 12
-            Height = 30
-            Top = 36
+            Height = 28
+            Top = 35
             Width = 48
             AutoSize = True
             Caption = 'from'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -199,9 +209,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object Editz_Lmin: TEdit
             Left = 80
-            Height = 37
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -212,9 +223,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object Editz_Lmax: TEdit
             Left = 212
-            Height = 37
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -225,9 +237,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object Editz_dL: TEdit
             Left = 464
-            Height = 37
+            Height = 35
             Top = 32
             Width = 68
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -238,9 +251,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object Editz_Iter: TEdit
             Left = 782
-            Height = 37
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -251,11 +265,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object Text_z1: TStaticText
             Left = 176
-            Height = 30
-            Top = 36
+            Height = 28
+            Top = 35
             Width = 20
             AutoSize = True
             Caption = 'to'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -264,11 +279,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object Text_z2: TStaticText
             Left = 314
-            Height = 30
-            Top = 36
-            Width = 33
+            Height = 28
+            Top = 35
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -277,11 +293,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object Text_z3: TStaticText
             Left = 392
-            Height = 30
-            Top = 36
+            Height = 28
+            Top = 35
             Width = 58
             AutoSize = True
             Caption = 'steps'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -290,11 +307,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object Text_z4: TStaticText
             Left = 546
-            Height = 30
-            Top = 36
-            Width = 33
+            Height = 28
+            Top = 35
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -303,11 +321,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object Text_z5: TStaticText
             Left = 624
-            Height = 30
-            Top = 36
-            Width = 154
+            Height = 28
+            Top = 35
+            Width = 156
             AutoSize = True
             Caption = 'max. Iterations'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -347,11 +366,12 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object TextRAnCY2: TStaticText
           Left = 420
-          Height = 30
-          Top = 264
-          Width = 40
+          Height = 28
+          Top = 259
+          Width = 41
           AutoSize = True
           Caption = 'and'
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           ParentFont = False
@@ -359,11 +379,12 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object TextRAnCY1: TStaticText
           Left = 70
-          Height = 30
-          Top = 264
-          Width = 19
+          Height = 28
+          Top = 259
+          Width = 20
           AutoSize = True
           Caption = 'at'
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           ParentFont = False
@@ -372,7 +393,7 @@ object Popup_FitTuning: TPopup_FitTuning
         object TextRAnXf: TStaticText
           Left = 424
           Height = 28
-          Top = 106
+          Top = 101
           Width = 41
           AutoSize = True
           Caption = 'and'
@@ -385,7 +406,7 @@ object Popup_FitTuning: TPopup_FitTuning
         object TextRAnX: TStaticText
           Left = 70
           Height = 28
-          Top = 106
+          Top = 101
           Width = 20
           AutoSize = True
           Caption = 'at'
@@ -410,10 +431,11 @@ object Popup_FitTuning: TPopup_FitTuning
           ParentFont = False
           TabOrder = 4
           object fmin_XY: TEdit
-            Left = 66
-            Height = 37
+            Left = 72
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -423,10 +445,11 @@ object Popup_FitTuning: TPopup_FitTuning
             Text = '-1'
           end
           object fmax_XY: TEdit
-            Left = 224
-            Height = 37
+            Left = 216
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -437,9 +460,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object df_XY: TEdit
             Left = 464
-            Height = 37
+            Height = 35
             Top = 32
             Width = 74
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -450,9 +474,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object Iter_XY: TEdit
             Left = 786
-            Height = 37
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -463,11 +488,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreXY: TStaticText
             Left = 16
-            Height = 30
-            Top = 36
+            Height = 28
+            Top = 35
             Width = 48
             AutoSize = True
             Caption = 'from'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -476,11 +502,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreXY1: TStaticText
             Left = 624
-            Height = 30
-            Top = 36
-            Width = 154
+            Height = 28
+            Top = 35
+            Width = 156
             AutoSize = True
             Caption = 'max. Iterations'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -489,11 +516,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreXY2: TStaticText
             Left = 546
-            Height = 30
-            Top = 36
-            Width = 33
+            Height = 28
+            Top = 35
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -502,11 +530,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreXY4: TStaticText
             Left = 314
-            Height = 30
-            Top = 36
-            Width = 33
+            Height = 28
+            Top = 35
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -515,11 +544,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreXY3: TStaticText
             Left = 392
-            Height = 30
-            Top = 36
+            Height = 28
+            Top = 35
             Width = 58
             AutoSize = True
             Caption = 'steps'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -528,11 +558,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreXY5: TStaticText
             Left = 176
-            Height = 30
-            Top = 36
+            Height = 28
+            Top = 35
             Width = 20
             AutoSize = True
             Caption = 'to'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -555,10 +586,11 @@ object Popup_FitTuning: TPopup_FitTuning
           ParentFont = False
           TabOrder = 5
           object fmin_CYS: TEdit
-            Left = 66
-            Height = 37
+            Left = 72
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -568,10 +600,11 @@ object Popup_FitTuning: TPopup_FitTuning
             Text = '-1'
           end
           object fmax_CYS: TEdit
-            Left = 224
-            Height = 37
+            Left = 216
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -582,9 +615,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object df_CYS: TEdit
             Left = 464
-            Height = 37
+            Height = 35
             Top = 32
             Width = 74
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -595,9 +629,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object Iter_CYS: TEdit
             Left = 786
-            Height = 37
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -608,11 +643,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreCYS5: TStaticText
             Left = 176
-            Height = 30
-            Top = 36
+            Height = 28
+            Top = 35
             Width = 20
             AutoSize = True
             Caption = 'to'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -621,11 +657,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreCYS1: TStaticText
             Left = 624
-            Height = 30
-            Top = 36
-            Width = 154
+            Height = 28
+            Top = 35
+            Width = 156
             AutoSize = True
             Caption = 'max. Iterations'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -634,11 +671,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreCYS2: TStaticText
             Left = 546
-            Height = 30
-            Top = 36
-            Width = 33
+            Height = 28
+            Top = 35
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -647,11 +685,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreCYS4: TStaticText
             Left = 314
-            Height = 30
-            Top = 36
-            Width = 33
+            Height = 28
+            Top = 35
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -660,11 +699,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreCYS3: TStaticText
             Left = 392
-            Height = 30
-            Top = 36
+            Height = 28
+            Top = 35
             Width = 58
             AutoSize = True
             Caption = 'steps'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -673,11 +713,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreCYS: TStaticText
             Left = 16
-            Height = 30
-            Top = 36
+            Height = 28
+            Top = 35
             Width = 48
             AutoSize = True
             Caption = 'from'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -713,9 +754,10 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object dLambdaIR: TEdit
           Left = 264
-          Height = 37
-          Top = 96
+          Height = 35
+          Top = 98
           Width = 54
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
@@ -726,9 +768,10 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object LambdaIR: TEdit
           Left = 106
-          Height = 37
-          Top = 96
+          Height = 35
+          Top = 98
           Width = 90
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
@@ -739,9 +782,10 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object LambdaIR2: TEdit
           Left = 474
-          Height = 37
-          Top = 96
+          Height = 35
+          Top = 98
           Width = 90
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
@@ -752,9 +796,10 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object dLambdaIR2: TEdit
           Left = 632
-          Height = 37
-          Top = 96
+          Height = 35
+          Top = 98
           Width = 54
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
@@ -765,9 +810,10 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object LambdaCY_1: TEdit
           Left = 106
-          Height = 37
-          Top = 254
+          Height = 35
+          Top = 256
           Width = 90
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
@@ -778,9 +824,10 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object dLambdaCY_1: TEdit
           Left = 264
-          Height = 37
-          Top = 254
+          Height = 35
+          Top = 256
           Width = 54
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
@@ -791,9 +838,10 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object LambdaCY_2: TEdit
           Left = 474
-          Height = 37
-          Top = 254
+          Height = 35
+          Top = 256
           Width = 90
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
@@ -804,9 +852,10 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object dLambdaCY_2: TEdit
           Left = 632
-          Height = 37
-          Top = 254
+          Height = 35
+          Top = 256
           Width = 54
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
@@ -818,7 +867,7 @@ object Popup_FitTuning: TPopup_FitTuning
         object TextRAnX1: TStaticText
           Left = 208
           Height = 28
-          Top = 106
+          Top = 101
           Width = 29
           AutoSize = True
           Caption = '+/-'
@@ -831,7 +880,7 @@ object Popup_FitTuning: TPopup_FitTuning
         object TextRAnX2: TStaticText
           Left = 331
           Height = 28
-          Top = 106
+          Top = 101
           Width = 41
           AutoSize = True
           Caption = 'nm '
@@ -844,7 +893,7 @@ object Popup_FitTuning: TPopup_FitTuning
         object TextRAnXf1: TStaticText
           Left = 578
           Height = 28
-          Top = 106
+          Top = 101
           Width = 29
           AutoSize = True
           Caption = '+/-'
@@ -857,7 +906,7 @@ object Popup_FitTuning: TPopup_FitTuning
         object TextRAnXf2: TStaticText
           Left = 704
           Height = 28
-          Top = 106
+          Top = 101
           Width = 41
           AutoSize = True
           Caption = 'nm '
@@ -869,11 +918,12 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object TextRAnCY3: TStaticText
           Left = 208
-          Height = 30
-          Top = 264
+          Height = 28
+          Top = 259
           Width = 29
           AutoSize = True
           Caption = '+/-'
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           ParentFont = False
@@ -881,11 +931,12 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object TextRAnCY4: TStaticText
           Left = 330
-          Height = 30
-          Top = 264
-          Width = 39
+          Height = 28
+          Top = 259
+          Width = 41
           AutoSize = True
           Caption = 'nm '
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           ParentFont = False
@@ -893,11 +944,12 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object TextRAnCY5: TStaticText
           Left = 578
-          Height = 30
-          Top = 264
+          Height = 28
+          Top = 259
           Width = 29
           AutoSize = True
           Caption = '+/-'
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           ParentFont = False
@@ -905,11 +957,12 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object TextRAnCY6: TStaticText
           Left = 704
-          Height = 30
-          Top = 264
-          Width = 39
+          Height = 28
+          Top = 259
+          Width = 41
           AutoSize = True
           Caption = 'nm '
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           ParentFont = False
@@ -947,11 +1000,12 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object TextRAnCY1sh: TStaticText
           Left = 70
-          Height = 30
+          Height = 28
           Top = 70
-          Width = 19
+          Width = 20
           AutoSize = True
           Caption = 'at'
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           ParentFont = False
@@ -959,11 +1013,12 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object TextRAnXsh: TStaticText
           Left = 70
-          Height = 30
+          Height = 28
           Top = 194
-          Width = 19
+          Width = 20
           AutoSize = True
           Caption = 'at'
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           ParentFont = False
@@ -985,9 +1040,10 @@ object Popup_FitTuning: TPopup_FitTuning
           TabOrder = 2
           object fmin_XYsh: TEdit
             Left = 66
-            Height = 37
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -998,9 +1054,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object fmax_XYsh: TEdit
             Left = 206
-            Height = 37
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1011,9 +1068,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object df_XYsh: TEdit
             Left = 462
-            Height = 37
+            Height = 35
             Top = 32
             Width = 74
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1024,9 +1082,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object Iter_XYsh: TEdit
             Left = 786
-            Height = 37
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1037,11 +1096,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreXYsh: TStaticText
             Left = 12
-            Height = 30
+            Height = 28
             Top = 36
             Width = 48
             AutoSize = True
             Caption = 'from'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1050,11 +1110,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreXYsh5: TStaticText
             Left = 176
-            Height = 30
+            Height = 28
             Top = 36
             Width = 20
             AutoSize = True
             Caption = 'to'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1063,11 +1124,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreXYsh4: TStaticText
             Left = 314
-            Height = 30
+            Height = 28
             Top = 36
-            Width = 33
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1076,11 +1138,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreXYsh3: TStaticText
             Left = 392
-            Height = 30
+            Height = 28
             Top = 36
             Width = 58
             AutoSize = True
             Caption = 'steps'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1089,11 +1152,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreXYsh2: TStaticText
             Left = 546
-            Height = 30
+            Height = 28
             Top = 36
-            Width = 33
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1102,11 +1166,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreXYsh1: TStaticText
             Left = 624
-            Height = 30
+            Height = 28
             Top = 36
-            Width = 154
+            Width = 156
             AutoSize = True
             Caption = 'max. Iterations'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1130,9 +1195,10 @@ object Popup_FitTuning: TPopup_FitTuning
           TabOrder = 3
           object fmin_CYSsh: TEdit
             Left = 66
-            Height = 37
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1143,9 +1209,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object fmax_CYSsh: TEdit
             Left = 206
-            Height = 37
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1156,9 +1223,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object df_CYSsh: TEdit
             Left = 462
-            Height = 37
+            Height = 35
             Top = 32
             Width = 74
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1169,9 +1237,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object Iter_CYSsh: TEdit
             Left = 786
-            Height = 37
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1182,11 +1251,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreCYSsh: TStaticText
             Left = 16
-            Height = 30
+            Height = 28
             Top = 36
             Width = 48
             AutoSize = True
             Caption = 'from'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1195,11 +1265,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreCYSsh5: TStaticText
             Left = 176
-            Height = 30
+            Height = 28
             Top = 36
             Width = 20
             AutoSize = True
             Caption = 'to'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1208,11 +1279,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreCYSsh4: TStaticText
             Left = 314
-            Height = 30
+            Height = 28
             Top = 36
-            Width = 33
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1221,11 +1293,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreCYSsh3: TStaticText
             Left = 392
-            Height = 30
+            Height = 28
             Top = 36
             Width = 58
             AutoSize = True
             Caption = 'steps'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1234,11 +1307,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreCYSsh2: TStaticText
             Left = 546
-            Height = 30
+            Height = 28
             Top = 36
-            Width = 33
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1247,11 +1321,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRPreCYSsh1: TStaticText
             Left = 624
-            Height = 30
+            Height = 28
             Top = 36
-            Width = 154
+            Width = 156
             AutoSize = True
             Caption = 'max. Iterations'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1287,9 +1362,10 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object dLambdaIRsh: TEdit
           Left = 264
-          Height = 37
+          Height = 35
           Top = 184
           Width = 90
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
@@ -1300,9 +1376,10 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object LambdaIRsh: TEdit
           Left = 106
-          Height = 37
+          Height = 35
           Top = 184
           Width = 90
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
@@ -1313,9 +1390,10 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object Edit_LambdazB: TEdit
           Left = 106
-          Height = 37
+          Height = 35
           Top = 62
           Width = 90
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
@@ -1326,9 +1404,10 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object Edit_dLambdazB: TEdit
           Left = 264
-          Height = 37
+          Height = 35
           Top = 62
           Width = 90
+          Font.CharSet = GREEK_CHARSET
           Font.Color = clWindowText
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
@@ -1353,9 +1432,10 @@ object Popup_FitTuning: TPopup_FitTuning
           TabOrder = 10
           object nest_minSh: TEdit
             Left = 66
-            Height = 37
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1366,9 +1446,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object nest_maxSh: TEdit
             Left = 206
-            Height = 37
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1379,9 +1460,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object dnest_sh: TEdit
             Left = 462
-            Height = 37
+            Height = 35
             Top = 32
             Width = 74
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1392,9 +1474,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object Iter_nest: TEdit
             Left = 786
-            Height = 37
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1405,11 +1488,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextNestSh: TStaticText
             Left = 12
-            Height = 30
+            Height = 28
             Top = 36
             Width = 48
             AutoSize = True
             Caption = 'from'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1418,11 +1502,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextNestSh5: TStaticText
             Left = 176
-            Height = 30
+            Height = 28
             Top = 36
             Width = 20
             AutoSize = True
             Caption = 'to'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1431,11 +1516,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextNestSh4: TStaticText
             Left = 314
-            Height = 30
+            Height = 28
             Top = 36
-            Width = 33
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1444,11 +1530,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextNestSh3: TStaticText
             Left = 392
-            Height = 30
+            Height = 28
             Top = 36
             Width = 58
             AutoSize = True
             Caption = 'steps'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1457,11 +1544,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextNestSh2: TStaticText
             Left = 546
-            Height = 30
+            Height = 28
             Top = 36
-            Width = 33
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1470,11 +1558,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextNestSh1: TStaticText
             Left = 624
-            Height = 30
+            Height = 28
             Top = 36
-            Width = 154
+            Width = 156
             AutoSize = True
             Caption = 'max. Iterations'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1484,11 +1573,12 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object TextRAnCY1sh1: TStaticText
           Left = 214
-          Height = 30
+          Height = 28
           Top = 70
           Width = 29
           AutoSize = True
           Caption = '+/-'
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           ParentFont = False
@@ -1496,11 +1586,12 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object TextRAnCY1sh2: TStaticText
           Left = 372
-          Height = 30
+          Height = 28
           Top = 70
-          Width = 33
+          Width = 34
           AutoSize = True
           Caption = 'nm'
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           ParentFont = False
@@ -1508,11 +1599,12 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object TextRAnXsh1: TStaticText
           Left = 214
-          Height = 30
+          Height = 28
           Top = 194
           Width = 29
           AutoSize = True
           Caption = '+/-'
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           ParentFont = False
@@ -1520,11 +1612,12 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object TextRAnXsh2: TStaticText
           Left = 366
-          Height = 30
+          Height = 28
           Top = 192
-          Width = 39
+          Width = 41
           AutoSize = True
           Caption = 'nm '
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           ParentFont = False
@@ -1551,11 +1644,12 @@ object Popup_FitTuning: TPopup_FitTuning
         TabOrder = 0
         object TextHeaderEd1: TStaticText
           Left = 320
-          Height = 30
+          Height = 28
           Top = 128
-          Width = 108
+          Width = 107
           AutoSize = True
           Caption = 'X-Column'
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           ParentFont = False
@@ -1563,11 +1657,12 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object TextHeaderEd3: TStaticText
           Left = 562
-          Height = 30
+          Height = 28
           Top = 132
-          Width = 107
+          Width = 108
           AutoSize = True
           Caption = 'Y-Column'
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           ParentFont = False
@@ -1601,9 +1696,10 @@ object Popup_FitTuning: TPopup_FitTuning
           TabOrder = 0
           object fmin_1: TEdit
             Left = 70
-            Height = 37
+            Height = 35
             Top = 32
             Width = 88
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1614,9 +1710,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object fmax_1: TEdit
             Left = 208
-            Height = 37
+            Height = 35
             Top = 32
             Width = 88
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1627,9 +1724,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object dk_1: TEdit
             Left = 464
-            Height = 37
+            Height = 35
             Top = 32
             Width = 66
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1640,9 +1738,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object Iter_1: TEdit
             Left = 786
-            Height = 37
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1653,11 +1752,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRrsEd: TStaticText
             Left = 12
-            Height = 30
+            Height = 28
             Top = 36
             Width = 48
             AutoSize = True
             Caption = 'from'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1666,11 +1766,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRrsEd5: TStaticText
             Left = 176
-            Height = 30
+            Height = 28
             Top = 36
             Width = 20
             AutoSize = True
             Caption = 'to'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1679,11 +1780,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRrsEd4: TStaticText
             Left = 314
-            Height = 30
+            Height = 28
             Top = 36
-            Width = 33
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1692,11 +1794,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRrsEd3: TStaticText
             Left = 392
-            Height = 30
+            Height = 28
             Top = 36
             Width = 58
             AutoSize = True
             Caption = 'steps'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1705,11 +1808,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRrsEd2: TStaticText
             Left = 546
-            Height = 30
+            Height = 28
             Top = 36
-            Width = 33
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1718,11 +1822,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRrsEd1: TStaticText
             Left = 624
-            Height = 30
+            Height = 28
             Top = 36
-            Width = 154
+            Width = 156
             AutoSize = True
             Caption = 'max. Iterations'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1759,9 +1864,10 @@ object Popup_FitTuning: TPopup_FitTuning
           TabOrder = 2
           object fmin_2: TEdit
             Left = 66
-            Height = 37
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1772,9 +1878,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object fmax_2: TEdit
             Left = 208
-            Height = 37
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1785,9 +1892,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object dk_2: TEdit
             Left = 456
-            Height = 37
+            Height = 35
             Top = 32
             Width = 74
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1798,9 +1906,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object Iter_2: TEdit
             Left = 786
-            Height = 37
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1811,11 +1920,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRrsEd6: TStaticText
             Left = 314
-            Height = 30
+            Height = 28
             Top = 36
-            Width = 33
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1824,11 +1934,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRrsEd7: TStaticText
             Left = 392
-            Height = 30
+            Height = 28
             Top = 36
             Width = 58
             AutoSize = True
             Caption = 'steps'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1837,11 +1948,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRrsEd8: TStaticText
             Left = 546
-            Height = 30
+            Height = 28
             Top = 36
-            Width = 33
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1850,11 +1962,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRrsEd9: TStaticText
             Left = 624
-            Height = 30
+            Height = 28
             Top = 36
-            Width = 154
+            Width = 156
             AutoSize = True
             Caption = 'max. Iterations'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1863,11 +1976,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRrsEd10: TStaticText
             Left = 176
-            Height = 30
+            Height = 28
             Top = 36
             Width = 20
             AutoSize = True
             Caption = 'to'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1876,11 +1990,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRrsEd11: TStaticText
             Left = 12
-            Height = 30
+            Height = 28
             Top = 36
             Width = 48
             AutoSize = True
             Caption = 'from'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1903,9 +2018,10 @@ object Popup_FitTuning: TPopup_FitTuning
           TabOrder = 3
           object fmin_3: TEdit
             Left = 66
-            Height = 37
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1916,9 +2032,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object fmax_3: TEdit
             Left = 208
-            Height = 37
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1929,9 +2046,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object dk_3: TEdit
             Left = 456
-            Height = 37
+            Height = 35
             Top = 32
             Width = 74
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1942,9 +2060,10 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object Iter_3: TEdit
             Left = 786
-            Height = 37
+            Height = 35
             Top = 32
             Width = 90
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1955,11 +2074,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRrsBlue1: TStaticText
             Left = 624
-            Height = 30
+            Height = 28
             Top = 36
-            Width = 154
+            Width = 156
             AutoSize = True
             Caption = 'max. Iterations'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1968,11 +2088,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRrsBlue: TStaticText
             Left = 12
-            Height = 30
+            Height = 28
             Top = 36
             Width = 48
             AutoSize = True
             Caption = 'from'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1981,11 +2102,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRrsBlue5: TStaticText
             Left = 176
-            Height = 30
+            Height = 28
             Top = 36
             Width = 20
             AutoSize = True
             Caption = 'to'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -1994,11 +2116,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRrsBlue4: TStaticText
             Left = 314
-            Height = 30
+            Height = 28
             Top = 36
-            Width = 33
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -2007,11 +2130,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRrsBlue3: TStaticText
             Left = 392
-            Height = 30
+            Height = 28
             Top = 36
             Width = 58
             AutoSize = True
             Caption = 'steps'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -2020,11 +2144,12 @@ object Popup_FitTuning: TPopup_FitTuning
           end
           object TextRrsBlue2: TStaticText
             Left = 546
-            Height = 30
+            Height = 28
             Top = 36
-            Width = 33
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -2038,6 +2163,7 @@ object Popup_FitTuning: TPopup_FitTuning
           Top = 78
           Width = 54
           Caption = 'File:'
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           ParentFont = False
@@ -2045,10 +2171,11 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object EditEdFile: TEdit
           Left = 194
-          Height = 37
+          Height = 35
           Top = 70
           Width = 650
           Enabled = False
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           ParentFont = False
@@ -2069,11 +2196,12 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object TextHeaderEd: TStaticText
           Left = 54
-          Height = 30
+          Height = 28
           Top = 130
-          Width = 137
+          Width = 135
           AutoSize = True
           Caption = 'Header lines'
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           ParentFont = False
@@ -2081,10 +2209,11 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object EditHeaderEd: TEdit
           Left = 196
-          Height = 37
+          Height = 35
           Top = 122
           Width = 108
           Anchors = [akTop, akLeft, akRight]
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           OnChange = EditHeaderGewChange
@@ -2094,9 +2223,10 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object EditXColEd: TEdit
           Left = 438
-          Height = 37
+          Height = 35
           Top = 122
           Width = 90
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           OnChange = EditXColGewChange
@@ -2106,9 +2236,10 @@ object Popup_FitTuning: TPopup_FitTuning
         end
         object EditYColEd: TEdit
           Left = 668
-          Height = 37
+          Height = 35
           Top = 122
           Width = 90
+          Font.CharSet = GREEK_CHARSET
           Font.Height = -24
           Font.Name = 'MS Sans Serif'
           OnChange = EditYColGewChange
@@ -2641,7 +2772,7 @@ object Popup_FitTuning: TPopup_FitTuning
     TabOrder = 5
   end
   object OpenDialog1: TOpenDialog
-    left = 632
-    top = 344
+    Left = 632
+    Top = 344
   end
 end

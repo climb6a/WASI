@@ -1,31 +1,32 @@
 object AboutBox: TAboutBox
-  Left = 1228
-  Height = 469
-  Top = 295
-  Width = 1052
+  Left = 409
+  Height = 250
+  Top = 249
+  Width = 658
   BorderStyle = bsDialog
   Caption = 'About WASI'
-  ClientHeight = 469
-  ClientWidth = 1052
+  ClientHeight = 250
+  ClientWidth = 658
   Color = clBtnFace
-  DesignTimePPI = 192
+  DesignTimePPI = 120
+  Font.CharSet = GREEK_CHARSET
   Font.Color = clBlack
-  Font.Height = -22
+  Font.Height = -15
   Font.Name = 'MS Sans Serif'
   OnCreate = FormCreate
   Position = poScreenCenter
-  LCLVersion = '2.0.6.0'
+  LCLVersion = '2.0.10.0'
   object OKButton: TButton
-    Left = 464
-    Height = 50
-    Top = 400
-    Width = 150
+    Left = 296
+    Height = 31
+    Top = 208
+    Width = 94
     Cancel = True
     Caption = 'OK'
     Default = True
     Font.CharSet = GREEK_CHARSET
     Font.Color = clBlack
-    Font.Height = -24
+    Font.Height = -15
     Font.Name = 'MS Sans Serif'
     ModalResult = 2
     OnClick = OKButtonClick
@@ -33,30 +34,32 @@ object AboutBox: TAboutBox
     TabOrder = 0
   end
   object Panel1: TPanel
-    Left = 16
-    Height = 338
-    Top = 32
-    Width = 1024
+    Left = 10
+    Height = 172
+    Top = 20
+    Width = 640
     BevelInner = bvRaised
     BevelOuter = bvLowered
-    ClientHeight = 338
-    ClientWidth = 1024
+    ClientHeight = 172
+    ClientWidth = 640
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clBlack
-    Font.Height = -22
+    Font.Height = -15
     Font.Name = 'MS Sans Serif'
     ParentFont = False
     TabOrder = 1
+    OnClick = Panel1Click
     object ProgramName: TLabel
-      Left = 346
-      Height = 44
-      Top = 34
-      Width = 670
+      Left = 216
+      Height = 28
+      Top = 21
+      Width = 419
       Alignment = taCenter
       AutoSize = False
       Caption = 'Program Name'
       Font.CharSet = GREEK_CHARSET
       Font.Color = clBlack
-      Font.Height = -26
+      Font.Height = -16
       Font.Name = 'MS Sans Serif'
       Font.Quality = fqCleartype
       Font.Style = [fsBold]
@@ -64,55 +67,57 @@ object AboutBox: TAboutBox
       ParentFont = False
     end
     object Copyright: TLabel
-      Left = 364
-      Height = 26
-      Top = 220
-      Width = 648
+      Left = 232
+      Height = 18
+      Top = 104
+      Width = 405
       Alignment = taCenter
       AutoSize = False
+      BorderSpacing.InnerBorder = 2
       Caption = 'Copyright: Peter Gege'
       Font.CharSet = GREEK_CHARSET
       Font.Color = clBlack
-      Font.Height = -24
+      Font.Height = -15
       Font.Name = 'MS Sans Serif'
       ParentColor = False
       ParentFont = False
     end
     object LabelVersion: TLabel
-      Left = 348
-      Height = 26
-      Top = 80
-      Width = 666
+      Left = 216
+      Height = 18
+      Top = 50
+      Width = 416
       Alignment = taCenter
       AutoSize = False
       Caption = 'Version'
       Font.CharSet = GREEK_CHARSET
       Font.Color = clBlack
-      Font.Height = -24
+      Font.Height = -15
       Font.Name = 'MS Sans Serif'
       ParentColor = False
       ParentFont = False
     end
     object Label1: TLabel
-      Left = 348
-      Height = 26
-      Top = 268
-      Width = 664
+      Left = 217
+      Height = 18
+      Top = 136
+      Width = 417
       Alignment = taCenter
       AutoSize = False
+      BorderSpacing.InnerBorder = 2
       Caption = 'Contact: peter.gege@dlr.de'
       Font.CharSet = GREEK_CHARSET
       Font.Color = clBlack
-      Font.Height = -24
+      Font.Height = -15
       Font.Name = 'MS Sans Serif'
       ParentColor = False
       ParentFont = False
     end
     object Image1: TImage
       Left = 0
-      Height = 338
+      Height = 168
       Top = 0
-      Width = 338
+      Width = 168
       Picture.Data = {
         0A544A706567496D6167651F590000FFD8FFE000104A46494600010101004800
         480000FFDB004300010101010101010101010101010101020101010101020101

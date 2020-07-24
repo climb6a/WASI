@@ -11,7 +11,7 @@ object Form_Models: TForm_Models
   DesignTimePPI = 192
   OnCreate = FormCreate
   Position = poMainFormCenter
-  LCLVersion = '2.0.6.0'
+  LCLVersion = '2.0.10.0'
   object ButtonOK: TButton
     Left = 558
     Height = 58
@@ -45,13 +45,13 @@ object Form_Models: TForm_Models
     Height = 1260
     Top = 54
     Width = 1410
-    ActivePage = TabSheet5
+    ActivePage = TabSheet8
     Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
     ParentFont = False
-    TabIndex = 9
+    TabIndex = 0
     TabOrder = 2
     OnChange = PageControllChange
     object TabSheet8: TTabSheet
@@ -2086,11 +2086,12 @@ object Form_Models: TForm_Models
           TabOrder = 0
           object Text_width1: TStaticText
             Left = 246
-            Height = 30
+            Height = 28
             Top = 190
             Width = 85
             AutoSize = True
             Caption = 'sigma ='
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -2099,11 +2100,12 @@ object Form_Models: TForm_Models
           end
           object Text_width2: TStaticText
             Left = 480
-            Height = 30
+            Height = 28
             Top = 190
-            Width = 33
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -2112,11 +2114,12 @@ object Form_Models: TForm_Models
           end
           object Text_width3: TStaticText
             Left = 600
-            Height = 30
+            Height = 28
             Top = 190
-            Width = 94
+            Width = 95
             AutoSize = True
             Caption = 'FWHM ='
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -2125,11 +2128,12 @@ object Form_Models: TForm_Models
           end
           object Text_width4: TStaticText
             Left = 834
-            Height = 30
+            Height = 28
             Top = 190
-            Width = 33
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -2142,6 +2146,7 @@ object Form_Models: TForm_Models
             Top = 116
             Width = 418
             Caption = 'Center wavelength                                  nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -2150,9 +2155,10 @@ object Form_Models: TForm_Models
           end
           object Edit_chl_0: TEdit
             Left = 346
-            Height = 37
+            Height = 35
             Top = 106
             Width = 110
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -2163,11 +2169,12 @@ object Form_Models: TForm_Models
           end
           object Text_width: TStaticText
             Left = 32
-            Height = 30
+            Height = 28
             Top = 190
             Width = 118
             AutoSize = True
             Caption = 'Peak width'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -2176,9 +2183,10 @@ object Form_Models: TForm_Models
           end
           object Edit_chl_sig: TEdit
             Left = 346
-            Height = 37
+            Height = 35
             Top = 180
             Width = 110
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -2189,9 +2197,10 @@ object Form_Models: TForm_Models
           end
           object Edit_chl_FWHM: TEdit
             Left = 712
-            Height = 37
+            Height = 35
             Top = 180
             Width = 110
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -2202,11 +2211,12 @@ object Form_Models: TForm_Models
           end
           object Text_PAR: TStaticText
             Left = 32
-            Height = 30
+            Height = 28
             Top = 262
-            Width = 116
+            Width = 117
             AutoSize = True
             Caption = 'PAR range'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -2215,9 +2225,10 @@ object Form_Models: TForm_Models
           end
           object Edit_PAR_min: TEdit
             Left = 346
-            Height = 37
+            Height = 35
             Top = 254
             Width = 110
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -2228,9 +2239,10 @@ object Form_Models: TForm_Models
           end
           object Edit_PAR_max: TEdit
             Left = 712
-            Height = 37
+            Height = 35
             Top = 254
             Width = 110
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -2243,8 +2255,9 @@ object Form_Models: TForm_Models
             Left = 32
             Height = 35
             Top = 46
-            Width = 533
+            Width = 536
             Caption = 'include fluorescence (slows down calculation!)'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -2254,11 +2267,12 @@ object Form_Models: TForm_Models
           end
           object Text_PAR1: TStaticText
             Left = 268
-            Height = 30
+            Height = 28
             Top = 262
-            Width = 59
+            Width = 60
             AutoSize = True
             Caption = 'min ='
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -2267,11 +2281,12 @@ object Form_Models: TForm_Models
           end
           object Text_PAR2: TStaticText
             Left = 482
-            Height = 30
+            Height = 28
             Top = 262
-            Width = 33
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -2280,11 +2295,12 @@ object Form_Models: TForm_Models
           end
           object Text_PAR3: TStaticText
             Left = 630
-            Height = 30
+            Height = 28
             Top = 262
-            Width = 64
+            Width = 65
             AutoSize = True
             Caption = 'max ='
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -2293,11 +2309,12 @@ object Form_Models: TForm_Models
           end
           object Text_PAR4: TStaticText
             Left = 834
-            Height = 30
+            Height = 28
             Top = 262
-            Width = 33
+            Width = 34
             AutoSize = True
             Caption = 'nm'
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -4217,241 +4234,169 @@ object Form_Models: TForm_Models
           end
           object EditHeaderA0: TEdit
             Left = 940
-            Height = 37
+            Height = 35
             Top = 56
             Width = 80
             Anchors = [akTop, akLeft, akRight]
-            Font.Color = clWindowText
-            Font.Height = -24
-            Font.Name = 'MS Sans Serif'
             OnChange = EditHeaderA0Change
-            ParentFont = False
             TabOrder = 19
             Text = '3'
           end
           object EditXColA0: TEdit
             Left = 1074
-            Height = 37
+            Height = 35
             Top = 56
             Width = 76
-            Font.Color = clWindowText
-            Font.Height = -24
-            Font.Name = 'MS Sans Serif'
             OnChange = EditXColA0Change
-            ParentFont = False
             TabOrder = 20
             Text = '1'
           end
           object EditYColA0: TEdit
             Left = 1188
-            Height = 37
+            Height = 35
             Top = 56
             Width = 74
-            Font.Color = clWindowText
-            Font.Height = -24
-            Font.Name = 'MS Sans Serif'
             OnChange = EditYColA0Change
-            ParentFont = False
             TabOrder = 21
             Text = '2'
           end
           object EditHeaderA1: TEdit
             Left = 940
-            Height = 37
+            Height = 35
             Top = 108
             Width = 80
             Anchors = [akTop, akLeft, akRight]
-            Font.Color = clWindowText
-            Font.Height = -24
-            Font.Name = 'MS Sans Serif'
             OnChange = EditHeaderA1Change
-            ParentFont = False
             TabOrder = 22
             Text = '3'
           end
           object EditXColA1: TEdit
             Left = 1074
-            Height = 37
+            Height = 35
             Top = 110
             Width = 76
-            Font.Color = clWindowText
-            Font.Height = -24
-            Font.Name = 'MS Sans Serif'
             OnChange = EditXColA1Change
-            ParentFont = False
             TabOrder = 23
             Text = '1'
           end
           object EditYColA1: TEdit
             Left = 1188
-            Height = 37
+            Height = 35
             Top = 110
             Width = 74
-            Font.Color = clWindowText
-            Font.Height = -24
-            Font.Name = 'MS Sans Serif'
             OnChange = EditYColA1Change
-            ParentFont = False
             TabOrder = 24
             Text = '2'
           end
           object EditHeaderA2: TEdit
             Left = 940
-            Height = 37
+            Height = 35
             Top = 164
             Width = 80
             Anchors = [akTop, akLeft, akRight]
-            Font.Color = clWindowText
-            Font.Height = -24
-            Font.Name = 'MS Sans Serif'
             OnChange = EditHeaderA2Change
-            ParentFont = False
             TabOrder = 25
             Text = '3'
           end
           object EditXColA2: TEdit
             Left = 1074
-            Height = 37
+            Height = 35
             Top = 164
             Width = 76
-            Font.Color = clWindowText
-            Font.Height = -24
-            Font.Name = 'MS Sans Serif'
             OnChange = EditXColA2Change
-            ParentFont = False
             TabOrder = 26
             Text = '1'
           end
           object EditYColA2: TEdit
             Left = 1188
-            Height = 37
+            Height = 35
             Top = 164
             Width = 74
-            Font.Color = clWindowText
-            Font.Height = -24
-            Font.Name = 'MS Sans Serif'
             OnChange = EditYColA2Change
-            ParentFont = False
             TabOrder = 27
             Text = '2'
           end
           object EditHeaderA3: TEdit
             Left = 940
-            Height = 37
+            Height = 35
             Top = 218
             Width = 80
             Anchors = [akTop, akLeft, akRight]
-            Font.Color = clWindowText
-            Font.Height = -24
-            Font.Name = 'MS Sans Serif'
             OnChange = EditHeaderA3Change
-            ParentFont = False
             TabOrder = 28
             Text = '3'
           end
           object EditXColA3: TEdit
             Left = 1074
-            Height = 37
+            Height = 35
             Top = 218
             Width = 76
-            Font.Color = clWindowText
-            Font.Height = -24
-            Font.Name = 'MS Sans Serif'
             OnChange = EditXColA3Change
-            ParentFont = False
             TabOrder = 29
             Text = '1'
           end
           object EditYColA3: TEdit
             Left = 1188
-            Height = 37
+            Height = 35
             Top = 218
             Width = 74
-            Font.Color = clWindowText
-            Font.Height = -24
-            Font.Name = 'MS Sans Serif'
             OnChange = EditYColA3Change
-            ParentFont = False
             TabOrder = 30
             Text = '2'
           end
           object EditHeaderA4: TEdit
             Left = 940
-            Height = 37
+            Height = 35
             Top = 272
             Width = 80
             Anchors = [akTop, akLeft, akRight]
-            Font.Color = clWindowText
-            Font.Height = -24
-            Font.Name = 'MS Sans Serif'
             OnChange = EditHeaderA4Change
-            ParentFont = False
             TabOrder = 31
             Text = '3'
           end
           object EditXColA4: TEdit
             Left = 1074
-            Height = 37
+            Height = 35
             Top = 272
             Width = 76
-            Font.Color = clWindowText
-            Font.Height = -24
-            Font.Name = 'MS Sans Serif'
             OnChange = EditXColA4Change
-            ParentFont = False
             TabOrder = 32
             Text = '1'
           end
           object EditYColA4: TEdit
             Left = 1188
-            Height = 37
+            Height = 35
             Top = 272
             Width = 74
-            Font.Color = clWindowText
-            Font.Height = -24
-            Font.Name = 'MS Sans Serif'
             OnChange = EditYColA4Change
-            ParentFont = False
             TabOrder = 33
             Text = '2'
           end
           object EditHeaderA5: TEdit
             Left = 940
-            Height = 37
+            Height = 35
             Top = 326
             Width = 80
             Anchors = [akTop, akLeft, akRight]
-            Font.Color = clWindowText
-            Font.Height = -24
-            Font.Name = 'MS Sans Serif'
             OnChange = EditHeaderA5Change
-            ParentFont = False
             TabOrder = 34
             Text = '3'
           end
           object EditXColA5: TEdit
             Left = 1074
-            Height = 37
+            Height = 35
             Top = 326
             Width = 76
-            Font.Color = clWindowText
-            Font.Height = -24
-            Font.Name = 'MS Sans Serif'
             OnChange = EditXColA5Change
-            ParentFont = False
             TabOrder = 35
             Text = '1'
           end
           object EditYColA5: TEdit
             Left = 1188
-            Height = 37
+            Height = 35
             Top = 326
             Width = 74
-            Font.Color = clWindowText
-            Font.Height = -24
-            Font.Name = 'MS Sans Serif'
             OnChange = EditYColA5Change
-            ParentFont = False
             TabOrder = 36
             Text = '2'
           end
@@ -4569,9 +4514,10 @@ object Form_Models: TForm_Models
           end
           object Edit_day: TEdit
             Left = 620
-            Height = 37
+            Height = 35
             Top = 16
             Width = 110
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -4596,9 +4542,10 @@ object Form_Models: TForm_Models
           end
           object Edit_dsmpl: TEdit
             Left = 620
-            Height = 37
+            Height = 35
             Top = 70
             Width = 110
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -4623,9 +4570,10 @@ object Form_Models: TForm_Models
           end
           object Edit_pEd: TEdit
             Left = 620
-            Height = 37
+            Height = 35
             Top = 126
             Width = 110
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -4776,9 +4724,10 @@ object Form_Models: TForm_Models
           end
           object EditXColEd: TEdit
             Left = 510
-            Height = 37
+            Height = 35
             Top = 132
             Width = 102
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -4789,9 +4738,10 @@ object Form_Models: TForm_Models
           end
           object EditYColEd: TEdit
             Left = 782
-            Height = 37
+            Height = 35
             Top = 132
             Width = 102
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -4802,10 +4752,11 @@ object Form_Models: TForm_Models
           end
           object EditEdFile: TEdit
             Left = 216
-            Height = 37
+            Height = 35
             Top = 72
             Width = 906
             Enabled = False
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -4885,9 +4836,10 @@ object Form_Models: TForm_Models
           end
           object Edit_rho_dd: TEdit
             Left = 182
-            Height = 37
+            Height = 35
             Top = 80
             Width = 108
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -4939,9 +4891,10 @@ object Form_Models: TForm_Models
           end
           object Edit_rho_ds: TEdit
             Left = 182
-            Height = 37
+            Height = 35
             Top = 198
             Width = 108
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -5002,9 +4955,10 @@ object Form_Models: TForm_Models
           end
           object Edit_rho_u: TEdit
             Left = 182
-            Height = 37
+            Height = 35
             Top = 30
             Width = 108
+            Font.CharSet = GREEK_CHARSET
             Font.Color = clWindowText
             Font.Height = -24
             Font.Name = 'MS Sans Serif'
@@ -5038,7 +4992,7 @@ object Form_Models: TForm_Models
     end
   end
   object OpenDialog1: TOpenDialog
-    left = 1328
-    top = 1296
+    Left = 1328
+    Top = 1296
   end
 end

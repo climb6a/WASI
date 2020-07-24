@@ -13,7 +13,7 @@ object FormDataFormat: TFormDataFormat
   Font.Name = 'MS Sans Serif'
   OnCreate = FormCreate
   Position = poMainFormCenter
-  LCLVersion = '2.0.6.0'
+  LCLVersion = '2.0.10.0'
   object GroupBoxFileFormat: TGroupBox
     Left = 22
     Height = 366
@@ -616,6 +616,20 @@ object FormDataFormat: TFormDataFormat
     Font.Name = 'MS Sans Serif'
     ParentFont = False
     TabOrder = 4
+    object Static_FWHM: TStaticText
+      Left = 966
+      Height = 28
+      Top = 28
+      Width = 95
+      AutoSize = True
+      Caption = 'FWHM ='
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      ParentFont = False
+      TabOrder = 18
+    end
     object TextX: TStaticText
       Left = 428
       Height = 28
@@ -870,34 +884,6 @@ object FormDataFormat: TFormDataFormat
       ParentFont = False
       TabOrder = 15
     end
-    object Static_FWHM: TStaticText
-      Left = 966
-      Height = 28
-      Top = 28
-      Width = 130
-      AutoSize = True
-      Caption = 'FWHM =     '
-      Font.CharSet = GREEK_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -24
-      Font.Name = 'MS Sans Serif'
-      ParentFont = False
-      TabOrder = 18
-    end
-    object EditFWHM: TEdit
-      Left = 1080
-      Height = 35
-      Top = 22
-      Width = 92
-      Font.CharSet = GREEK_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -24
-      Font.Name = 'MS Sans Serif'
-      OnChange = EditFWHMChange
-      ParentFont = False
-      TabOrder = 19
-      Text = '1'
-    end
     object Static_dxs1: TStaticText
       Left = 432
       Height = 28
@@ -968,6 +954,20 @@ object FormDataFormat: TFormDataFormat
       ParentFont = False
       TabOrder = 24
     end
+    object EditFWHM: TEdit
+      Left = 1080
+      Height = 35
+      Top = 22
+      Width = 92
+      Font.CharSet = GREEK_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'MS Sans Serif'
+      OnChange = EditFWHMChange
+      ParentFont = False
+      TabOrder = 19
+      Text = '1'
+    end
   end
   object ButtonManipulate: TButton
     Left = 578
@@ -1029,7 +1029,7 @@ object FormDataFormat: TFormDataFormat
   end
   object OpenDialog1: TOpenDialog
     Options = [ofHideReadOnly, ofAllowMultiSelect, ofEnableSizing]
-    left = 1082
-    top = 1228
+    Left = 1082
+    Top = 1228
   end
 end

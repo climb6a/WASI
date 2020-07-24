@@ -2,7 +2,7 @@ unit Frame_Resid;
 
 {$MODE Delphi}
 
-{ Version vom 20.11.2000 }
+{ Version vom 24.7.2020 }
 
 interface
 

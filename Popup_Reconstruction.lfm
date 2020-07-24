@@ -8,12 +8,13 @@ object Popup_Reconstruct: TPopup_Reconstruct
   ClientWidth = 1018
   Color = clBtnFace
   DesignTimePPI = 192
+  Font.CharSet = GREEK_CHARSET
   Font.Color = clWindowText
   Font.Height = -26
   Font.Name = 'MS Sans Serif'
   OnCreate = FormCreate
   Position = poMainFormCenter
-  LCLVersion = '2.0.6.0'
+  LCLVersion = '2.0.10.0'
   object GroupSaveErr: TGroupBox
     Left = 32
     Height = 496
@@ -65,6 +66,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 90
     Width = 80
     Caption = 'C[0]'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -78,6 +80,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 130
     Width = 80
     Caption = 'C[1]'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -91,6 +94,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 170
     Width = 80
     Caption = 'C[2]'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -104,6 +108,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 210
     Width = 80
     Caption = 'C[3]'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -117,6 +122,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 250
     Width = 80
     Caption = 'C[4]'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -130,6 +136,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 290
     Width = 80
     Caption = 'C[5]'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -141,8 +148,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 96
     Height = 35
     Top = 330
-    Width = 83
+    Width = 81
     Caption = 'C_X'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -154,8 +162,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 96
     Height = 35
     Top = 370
-    Width = 106
+    Width = 103
     Caption = 'C_Mie'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -167,8 +176,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 96
     Height = 35
     Top = 410
-    Width = 127
+    Width = 129
     Caption = 'bbs_phy'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -182,6 +192,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 450
     Width = 82
     Caption = 'C_Y'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -195,6 +206,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 90
     Width = 52
     Caption = 'S'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -206,8 +218,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 288
     Height = 35
     Top = 130
-    Width = 49
+    Width = 50
     Caption = 'n'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -219,8 +232,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 288
     Height = 35
     Top = 170
-    Width = 87
+    Width = 86
     Caption = 'T_W'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -234,6 +248,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 210
     Width = 55
     Caption = 'Q'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -245,8 +260,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 288
     Height = 35
     Top = 250
-    Width = 75
+    Width = 76
     Caption = 'fluo'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -260,6 +276,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 290
     Width = 97
     Caption = 'rho_L'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -273,6 +290,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 330
     Width = 112
     Caption = 'rho_dd'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -286,6 +304,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 370
     Width = 110
     Caption = 'rho_ds'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -297,8 +316,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 288
     Height = 35
     Top = 410
-    Width = 95
+    Width = 96
     Caption = 'alpha'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -312,6 +332,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 450
     Width = 83
     Caption = 'beta'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -323,8 +344,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 480
     Height = 35
     Top = 90
-    Width = 83
+    Width = 84
     Caption = 'f_dd'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -336,8 +358,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 480
     Height = 35
     Top = 130
-    Width = 81
+    Width = 82
     Caption = 'f_ds'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -351,6 +374,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 170
     Width = 91
     Caption = 'H_oz'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -362,8 +386,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 480
     Height = 35
     Top = 210
-    Width = 73
+    Width = 74
     Caption = 'WV'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -375,8 +400,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 480
     Height = 35
     Top = 250
-    Width = 42
+    Width = 43
     Caption = 'f'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -388,8 +414,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 480
     Height = 35
     Top = 290
-    Width = 47
+    Width = 48
     Caption = 'z'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -401,8 +428,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 480
     Height = 35
     Top = 330
-    Width = 63
+    Width = 64
     Caption = 'zB'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -414,8 +442,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 480
     Height = 35
     Top = 370
-    Width = 74
+    Width = 76
     Caption = 'sun'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -427,8 +456,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 480
     Height = 35
     Top = 410
-    Width = 85
+    Width = 82
     Caption = 'view'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -442,6 +472,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 450
     Width = 83
     Caption = 'dphi'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -453,8 +484,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 652
     Height = 35
     Top = 90
-    Width = 86
+    Width = 87
     Caption = 'f_nw'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -466,8 +498,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 652
     Height = 35
     Top = 130
-    Width = 84
+    Width = 85
     Caption = 'fA[0]'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -479,8 +512,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 652
     Height = 35
     Top = 170
-    Width = 84
+    Width = 85
     Caption = 'fA[1]'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -492,8 +526,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 652
     Height = 35
     Top = 210
-    Width = 84
+    Width = 85
     Caption = 'fA[2]'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -505,8 +540,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 652
     Height = 35
     Top = 250
-    Width = 84
+    Width = 85
     Caption = 'fA[3]'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -518,8 +554,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 652
     Height = 35
     Top = 290
-    Width = 84
+    Width = 85
     Caption = 'fA[4]'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -531,8 +568,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 652
     Height = 35
     Top = 330
-    Width = 84
+    Width = 85
     Caption = 'fA[5]'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -546,6 +584,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 370
     Width = 91
     Caption = 'g_dd'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -559,6 +598,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 410
     Width = 97
     Caption = 'g_dsr'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -572,6 +612,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 450
     Width = 102
     Caption = 'g_dsa'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -585,6 +626,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 90
     Width = 110
     Caption = 'delta_r'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -596,8 +638,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 826
     Height = 35
     Top = 130
-    Width = 122
+    Width = 123
     Caption = 'alpha_d'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -611,6 +654,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 170
     Width = 110
     Caption = 'beta_d'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -624,6 +668,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 210
     Width = 143
     Caption = 'gamma_d'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -637,6 +682,7 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Top = 250
     Width = 116
     Caption = 'delta_d'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -648,8 +694,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 826
     Height = 35
     Top = 290
-    Width = 114
+    Width = 116
     Caption = 'dummy'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'
@@ -661,8 +708,9 @@ object Popup_Reconstruct: TPopup_Reconstruct
     Left = 826
     Height = 35
     Top = 330
-    Width = 74
+    Width = 75
     Caption = 'test'
+    Font.CharSet = GREEK_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
     Font.Name = 'MS Sans Serif'

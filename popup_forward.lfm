@@ -13,7 +13,7 @@ object FormData: TFormData
   Font.Name = 'MS Sans Serif'
   OnCreate = FormCreate
   Position = poMainFormCenter
-  LCLVersion = '2.0.6.0'
+  LCLVersion = '2.0.10.0'
   object ButtonCancel: TButton
     Left = 650
     Height = 54
@@ -185,9 +185,10 @@ object FormData: TFormData
       end
       object Edit_offset: TEdit
         Left = 452
-        Height = 37
+        Height = 35
         Top = 12
         Width = 108
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
         Font.Height = -24
         Font.Name = 'MS Sans Serif'
@@ -212,10 +213,11 @@ object FormData: TFormData
       end
       object Edit_offset_file: TEdit
         Left = 48
-        Height = 37
+        Height = 35
         Top = 118
         Width = 950
         Enabled = False
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
         Font.Height = -24
         Font.Name = 'MS Sans Serif'
@@ -238,10 +240,11 @@ object FormData: TFormData
       end
       object Edit_Header_offsetfile: TEdit
         Left = 208
-        Height = 37
+        Height = 35
         Top = 172
         Width = 82
         Anchors = [akTop, akLeft, akRight]
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
         Font.Height = -24
         Font.Name = 'MS Sans Serif'
@@ -252,9 +255,10 @@ object FormData: TFormData
       end
       object Edit_X_offsetfile: TEdit
         Left = 592
-        Height = 37
+        Height = 35
         Top = 172
         Width = 74
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
         Font.Height = -24
         Font.Name = 'MS Sans Serif'
@@ -265,9 +269,10 @@ object FormData: TFormData
       end
       object Edit_Y_offsetfile: TEdit
         Left = 1014
-        Height = 37
+        Height = 35
         Top = 172
         Width = 74
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
         Font.Height = -24
         Font.Name = 'MS Sans Serif'
@@ -347,9 +352,10 @@ object FormData: TFormData
       end
       object EditNoise: TEdit
         Left = 540
-        Height = 37
+        Height = 35
         Top = 36
         Width = 108
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
         Font.Height = -24
         Font.Name = 'MS Sans Serif'
@@ -374,10 +380,11 @@ object FormData: TFormData
       end
       object Edit_noise_file: TEdit
         Left = 48
-        Height = 37
+        Height = 35
         Top = 118
         Width = 950
         Enabled = False
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
         Font.Height = -24
         Font.Name = 'MS Sans Serif'
@@ -414,10 +421,11 @@ object FormData: TFormData
       end
       object Edit_Header_noisefile: TEdit
         Left = 226
-        Height = 37
+        Height = 35
         Top = 172
         Width = 68
         Anchors = [akTop, akLeft, akRight]
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
         Font.Height = -24
         Font.Name = 'MS Sans Serif'
@@ -428,9 +436,10 @@ object FormData: TFormData
       end
       object Edit_X_noisefile: TEdit
         Left = 592
-        Height = 37
+        Height = 35
         Top = 172
         Width = 74
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
         Font.Height = -24
         Font.Name = 'MS Sans Serif'
@@ -441,9 +450,10 @@ object FormData: TFormData
       end
       object Edit_Y_noisefile: TEdit
         Left = 1014
-        Height = 37
+        Height = 35
         Top = 172
         Width = 74
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
         Font.Height = -24
         Font.Name = 'MS Sans Serif'
@@ -483,9 +493,10 @@ object FormData: TFormData
     end
     object EditRadiom: TEdit
       Left = 540
-      Height = 37
+      Height = 35
       Top = 22
       Width = 108
+      Font.CharSet = GREEK_CHARSET
       Font.Color = clWindowText
       Font.Height = -24
       Font.Name = 'MS Sans Serif'
@@ -591,9 +602,10 @@ object FormData: TFormData
       end
       object Edit_scale: TEdit
         Left = 452
-        Height = 37
+        Height = 35
         Top = 12
         Width = 108
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
         Font.Height = -24
         Font.Name = 'MS Sans Serif'
@@ -618,10 +630,11 @@ object FormData: TFormData
       end
       object Edit_scale_file: TEdit
         Left = 48
-        Height = 37
+        Height = 35
         Top = 118
         Width = 950
         Enabled = False
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
         Font.Height = -24
         Font.Name = 'MS Sans Serif'
@@ -644,10 +657,11 @@ object FormData: TFormData
       end
       object Edit_Header_scalefile: TEdit
         Left = 208
-        Height = 37
+        Height = 35
         Top = 172
         Width = 82
         Anchors = [akTop, akLeft, akRight]
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
         Font.Height = -24
         Font.Name = 'MS Sans Serif'
@@ -658,9 +672,10 @@ object FormData: TFormData
       end
       object Edit_X_scalefile: TEdit
         Left = 592
-        Height = 37
+        Height = 35
         Top = 172
         Width = 74
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
         Font.Height = -24
         Font.Name = 'MS Sans Serif'
@@ -671,9 +686,10 @@ object FormData: TFormData
       end
       object Edit_Y_scalefile: TEdit
         Left = 1014
-        Height = 37
+        Height = 35
         Top = 172
         Width = 74
+        Font.CharSet = GREEK_CHARSET
         Font.Color = clWindowText
         Font.Height = -24
         Font.Name = 'MS Sans Serif'
@@ -700,7 +716,7 @@ object FormData: TFormData
   end
   object OpenDialog1: TOpenDialog
     Options = [ofHideReadOnly, ofAllowMultiSelect, ofEnableSizing]
-    left = 78
-    top = 1172
+    Left = 78
+    Top = 1172
   end
 end

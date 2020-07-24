@@ -23,6 +23,7 @@ type
     Image1: TImage;
     procedure FormCreate(Sender: TObject);
     procedure OKButtonClick(Sender: TObject);
+    procedure Panel1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -56,6 +57,11 @@ begin
     end;
 
 procedure TAboutBox.OKButtonClick(Sender: TObject);
+begin
+
+end;
+
+procedure TAboutBox.Panel1Click(Sender: TObject);
 begin
 
 end;
