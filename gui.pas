@@ -3,7 +3,7 @@ unit gui;
 {$MODE Delphi}
 
 { Main unit of program WASI. }
-{ Version vom 24.7.2020 }
+{ Version vom 25.7.2020 }
 
 interface
 
@@ -1495,17 +1495,9 @@ begin
 procedure TForm1.Legende;
 { When 2 spectra are shown in the forward mode, plot their legend. }
 begin
-    if {flag_batch and} (NSpectra=2) then begin
-        Canvas.Pen.Color := farbS[1];
-        Canvas.MoveTo(ClientWidth-DX_right-150, DY_top+32);
-        Canvas.LineTo(ClientWidth-DX_right-100, DY_top+32);
-        Canvas.Pen.Color := farbS[2];
-        Canvas.MoveTo(ClientWidth-DX_right-150, DY_top+48);
-        Canvas.LineTo(ClientWidth-DX_right-100, DY_top+48);
-        Canvas.Pen.Color := clBlack;
-        canvas.brush.style := bsClear;
-        Canvas.TextOut(ClientWidth-DX_right-90, DY_top+26, spec[1]^.ParText);
-        Canvas.TextOut(ClientWidth-DX_right-90, DY_top+42, spec[2]^.ParText);
+    if (NSpectra=2) then begin
+        Legend_par(farbS[1], spec[1]^.ParText, -35);
+        Legend_par(farbS[2], spec[2]^.ParText, -10);
         end;
     end;
 

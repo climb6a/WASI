@@ -2,7 +2,7 @@ unit Frame_par;
 
 {$MODE Delphi}
 
-{ Version vom 31.1.2020 }
+{ Version vom 25.7.2020 }
 
 interface
 
@@ -937,7 +937,7 @@ begin
     if (spec_type=S_Lup) and (not flag_above) then DisableLds(Sender);  }
     PanelGray1.Top:=StaticText2.Top; //Cp_fit.Top;
     PanelGray1.Width:=CP_0.Left-Cp_fit.Width+Cp_fit.Height-6;
-    PanelGray1.Left:=CP_0.Left-PanelGray1.Width-2;
+    PanelGray1.Left:=CP_0.Left-PanelGray1.Width-4;
     PanelGray1.Height:=Height;
     PanelGray1.Visible:=flag_panel_fw;
     PanelGray1.Color:=clDefault;
@@ -945,7 +945,7 @@ begin
 
     PanelGray2.Width:=PanelGray1.Width;
     PanelGray2.Top:=StaticText2.Top;
-    PanelGray2.Left:=f_nw_0.Left-PanelGray2.Width-2;
+    PanelGray2.Left:=f_nw_0.Left-PanelGray2.Width-4;
     PanelGray2.Height:=Height;
     PanelGray2.Visible:=flag_panel_fw;
 

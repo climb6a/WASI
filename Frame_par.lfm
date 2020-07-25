@@ -8,7 +8,7 @@ object Frame_p: TFrame_p
   ClientWidth = 316
   DesignTimePPI = 192
   Font.Color = clWindowText
-  Font.Height = -184
+  Font.Height = -368
   Font.Name = 'MS Sans Serif'
   ParentFont = False
   Scaled = False

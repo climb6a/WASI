@@ -360,19 +360,6 @@ object FrameBatch: TFrameBatch
     ParentFont = False
     TabOrder = 22
   end
-  object Panel2Hide: TPanel
-    Left = 77
-    Height = 46
-    Top = 13
-    Width = 82
-    BevelOuter = bvNone
-    Color = clGradientInactiveCaption
-    Font.Height = -19
-    ParentColor = False
-    ParentFont = False
-    TabOrder = 23
-    UseDockManager = False
-  end
   object StaticText3: TStaticText
     Left = 251
     Height = 35
@@ -385,5 +372,18 @@ object FrameBatch: TFrameBatch
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 2
+  end
+  object Panel2Hide: TPanel
+    Left = 77
+    Height = 46
+    Top = 13
+    Width = 82
+    BevelOuter = bvNone
+    Color = clGradientInactiveCaption
+    Font.Height = -19
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 23
+    UseDockManager = False
   end
 end
