@@ -2,7 +2,7 @@ unit Frame_par;
 
 {$MODE Delphi}
 
-{ Version vom 25.7.2020 }
+{ Version vom 1.8.2020 }
 
 interface
 
@@ -126,7 +126,6 @@ type
     f_nw_fit: TCheckBox;
     f_nw_0: TEdit;
     procedure FormCreate(Sender: TObject);
-    procedure sun_fitChange(Sender: TObject);
     procedure updte(Sender: TObject);
     procedure Parameter_enable(Sender: TObject);
     procedure update_actual(Sender: TObject);
@@ -914,11 +913,6 @@ begin
     updte(Sender);
     end;
 
-procedure TFrame_p.sun_fitChange(Sender: TObject);
-begin
-
-end;
-
 
 procedure TFrame_p.updte(Sender: TObject);
 begin
@@ -953,11 +947,6 @@ begin
     StaticText2.Top:=14;
     if flag_panel_fw then update_fw(Sender) else update_actual(Sender);
     Parameter_enable(Sender);
- (*
-    // Use parameter f_nw to show parameter value
-    f_nw_fit.Caption:='DY_leg';
-    f_nw.fw:=DY_leg;  // ATTENTION: ONLY FOR TEST PURPOSES
-    *)
     end;
 
 procedure TFrame_p.handle_private(Sender: TObject);

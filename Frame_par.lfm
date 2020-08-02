@@ -1,20 +1,18 @@
 object Frame_p: TFrame_p
   Left = 0
-  Height = 625
+  Height = 658
   Top = 0
-  Width = 316
+  Width = 368
   VertScrollBar.Tracking = True
-  ClientHeight = 625
-  ClientWidth = 316
-  DesignTimePPI = 192
-  Font.Color = clWindowText
-  Font.Height = -368
-  Font.Name = 'MS Sans Serif'
+  ClientHeight = 658
+  ClientWidth = 368
+  DesignTimePPI = 120
+  Font.CharSet = GREEK_CHARSET
+  Font.Height = -15
   ParentFont = False
-  Scaled = False
   TabOrder = 0
-  DesignLeft = 988
-  DesignTop = 135
+  DesignLeft = 929
+  DesignTop = 190
   object Cp_fit: TCheckBox
     Left = 0
     Height = 29
@@ -24,12 +22,7 @@ object Frame_p: TFrame_p
     AutoSize = False
     Caption = 'C[0]'
     Checked = True
-    Font.CharSet = GREEK_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = Cp_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
@@ -37,14 +30,10 @@ object Frame_p: TFrame_p
   end
   object CP_0: TEdit
     Left = 88
-    Height = 21
+    Height = 28
     Top = 32
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = CP_0Change
-    ParentFont = False
     TabOrder = 1
     Text = '5'
   end
@@ -56,25 +45,17 @@ object Frame_p: TFrame_p
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'C[1]'
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = C1_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 2
   end
   object C1_0: TEdit
     Left = 88
-    Height = 21
+    Height = 28
     Top = 56
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = C1_0Change
-    ParentFont = False
     TabOrder = 3
     Text = '0'
   end
@@ -86,25 +67,17 @@ object Frame_p: TFrame_p
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'C[2]'
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = C2_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 4
   end
   object C2_0: TEdit
     Left = 88
-    Height = 21
+    Height = 28
     Top = 80
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = C2_0Change
-    ParentFont = False
     TabOrder = 5
     Text = '0'
   end
@@ -116,25 +89,17 @@ object Frame_p: TFrame_p
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'C[3]'
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = C3_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 6
   end
   object C3_0: TEdit
     Left = 88
-    Height = 21
+    Height = 28
     Top = 104
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = C3_0Change
-    ParentFont = False
     TabOrder = 7
     Text = '0'
   end
@@ -146,25 +111,17 @@ object Frame_p: TFrame_p
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'C[4]'
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = C4_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 8
   end
   object C4_0: TEdit
     Left = 88
-    Height = 21
+    Height = 28
     Top = 128
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = C4_0Change
-    ParentFont = False
     TabOrder = 9
     Text = '0'
   end
@@ -176,25 +133,17 @@ object Frame_p: TFrame_p
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'C[5]'
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = C5_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 10
   end
   object C5_0: TEdit
     Left = 88
-    Height = 21
+    Height = 28
     Top = 152
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = C5_0Change
-    ParentFont = False
     TabOrder = 11
     Text = '0'
   end
@@ -207,11 +156,7 @@ object Frame_p: TFrame_p
     AutoSize = False
     Caption = 'C_Y'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = CY_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
@@ -219,14 +164,10 @@ object Frame_p: TFrame_p
   end
   object CY_0: TEdit
     Left = 88
-    Height = 21
+    Height = 28
     Top = 248
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = CY_0Change
-    ParentFont = False
     TabOrder = 13
     Text = '0.5'
   end
@@ -238,25 +179,17 @@ object Frame_p: TFrame_p
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'S'
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = S_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 14
   end
   object S_0: TEdit
     Left = 88
-    Height = 21
+    Height = 28
     Top = 272
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = S_0Change
-    ParentFont = False
     TabOrder = 15
     Text = '0.014'
   end
@@ -269,11 +202,7 @@ object Frame_p: TFrame_p
     AutoSize = False
     Caption = 'X'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = CL_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
@@ -281,14 +210,10 @@ object Frame_p: TFrame_p
   end
   object CL_0: TEdit
     Left = 88
-    Height = 21
+    Height = 28
     Top = 200
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = CL_0Change
-    ParentFont = False
     TabOrder = 17
     Text = '1'
   end
@@ -300,25 +225,17 @@ object Frame_p: TFrame_p
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'C_Mie'
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = CMie_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 18
   end
   object CMie_0: TEdit
     Left = 88
-    Height = 21
+    Height = 28
     Top = 224
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = CMie_0Change
-    ParentFont = False
     TabOrder = 19
     Text = '0'
   end
@@ -330,227 +247,167 @@ object Frame_p: TFrame_p
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'T_W'
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = TW_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 20
   end
   object TW_0: TEdit
     Left = 88
-    Height = 21
+    Height = 28
     Top = 320
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = TW_0Change
-    ParentFont = False
     TabOrder = 21
     Text = '18'
   end
   object g_dd_fit: TCheckBox
-    Left = 160
+    Left = 210
     Height = 29
-    Top = 416
+    Top = 418
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'g_dd'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = g_dd_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
     TabOrder = 22
   end
   object g_dd_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 415
+    Left = 298
+    Height = 28
+    Top = 416
     Width = 50
     Enabled = False
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = g_dd_0Change
-    ParentFont = False
     TabOrder = 23
     Text = '0.3'
   end
   object g_dsr_fit: TCheckBox
-    Left = 160
+    Left = 210
     Height = 29
-    Top = 440
+    Top = 441
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'g_dsr'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = g_dsr_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
     TabOrder = 24
   end
   object g_dsr_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 440
+    Left = 298
+    Height = 28
+    Top = 441
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = g_dsr_0Change
-    ParentFont = False
     TabOrder = 25
     Text = '0.1'
   end
   object g_dsa_fit: TCheckBox
-    Left = 160
+    Left = 210
     Height = 29
-    Top = 464
+    Top = 465
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'g_dsa'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = g_dsa_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
     TabOrder = 26
   end
   object g_dsa_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 464
+    Left = 298
+    Height = 28
+    Top = 465
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = g_dsa_0Change
-    ParentFont = False
     TabOrder = 27
     Text = '0.1'
   end
   object delta_r_fit: TCheckBox
-    Left = 160
-    Height = 20
-    Top = 544
+    Left = 211
+    Height = 24
+    Top = 566
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'delta_r'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = delta_r_fitClick
-    ParentFont = False
     State = cbChecked
     TabOrder = 28
   end
   object delta_r_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 544
+    Left = 299
+    Height = 28
+    Top = 566
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = delta_r_0Change
-    ParentFont = False
     TabOrder = 29
     Text = '0.1'
   end
   object alpha_fit: TCheckBox
-    Left = 160
+    Left = 210
     Height = 29
-    Top = 272
+    Top = 273
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'alpha'
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = alpha_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 30
   end
   object alpha_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 272
+    Left = 298
+    Height = 28
+    Top = 273
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = alpha_0Change
-    ParentFont = False
     TabOrder = 31
     Text = '0'
   end
   object Q_0: TEdit
     Left = 88
-    Height = 21
+    Height = 28
     Top = 368
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = Q_0Change
-    ParentFont = False
     TabOrder = 32
     Text = '5'
   end
   object rho_dd_fit: TCheckBox
-    Left = 160
+    Left = 210
     Height = 29
-    Top = 368
+    Top = 369
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'rho_dd'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = rho_dd_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
     TabOrder = 33
   end
   object rho_dd_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 368
+    Left = 298
+    Height = 28
+    Top = 369
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = rho_dd_0Change
-    ParentFont = False
     TabOrder = 34
     Text = '0.1'
   end
@@ -562,25 +419,17 @@ object Frame_p: TFrame_p
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'n'
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = n_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 35
   end
   object n_0: TEdit
     Left = 88
-    Height = 21
+    Height = 28
     Top = 296
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = n_0Change
-    ParentFont = False
     TabOrder = 36
     Text = '-1'
   end
@@ -590,13 +439,6 @@ object Frame_p: TFrame_p
     Top = 14
     Width = 134
     Caption = 'Parameter Fit?    Value'
-    Font.CharSet = GREEK_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'MS Sans Serif'
-    Font.Quality = fqCleartype
-    Font.Style = [fsBold]
-    ParentFont = False
     TabOrder = 37
   end
   object Q_fit: TCheckBox
@@ -607,132 +449,96 @@ object Frame_p: TFrame_p
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'Q'
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = Q_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 38
   end
   object alpha_d_fit: TCheckBox
-    Left = 0
-    Height = 20
-    Top = 520
+    Left = 1
+    Height = 24
+    Top = 530
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'alpha_d'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = alpha_d_fitClick
-    ParentFont = False
     State = cbChecked
     TabOrder = 39
   end
   object alpha_d_0: TEdit
-    Left = 88
-    Height = 21
-    Top = 520
+    Left = 89
+    Height = 28
+    Top = 495
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = alpha_d_0Change
-    ParentFont = False
     TabOrder = 40
     Text = '0.3'
   end
   object beta_d_fit: TCheckBox
-    Left = 1
-    Height = 20
-    Top = 544
+    Left = 2
+    Height = 24
+    Top = 564
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'beta_d'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = beta_d_fitClick
-    ParentFont = False
     State = cbChecked
     TabOrder = 41
   end
   object beta_d_0: TEdit
-    Left = 88
-    Height = 21
-    Top = 544
+    Left = 89
+    Height = 28
+    Top = 564
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = beta_d_0Change
-    ParentFont = False
     TabOrder = 42
     Text = '0.1'
   end
   object gamma_d_fit: TCheckBox
-    Left = 0
-    Height = 20
-    Top = 568
+    Left = 1
+    Height = 24
+    Top = 594
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'gamma_d'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = gamma_d_fitClick
-    ParentFont = False
     State = cbChecked
     TabOrder = 43
   end
   object gamma_d_0: TEdit
-    Left = 88
-    Height = 21
-    Top = 568
+    Left = 89
+    Height = 28
+    Top = 594
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = gamma_d_0Change
-    ParentFont = False
     TabOrder = 44
     Text = '0.1'
   end
   object delta_d_fit: TCheckBox
-    Left = 0
-    Height = 20
-    Top = 592
+    Left = 1
+    Height = 24
+    Top = 623
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'delta_d'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = delta_d_fitClick
-    ParentFont = False
     State = cbChecked
     TabOrder = 45
   end
   object delta_d_0: TEdit
-    Left = 88
-    Height = 21
-    Top = 592
+    Left = 89
+    Height = 28
+    Top = 623
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = delta_d_0Change
-    ParentFont = False
     TabOrder = 46
     Text = '0.1'
   end
@@ -745,11 +551,7 @@ object Frame_p: TFrame_p
     AutoSize = False
     Caption = 'f'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = f_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
@@ -757,14 +559,10 @@ object Frame_p: TFrame_p
   end
   object f_0: TEdit
     Left = 88
-    Height = 21
+    Height = 28
     Top = 344
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = f_0Change
-    ParentFont = False
     TabOrder = 48
     Text = '0.1'
   end
@@ -777,11 +575,7 @@ object Frame_p: TFrame_p
     AutoSize = False
     Caption = 'z'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = z_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
@@ -789,14 +583,10 @@ object Frame_p: TFrame_p
   end
   object z_0: TEdit
     Left = 88
-    Height = 21
+    Height = 28
     Top = 392
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = z_0Change
-    ParentFont = False
     TabOrder = 50
     Text = '0.1'
   end
@@ -809,11 +599,7 @@ object Frame_p: TFrame_p
     AutoSize = False
     Caption = 'zB'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = zB_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
@@ -821,14 +607,10 @@ object Frame_p: TFrame_p
   end
   object zB_0: TEdit
     Left = 88
-    Height = 21
+    Height = 28
     Top = 416
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = zB_0Change
-    ParentFont = False
     TabOrder = 52
     Text = '0.1'
   end
@@ -841,12 +623,7 @@ object Frame_p: TFrame_p
     AutoSize = False
     Caption = 'sun'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
-    OnChange = sun_fitChange
     OnClick = sun_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
@@ -854,14 +631,10 @@ object Frame_p: TFrame_p
   end
   object sun_0: TEdit
     Left = 88
-    Height = 21
+    Height = 28
     Top = 440
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = sun_0Change
-    ParentFont = False
     TabOrder = 54
     Text = '0.1'
   end
@@ -874,12 +647,8 @@ object Frame_p: TFrame_p
     AutoSize = False
     Caption = 'view'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = view_fitChange
     OnClick = view_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
@@ -887,407 +656,302 @@ object Frame_p: TFrame_p
   end
   object view_0: TEdit
     Left = 88
-    Height = 21
+    Height = 28
     Top = 464
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = view_0Change
-    ParentFont = False
     TabOrder = 56
     Text = '0.1'
   end
   object dphi_fit: TCheckBox
-    Left = 160
-    Height = 20
-    Top = 520
+    Left = 211
+    Height = 24
+    Top = 536
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'dphi'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = dphi_fitClick
-    ParentFont = False
     State = cbChecked
     TabOrder = 57
   end
   object dphi_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 520
+    Left = 299
+    Height = 28
+    Top = 536
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = dphi_0Change
-    ParentFont = False
     TabOrder = 58
     Text = '0.1'
   end
   object fa0_fit: TCheckBox
-    Left = 160
+    Left = 210
     Height = 29
-    Top = 56
+    Top = 58
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'fA[0]'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = fa0_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
     TabOrder = 61
   end
   object fa0_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 56
+    Left = 298
+    Height = 28
+    Top = 58
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = fa0_0Change
-    ParentFont = False
     TabOrder = 62
     Text = '0.1'
   end
   object fa1_fit: TCheckBox
-    Left = 160
+    Left = 210
     Height = 29
-    Top = 80
+    Top = 81
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'fA[1]'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = fa1_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
     TabOrder = 63
   end
   object fa1_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 80
+    Left = 298
+    Height = 28
+    Top = 81
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = fa1_0Change
-    ParentFont = False
     TabOrder = 64
     Text = '0.1'
   end
   object fa2_fit: TCheckBox
-    Left = 160
+    Left = 210
     Height = 29
-    Top = 104
+    Top = 105
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'fA[2]'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = fa2_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
     TabOrder = 65
   end
   object fa2_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 104
+    Left = 298
+    Height = 28
+    Top = 105
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = fa2_0Change
-    ParentFont = False
     TabOrder = 66
     Text = '0.1'
   end
   object fa3_fit: TCheckBox
-    Left = 160
+    Left = 210
     Height = 29
-    Top = 128
+    Top = 129
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'fA[3]'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = fa3_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
     TabOrder = 67
   end
   object fa3_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 128
+    Left = 298
+    Height = 28
+    Top = 129
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = fa3_0Change
-    ParentFont = False
     TabOrder = 68
     Text = '0.1'
   end
   object fa4_fit: TCheckBox
-    Left = 160
+    Left = 210
     Height = 29
-    Top = 152
+    Top = 153
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'fA[4]'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = fa4_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
     TabOrder = 69
   end
   object fa4_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 152
+    Left = 298
+    Height = 28
+    Top = 153
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = fa4_0Change
-    ParentFont = False
     TabOrder = 70
     Text = '0.1'
   end
   object fa5_fit: TCheckBox
-    Left = 160
+    Left = 210
     Height = 29
-    Top = 176
+    Top = 178
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'fA[5]'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = fa5_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
     TabOrder = 59
   end
   object fa5_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 176
+    Left = 298
+    Height = 28
+    Top = 178
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = fa5_0Change
-    ParentFont = False
     TabOrder = 60
     Text = '0.1'
   end
   object StaticText1: TStaticText
-    Left = 160
+    Left = 210
     Height = 20
-    Top = 14
+    Top = 15
     Width = 134
     Caption = 'Parameter Fit?    Value'
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
-    Font.Style = [fsBold]
-    ParentFont = False
     TabOrder = 72
   end
   object beta_fit: TCheckBox
-    Left = 160
+    Left = 210
     Height = 29
-    Top = 296
+    Top = 298
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'beta'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = beta_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
     TabOrder = 73
   end
   object beta_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 296
+    Left = 298
+    Height = 28
+    Top = 298
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = beta_0Change
-    ParentFont = False
     TabOrder = 74
     Text = '0.1'
   end
   object f_dd_fit: TCheckBox
-    Left = 160
+    Left = 210
     Height = 29
-    Top = 200
+    Top = 201
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'f_dd'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = f_dd_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
     TabOrder = 75
   end
   object f_dd_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 200
+    Left = 298
+    Height = 28
+    Top = 201
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = f_dd_0Change
-    ParentFont = False
     TabOrder = 76
     Text = '1'
   end
   object f_ds_fit: TCheckBox
-    Left = 160
+    Left = 210
     Height = 29
-    Top = 224
+    Top = 225
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'f_ds'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = f_ds_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
     TabOrder = 77
   end
   object f_ds_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 224
+    Left = 298
+    Height = 28
+    Top = 225
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = f_ds_0Change
-    ParentFont = False
     TabOrder = 78
     Text = '1'
   end
   object H_oz_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 248
+    Left = 298
+    Height = 28
+    Top = 249
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = H_oz_0Change
-    ParentFont = False
     TabOrder = 79
     Text = '1'
   end
   object H_oz_fit: TCheckBox
-    Left = 160
+    Left = 210
     Height = 29
-    Top = 248
+    Top = 249
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'H_oz'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = H_oz_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
     TabOrder = 80
   end
   object WV_fit: TCheckBox
-    Left = 160
+    Left = 210
     Height = 29
-    Top = 320
+    Top = 321
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'WV'
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = WV_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 81
   end
   object WV_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 320
+    Left = 298
+    Height = 28
+    Top = 321
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = WV_0Change
-    ParentFont = False
     TabOrder = 82
     Text = '0'
   end
@@ -1299,242 +963,179 @@ object Frame_p: TFrame_p
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'fluo'
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = fluo_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 83
   end
   object fluo_0: TEdit
     Left = 88
-    Height = 21
+    Height = 28
     Top = 176
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = fluo_0Change
-    ParentFont = False
     TabOrder = 84
     Text = '0'
   end
   object rho_ds_fit: TCheckBox
-    Left = 160
+    Left = 210
     Height = 29
-    Top = 392
+    Top = 393
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'rho_ds'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = rho_ds_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
     TabOrder = 85
   end
   object rho_ds_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 392
+    Left = 298
+    Height = 28
+    Top = 393
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = rho_ds_0Change
-    ParentFont = False
     TabOrder = 86
     Text = '0.1'
   end
   object dummy_fit: TCheckBox
-    Left = 160
-    Height = 20
-    Top = 568
+    Left = 211
+    Height = 24
+    Top = 596
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'dummy'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = dummy_fitClick
-    ParentFont = False
     State = cbChecked
     TabOrder = 87
   end
   object dummy_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 568
+    Left = 299
+    Height = 28
+    Top = 596
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = dummy_0Change
-    ParentFont = False
     TabOrder = 88
     Text = '0.1'
   end
   object rho_L_fit: TCheckBox
-    Left = 160
+    Left = 210
     Height = 29
-    Top = 344
+    Top = 345
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'rho_L'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = rho_L_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
     TabOrder = 89
   end
   object rho_L_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 344
+    Left = 298
+    Height = 28
+    Top = 345
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = rho_L_0Change
-    ParentFont = False
     TabOrder = 90
     Text = '0.1'
   end
   object test_fit: TCheckBox
-    Left = 160
-    Height = 20
-    Top = 592
+    Left = 211
+    Height = 24
+    Top = 624
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'test'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = test_fitClick
-    ParentFont = False
     State = cbChecked
     TabOrder = 91
   end
   object test_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 592
+    Left = 299
+    Height = 28
+    Top = 624
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = test_0Change
-    ParentFont = False
     TabOrder = 92
     Text = '0.1'
   end
   object f_nw_fit: TCheckBox
-    Left = 160
+    Left = 210
     Height = 29
-    Top = 32
+    Top = 33
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'f_nw'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = f_nw_fitClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
     TabOrder = 93
   end
   object f_nw_0: TEdit
-    Left = 248
-    Height = 21
-    Top = 32
+    Left = 298
+    Height = 28
+    Top = 33
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = f_nw_0Change
-    ParentFont = False
     TabOrder = 94
     Text = '0.1'
   end
   object PanelGray2: TPanel
-    Left = 216
+    Left = 266
     Height = 189
-    Top = 32
+    Top = 33
     Width = 26
     BevelColor = clActiveCaption
     BevelOuter = bvNone
     Color = clOlive
-    Font.Color = clWindowText
-    Font.Name = 'MS Sans Serif'
     ParentColor = False
-    ParentFont = False
     TabOrder = 71
   end
   object bbs_phy1: TCheckBox
-    Left = 0
-    Height = 20
-    Top = 528
+    Left = 1
+    Height = 24
+    Top = 495
     Width = 80
     Alignment = taLeftJustify
     AutoSize = False
     Caption = 'bbs_phy'
     Checked = True
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnClick = bbs_phyClick
-    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     State = cbChecked
     TabOrder = 96
   end
   object bbs_phy_0: TEdit
-    Left = 88
-    Height = 21
-    Top = 526
+    Left = 89
+    Height = 28
+    Top = 530
     Width = 50
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     OnChange = bbs_phy_0Change
-    ParentFont = False
     TabOrder = 97
     Text = '0.1'
   end
   object PanelGray1: TPanel
     Left = 56
     Height = 120
-    Top = 32
+    Top = 55
     Width = 26
     BevelOuter = bvNone
     Color = clOlive
-    Font.Color = clWindowText
-    Font.Height = -9
-    Font.Name = 'MS Sans Serif'
     ParentColor = False
-    ParentFont = False
     TabOrder = 95
   end
 end

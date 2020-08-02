@@ -382,6 +382,8 @@ begin
 
     // Calculate color matching functions if they are not yet imported
     if flag_public then begin set_mXYZ; Import_CIExyz; end;
+{    ch_lmin:=Nachbar(eye_lmin);
+    ch_lmax:=Nachbar(eye_lmax);    }
     assign_CIE_wavelengths;
 
     // Apply truecolor conversion to all pixels

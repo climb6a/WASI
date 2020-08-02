@@ -13,7 +13,7 @@ uses LCLIntf, LCLType, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ExtCtrls;
 
 const ProgramInfo  = 'WASI - Water color simulator';
-      vers: string = 'Version 5.2 - Latest update: 25 July 2020';
+      vers: string = 'Version 5.2 - Latest update: 2 Aug 2020';
       flag_public  : boolean = TRUE;                     { public version of WASI? }
       INI_public   = 'WASI5_2.INI';                      { File with public default values }
       INI_private  = 'private\PRIVATE.INI';              { File with private default values }

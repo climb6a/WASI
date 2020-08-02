@@ -3,7 +3,7 @@ unit misc;
 {$MODE Delphi}
 
 { Collection of general-purpose procedures and functions of program WASI. }
-{ Version vom 24.7.2020 }
+{ Version vom 2.8.2020 }
 
 interface
 uses { $IFDEF private_version} privates, { $ENDIF}
@@ -798,6 +798,14 @@ begin
         readln(datei, i); flag_cut_ROI:=i=1;
         readln(datei, i); flag_Martina:=i=1;
         readln(datei, i); flag_sim_NEL:=i=1;
+        readln(datei, i); flag_truecolor_fw:=i=1;
+        readln(datei, i); flag_truecolor_2D:=i=1;
+        readln(datei, i); flag_create_CIE:=i=1;
+        readln(datei, i); flag_CIE_label:=i=1;
+        readln(datei, i); flag_CIE_dots_black:=i=1;
+        readln(datei, i); flag_CIE_calc_locus:=i=1;
+        readln(datei, dotsize_CIE);
+        readln(datei, contrast_CIE);
         readln(datei, test_spec);
         readln(datei, dz_Ed);
         readln(datei, dz_Eu);
@@ -1333,6 +1341,14 @@ begin
     if flag_cut_ROI   then s1:='1' else s1:='0'; writeINI(datei_in, datei_out, s1, 8);
     if flag_Martina   then s1:='1' else s1:='0'; writeINI(datei_in, datei_out, s1, 8);
     if flag_sim_NEL   then s1:='1' else s1:='0'; writeINI(datei_in, datei_out, s1, 8);
+    if flag_truecolor_fw   then s1:='1' else s1:='0'; writeINI(datei_in, datei_out, s1, 8);
+    if flag_truecolor_2D   then s1:='1' else s1:='0'; writeINI(datei_in, datei_out, s1, 8);
+    if flag_create_CIE     then s1:='1' else s1:='0'; writeINI(datei_in, datei_out, s1, 8);
+    if flag_CIE_label      then s1:='1' else s1:='0'; writeINI(datei_in, datei_out, s1, 8);
+    if flag_CIE_dots_black then s1:='1' else s1:='0'; writeINI(datei_in, datei_out, s1, 8);
+    if flag_CIE_calc_locus then s1:='1' else s1:='0'; writeINI(datei_in, datei_out, s1, 8);
+    writeINI(datei_in, datei_out, schoen(dotsize_CIE, 0), 8);
+    writeINI(datei_in, datei_out, schoen(contrast_CIE, 0), 8);
     writeINI(datei_in, datei_out, schoen(test_spec, 0), 8);
     writeINI(datei_in, datei_out, schoen(dz_Ed, 3), 8);
     writeINI(datei_in, datei_out, schoen(dz_Eu, 3), 8);
@@ -3800,7 +3816,7 @@ begin
     k1:=MinX;
     error_file:=lies_spektrum(x^,  x^.Fname, x^.XColumn, x^.YColumn, x^.Header, ch, false);
 
-    if error_file>0 then begin   // Wavelength file is erroneous
+    if error_file>1 then begin   // Wavelength file is erroneous
         flag_x_file:=FALSE;
         flag_fwhm  :=FALSE;
         warning:='Error reading file ' + x^.Fname;
@@ -4755,6 +4771,7 @@ var k, u, o : integer;
 begin
     u:=Nachbar(Lmin);
     o:=Nachbar(Lmax);
+    spek.avg:=0;
     for k:=u to o do spek.avg:=spek.avg+spek.y[k];
     spek.avg:=spek.avg/(o-u+1);
     end;

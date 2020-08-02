@@ -3,7 +3,7 @@ unit gui;
 {$MODE Delphi}
 
 { Main unit of program WASI. }
-{ Version vom 25.7.2020 }
+{ Version vom 2.8.2020 }
 
 interface
 
@@ -2049,7 +2049,6 @@ var d1, d2, d3 : double;          // Data intervals
 begin
    flag_clear:=TRUE;
    set_YText;
-   ActualFile:='Simulated spectra';
    if Par1_min>Par1_max then begin c1:=Par1_min; Par1_min:=Par1_max; Par1_max:=c1; end;
    if Par2_min>Par2_max then begin c2:=Par2_min; Par2_min:=Par2_max; Par2_max:=c2; end;
    if Par3_min>Par3_max then begin c3:=Par3_min; Par3_min:=Par3_max; Par3_max:=c3; end;
@@ -2097,6 +2096,9 @@ begin
    fl_fw:=flag_panel_fw;
    fl_sv_tb:=flag_sv_table;
    if N_total>MaxSpectra then flag_sv_table:=FALSE;
+
+   if N_total=1 then ActualFile:='Simulated spectrum'
+                else ActualFile:='Simulated spectra';
    S_actual:=1;
    Nspectra:=1;
    N:=0;
@@ -2110,7 +2112,7 @@ begin
 
    if flag_MP then set_global_parameters_fw_MP;
 
-   if (not flag_public) and flag_truecolor_2D then begin
+   if (not flag_public) and flag_truecolor_fw then begin
    { Set background colors of parameter names.
      Note: There is a strange effect which I couldn't resolve:
      Changing the font color of a dropdown list sets the focus to that list.
@@ -2128,12 +2130,22 @@ begin
         end;
    end;
 
-   if (not flag_public) and flag_truecolor_2D then begin
+   if (not flag_public) and flag_create_CIE then begin
        RGB:= TRGB.Create(Application);
        RGB.FormCreate(Sender, Par1_N, Par2_N, TRUE);
        if flag_CIE_calc_locus then RGB.calcShoeEdge;
- //      RGB.PlotHorseshoeColors;
- //      RGB.PlotShoeEdge;
+       RGB.PlotHorseshoeColors;
+       RGB.PlotShoeEdge;
+
+       RGB_FileText:='';
+       if (Par1_N>1) and (Par1_Type>0) then
+           RGB_FileText:=par.name[Par1_Type]+'='+
+                     schoen(Par1_Min,2)+'-'+schoen(Par1_Max,2);
+       if (Par2_N>1) and (Par2_Type>0) then
+           RGB_FileText:=RGB_FileText+'__'+
+                     par.name[Par2_Type]+'='+schoen(Par2_Min,2)+'-'+
+                     schoen(Par2_Max,2);
+       RGB.ScaleColorXY(Par1_N, Par2_N);
        end;
 
    c1:=Par1_Min;
@@ -2157,10 +2169,10 @@ begin
                       calc_Ed_GreggCarder;
                       spec[S_actual]^:=Ed^;
                       Ed^.sim:=TRUE;
-                      if (not flag_public) and flag_truecolor_2D then begin
+                      if (not flag_public) and (flag_create_CIE or flag_truecolor_fw) then begin
                           Lu^:=Ed^;
-                          chroma(FALSE,FALSE,1);
-                          RGB.Preview(NoX,NoY,chroma_R,chroma_G,chroma_B);
+                          chroma(FALSE,FALSE,dotsize_CIE);
+                          if flag_create_CIE then RGB.Preview(NoX,NoY,chroma_R,chroma_G,chroma_B, TRUE);
                           end;
                       end;
                S_Lup: begin
@@ -2170,9 +2182,9 @@ begin
                       spec[S_actual]^:=Lu^;
                       Lu^.sim:=TRUE;
 
-                      if (not flag_public) and flag_truecolor_2D then begin
-                          chroma(TRUE,TRUE,1);
-                          RGB.Preview(NoX,NoY,chroma_R,chroma_G,chroma_B);
+                      if (not flag_public) and (flag_create_CIE or flag_truecolor_fw) then begin
+                          chroma(TRUE,FALSE,dotsize_CIE);
+                          if flag_create_CIE then RGB.Preview(NoX,NoY,chroma_R,chroma_G,chroma_B, TRUE);
                           end;
                       end;
                S_Rrs: begin
@@ -2181,12 +2193,12 @@ begin
                       spec[S_actual]^:=r_rs^;
                       r_rs^.sim:=TRUE;
                       if not flag_public and flag_sim_NEL then simulate_sensor_signal(1);
-                      if (not flag_public) and flag_truecolor_2D then begin
+                      if (not flag_public) and (flag_create_CIE or flag_truecolor_fw) then begin
                           calc_Ed_GreggCarder;
                           for i:=1 to Channel_number do
                               Lu^.y[i]:=spec[1]^.y[i]*Ed^.y[i];
-                          chroma(TRUE,TRUE,1);
-                          RGB.Preview(NoX,NoY,chroma_R,chroma_G,chroma_B);
+                          chroma(TRUE,FALSE,dotsize_CIE);
+                          if flag_create_CIE then RGB.Preview(NoX,NoY,chroma_R,chroma_G,chroma_B, TRUE);
                           end;
 
                       end;
@@ -2264,7 +2276,7 @@ begin
                    if (d2>0) and (d3>0) and (c1>Par1_min) and (c2>Par2_min) then farbS[S_actual]:=clSilver;
                    end;
                    }
-               if (not flag_public) and flag_truecolor_2D then
+               if (not flag_public) and flag_truecolor_fw then
                    farbS[S_actual]:=chroma_R + chroma_G shl 8 + chroma_B shl 16;
 
  (*
@@ -2374,17 +2386,8 @@ begin
        SavePAR_public(path_exe + INI_public, DIR_saveFwd + '\' + INI_public);
        end;
    if not flag_b_Invert then restore_fw;
-   if (not flag_public) and flag_truecolor_2D then begin    // Create chromaticity diagram
-       RGB_FileText:='';
-       if (Par1_N>1) and (Par1_Type>0) then
-           RGB_FileText:=par.name[Par1_Type]+'='+
-                     schoen(Par1_Min,2)+'-'+schoen(Par1_Max,2);
-       if (Par2_N>1) and (Par2_Type>0) then
-           RGB_FileText:=RGB_FileText+'__'+
-                     par.name[Par2_Type]+'='+schoen(Par2_Min,2)+'-'+
-                     schoen(Par2_Max,2);
-       RGB.ScaleColorXY(Par1_N, Par2_N);
-       RGB.Repaint;
+
+   if (not flag_public) and flag_create_CIE then begin    // Save chromaticity diagram to file
        RGB.SavePanel;
        RGB.SaveShoe;
        RGB.SaveWindow;
@@ -3240,7 +3243,7 @@ begin
         else begin { hyperspectral image }
             if (FileExt='.FIT') then y_scale:=1;
             Format_2D.import_HSI(Sender);
-            if flag_truecolor_2D then
+            if (not flag_public) and flag_truecolor_2D then
                 Format_2D.create_truecolor(Sender)
             else begin
                 Format_2D.load_RGB(Sender);
@@ -3264,7 +3267,7 @@ begin
             end;
         if not flag_background then begin
             temp_Ascaled:=Application.Scaled;
-            Application.Scaled:=FALSE;
+ //           Application.Scaled:=FALSE;
             Format_2D.Show;            // ERROR: Lazarus changes here window size
             flag_preview:=TRUE;
             Save_img.visible:=flag_preview;
@@ -3299,7 +3302,9 @@ begin
     s:=ChangeFileExt(ExtractFileName(HSI_img^.FName), '_');
     min:=round(x^.y[1]);
     max:=round(x^.y[channel_number]);
-    if flag_3bands then s:=s+'ch_'+IntToStr(band_B)+'-'+IntToStr(band_G)+
+    if (flag_3bands and (not flag_public) and flag_truecolor_2D) then
+        s:=s+'truecolor'
+    else if flag_3bands then s:=s+'ch_'+IntToStr(band_B)+'-'+IntToStr(band_G)+
         '-'+IntToStr(band_R)
     else if flag_show_EEM then s:=s+IntToStr(min)+'-'+IntToStr(max)+'nm'
     else s:=s+'_'+bandname[band_B]+'_'+schoen(Par0_Min,1)+'-'+schoen(Par0_Max,1);
@@ -4048,7 +4053,7 @@ begin
           Options_2D.set_temp_parameters(Sender);
           if flag_update_prv then begin
               Screen.Cursor:=crHourGlass;
-              if flag_truecolor_2D then
+              if (not flag_public) and flag_truecolor_2D then
                   Format_2D.create_truecolor(Sender)
               else begin
                   Format_2D.load_RGB(Sender);
@@ -4289,17 +4294,20 @@ begin
 procedure TForm1.CMFL1Click(Sender: TObject);
 begin
     Plot_Spectrum(CMF_r^, TRUE, Sender);
+//    Plot_Spectrum(CIExyz[1], TRUE, Sender);
     end;
 
 procedure TForm1.CMFM1Click(Sender: TObject);
 begin
     Plot_Spectrum(CMF_g^, TRUE, Sender);
+//    Plot_Spectrum(CIExyz[2], TRUE, Sender);
     end;
 
 
 procedure TForm1.CMFS1Click(Sender: TObject);
 begin
     Plot_Spectrum(CMF_b^, TRUE, Sender);
+//    Plot_Spectrum(CIExyz[3], TRUE, Sender);
     end;
 
 procedure TForm1.MProClick(Sender: TObject);
