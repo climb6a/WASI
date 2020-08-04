@@ -1,7 +1,7 @@
 object Format_2D: TFormat_2D
-  Left = 544
+  Left = 864
   Height = 356
-  Top = 221
+  Top = 204
   Width = 572
   HorzScrollBar.Page = 336
   HorzScrollBar.Tracking = True
@@ -9,8 +9,8 @@ object Format_2D: TFormat_2D
   VertScrollBar.Tracking = True
   AutoScroll = True
   Caption = 'WASI-2D'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 356
+  ClientWidth = 572
   Color = clBtnFace
   DesignTimePPI = 192
   Font.Height = -24
@@ -23,7 +23,7 @@ object Format_2D: TFormat_2D
   OnMouseUp = FormMouseUp
   OnPaint = FormPaint
   Position = poDefault
-  LCLVersion = '2.0.6.0'
+  LCLVersion = '2.0.10.0'
   object Label_Scroll_BB: TLabel
     Left = 16
     Height = 32
@@ -161,7 +161,7 @@ object Format_2D: TFormat_2D
   end
   object SaveDialogFitresults: TSaveDialog
     Options = [ofOverwritePrompt, ofHideReadOnly, ofEnableSizing]
-    left = 168
-    top = 8
+    Left = 168
+    Top = 8
   end
 end

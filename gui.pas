@@ -732,7 +732,7 @@ begin
     Frame_r1.FormCreate(Sender);         // Parameter list
     Save_img.visible:=flag_preview;
     Tools.visible:=not flag_public;
-    ComboSensor.visible:=not flag_public;
+    ComboSensor.visible:=not flag_public and not flag_b_invert;
     for i:=1 to Sensor_N do ComboSensor.Items[i]:=Sensor_name[i];
     MP.visible:=flag_MP;
     aIce1.visible:=flag_MP;
@@ -1700,6 +1700,7 @@ begin
         end;
     Frame_Res1.update_parameterlist(Sender);
     FrameGroesse(Sender);
+    ComboSensor.visible:=not flag_public and not flag_b_invert;
     case spec_type of
         S_Ed_GC : begin { downwelling irradiance }
                 Active_Ed_GC;
@@ -4294,20 +4295,17 @@ begin
 procedure TForm1.CMFL1Click(Sender: TObject);
 begin
     Plot_Spectrum(CMF_r^, TRUE, Sender);
-//    Plot_Spectrum(CIExyz[1], TRUE, Sender);
     end;
 
 procedure TForm1.CMFM1Click(Sender: TObject);
 begin
     Plot_Spectrum(CMF_g^, TRUE, Sender);
-//    Plot_Spectrum(CIExyz[2], TRUE, Sender);
     end;
 
 
 procedure TForm1.CMFS1Click(Sender: TObject);
 begin
     Plot_Spectrum(CMF_b^, TRUE, Sender);
-//    Plot_Spectrum(CIExyz[3], TRUE, Sender);
     end;
 
 procedure TForm1.MProClick(Sender: TObject);

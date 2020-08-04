@@ -3,7 +3,7 @@ unit misc;
 {$MODE Delphi}
 
 { Collection of general-purpose procedures and functions of program WASI. }
-{ Version vom 2.8.2020 }
+{ Version vom 42.8.2020 }
 
 interface
 uses { $IFDEF private_version} privates, { $ENDIF}
@@ -3918,7 +3918,6 @@ begin
         if not import_spectrum(CMF_g^) then exit;
         if not import_spectrum(CMF_b^) then exit;
         Import_spectral_locus;
-        Import_CIExyz;
         assign_CIE_wavelengths;
         if not import_ASCII_EEM(EEM_ph) then exit;
         if not import_ASCII_EEM(EEM_DOM) then exit;
@@ -4932,6 +4931,8 @@ begin
         load_single_resampled_file(pfad, CMF_r^, 3, channels);
         load_single_resampled_file(pfad, CMF_g^, 3, channels);
         load_single_resampled_file(pfad, CMF_b^, 3, channels);
+        ch_lmin:=Nachbar(eye_lmin);
+        ch_lmax:=Nachbar(eye_lmax);
         end;
     end;
 
@@ -4968,6 +4969,7 @@ begin
     resample_database(path);
     load_resampled_spectra(path, Channel_number);
     //if flag_del_rsmpl then DeleteFiles(copy(path,1,length(path)-1));
+    delete_calculated_spectra;
     end;
 
 

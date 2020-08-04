@@ -381,7 +381,7 @@ begin
     SetLength(cube_HSI4, Width_in, Height_in, 4);
 
     // Calculate color matching functions if they are not yet imported
-    if flag_public then begin set_mXYZ; Import_CIExyz; end;
+    if flag_public then set_mXYZ;
 {    ch_lmin:=Nachbar(eye_lmin);
     ch_lmax:=Nachbar(eye_lmax);    }
     assign_CIE_wavelengths;
@@ -1081,17 +1081,8 @@ begin
             x^.Header:=5;
             x^.XColumn:=2;
             x^.YColumn:=3;  { FWHM }
-            if flag_fwhm then begin
-                lies_spektrum(x^,  x^.Fname, x^.XColumn, x^.YColumn, x^.Header, ch, false);
-                xfile_xu:=xx^.y[1];
-                xfile_xo:=xx^.y[ch];
-                xfile_dx:=xx^.y[2]-xx^.y[1];
-                for k:=1 to ch do FWHM^.y[k]:=x^.y[k];
-                for k:=1 to ch do x^.y[k]:=xx^.y[k];
-                resample_database(path_out);
-                load_resampled_spectra(path_out, Channels_in);
-                end
-            else read_spectra;
+            read_spectra;
+            if flag_fwhm  then resample;
             if flag_Y_exp then berechne_aY(S.actual);
             berechne_bbMie;
             set_borders;
