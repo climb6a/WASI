@@ -12,6 +12,7 @@ begin
   Application.Title := 'WASI5.2';
   Application.CreateForm(TForm1, Form1);
   Application.CreateForm(TFormDataFormatAdvanced, FormDataFormatAdvanced);
+  Application.Scaled:=TRUE;
   if flag_background then begin
       Application.ShowMainForm := false;
       Form1.visible:=FALSE;

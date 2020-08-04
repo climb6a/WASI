@@ -1,11 +1,11 @@
 object Form1: TForm1
   Left = 892
-  Height = 1435
+  Height = 1054
   Top = 208
   Width = 1923
   BorderStyle = bsSingle
   Caption = 'WASI - Water color simulator'
-  ClientHeight = 1396
+  ClientHeight = 1015
   ClientWidth = 1923
   Color = clBtnFace
   DesignTimePPI = 192
@@ -2591,7 +2591,7 @@ object Form1: TForm1
     inherited CP_0: TEdit
       Left = 176
       Height = 40
-      Top = 66
+      Top = 64
       Width = 110
     end
     inherited C1_fit: TCheckBox
@@ -3148,7 +3148,7 @@ object Form1: TForm1
     inherited PanelGray2: TPanel
       Left = 435
       Height = 128
-      Top = 240
+      Top = 248
       Width = 54
       BevelColor = clDefault
       Color = clGradientActiveCaption
@@ -3168,7 +3168,7 @@ object Form1: TForm1
     inherited PanelGray1: TPanel
       Left = 128
       Height = 160
-      Top = 192
+      Top = 205
       Width = 32
       Color = clGradientActiveCaption
       TabOrder = 94

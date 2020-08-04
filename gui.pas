@@ -4099,8 +4099,8 @@ begin
 procedure TForm1.MenuTrueColorClick(Sender: TObject);
 begin
     RGB:= TRGB.Create(Application);
-    RGB.FormCreate(Sender, 100, 100, FALSE);
-    RGB.TruecolorPanel_fromRrs(100, 100);
+    RGB.FormCreate(Sender, 5, 5, FALSE);
+    RGB.TruecolorPanel_fromRrs(5, 5);
     if RGB_FileText='' then RGB_FileText:='color';
     end;
 
